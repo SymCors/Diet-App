@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/ui/viewmodel/authentication/login/login_viewmodel.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 
 class Login extends StatefulWidget {
