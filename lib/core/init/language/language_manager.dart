@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 import 'package:diet_app/core/init/language/languages/english.dart';
 import 'package:diet_app/core/init/language/languages/turkish.dart';

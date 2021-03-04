@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:diet_app/core/base/state/base_state.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:get/get.dart';
 import 'package:diet_app/core/init/language/language_manager.dart';
 
