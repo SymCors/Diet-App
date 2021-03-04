@@ -3,7 +3,6 @@ import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:get/get.dart';
 import 'package:diet_app/core/init/language/language_manager.dart';
 
-import 'ui/view/authentication/onboard/onboard.dart';
 
 void main() {
   runApp(
@@ -24,6 +23,6 @@ class Main extends StatefulWidget {
 class _MainState extends BaseState<Main> {
   @override
   Widget build(BuildContext context) {
-    return OnBoard();
+    return Container();
   }
 }
