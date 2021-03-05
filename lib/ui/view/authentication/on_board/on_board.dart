@@ -53,7 +53,7 @@ class _OnBoardState extends BaseState<OnBoard> {
                   ),
                 ),
                 onPressed: () {
-                  Get.offAndToNamed('/sign_up');
+                  viewModel.login();
                 },
                 child: Text('continue'.tr),
               ),

@@ -20,5 +20,9 @@ class OnBoardViewModel extends GetxController {
     currentPage.value = value;
   }
 
+  void login(){
+    Get.offAndToNamed('/login');
+  }
+
   bool get continueButtonVisible => currentPage.value == 2;
 }

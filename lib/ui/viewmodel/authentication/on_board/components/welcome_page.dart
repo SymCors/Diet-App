@@ -3,7 +3,7 @@ import 'package:diet_app/ui/view/authentication/on_board/base/base.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class WelcomePageViewModel extends GetxController {
+class WelcomePageViewModel {
   var model = OnBoardBaseModel(
       assetName: 'assets/images/onboard/onboarding3.png',
       title: 'welcome'.tr,

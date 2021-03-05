@@ -1,3 +1,5 @@
+import 'package:diet_app/core/constant/colors.dart';
+import 'package:diet_app/ui/view/authentication/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:get/get.dart';
@@ -11,12 +13,15 @@ void main() {
       locale: LanguageManager.locale,
       fallbackLocale: LanguageManager.fallbackLocale,
       translations: LanguageManager(),
-      initialRoute: '/',
+      initialRoute: '/login',
       routes: {
         '/':(context) => Main(),
         '/on_board':(context) => OnBoard(),
+        '/login':(context) => Login(),
       },
       theme: ThemeData(
+        primaryColor: AppColors.app_color,
+        primarySwatch: AppColors.primarySwatch,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
     ),
