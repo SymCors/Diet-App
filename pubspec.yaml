@@ -29,6 +29,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/onboard/
+    - assets/images/login/
     - assets/images/sign_up/
 
   fonts:

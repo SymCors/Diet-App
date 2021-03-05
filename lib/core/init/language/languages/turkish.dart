@@ -13,5 +13,6 @@ const Map<String, String> trTR = {
   'login': 'Giriş Yap',
   'not_have_account': 'Hesabınız yok mu?',
   'sign_up_now': 'Kayıt olun',
+  'sign_up': 'Kayıt Ol',
 
 };

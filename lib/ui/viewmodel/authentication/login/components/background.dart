@@ -1,7 +1,7 @@
 import 'package:diet_app/ui/model/authentication/login/components/background.dart';
 
-class BackgroundViewModel {
+class LoginBackgroundViewModel {
   var model = BackgroundModel(
-      assetName: 'assets/images/sign_up/background.webp'
+      assetName: 'assets/images/login/background.webp'
   );
 }

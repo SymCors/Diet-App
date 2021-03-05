@@ -1,8 +1,8 @@
-import 'package:diet_app/ui/viewmodel/authentication/login/components/background.dart';
+import 'package:diet_app/ui/viewmodel/authentication/sign_up/components/background.dart';
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
-  final viewModel = LoginBackgroundViewModel();
+  final viewModel = SignUpBackgroundViewModel();
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class FormFieldsViewModel extends GetxController{
+class SignUpFormFieldsViewModel extends GetxController{
   var isObscure = true.obs();
   var isChecked = true.obs();
 
@@ -15,6 +15,6 @@ class FormFieldsViewModel extends GetxController{
   }
 
   void signUp(){
-    Get.toNamed('sign_up');
+    Get.toNamed('/sign_up');
   }
 }

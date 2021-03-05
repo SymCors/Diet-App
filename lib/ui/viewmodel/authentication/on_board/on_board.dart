@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class OnBoardViewModel extends GetxController {
+
   var pageLists = <Widget>[
     WelcomePage(),
     SportPage(),

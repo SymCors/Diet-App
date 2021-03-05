@@ -1,9 +1,10 @@
-import 'package:diet_app/ui/viewmodel/authentication/login/components/form.dart';
+import 'package:diet_app/core/widget/text_input.dart';
+import 'package:diet_app/ui/viewmodel/authentication/login/components/form_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FormFields extends StatelessWidget {
-  final viewModel = Get.put(FormFieldsViewModel());
+  final viewModel = Get.put(LoginFormFieldsViewModel());
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class FormFields extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ContainerClass(
+          AppTextInput(
             marginTop: 0,
             child: TextField(
               decoration: InputDecoration(
@@ -26,10 +27,10 @@ class FormFields extends StatelessWidget {
               ),
             ),
           ),
-          ContainerClass(
+          AppTextInput(
             marginTop: 20,
-            child: GetBuilder<FormFieldsViewModel>(
-              init: FormFieldsViewModel(),
+            child: GetBuilder<LoginFormFieldsViewModel>(
+              init: LoginFormFieldsViewModel(),
               builder: (controller) => TextField(
                 obscureText: controller.isObscure,
                 decoration: InputDecoration(
@@ -50,7 +51,7 @@ class FormFields extends StatelessWidget {
             ),
           ),
           SizedBox(height: 15),
-          GetBuilder<FormFieldsViewModel>(
+          GetBuilder<LoginFormFieldsViewModel>(
             builder: (controller) => Padding(
               padding: const EdgeInsets.only(right: 5),
               child: Row(
@@ -130,40 +131,6 @@ class FormFields extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class ContainerClass extends StatelessWidget {
-  final Widget child;
-  final double marginTop;
-
-  ContainerClass({this.child, this.marginTop});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: marginTop),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
-            bottomLeft: Radius.circular(20),
-            bottomRight: Radius.circular(20)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 5,
-            offset: Offset(0, 5), // changes position of shadow
-          ),
-        ],
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 5),
-        child: child,
       ),
     );
   }
