@@ -7,7 +7,7 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Opacity(
-      opacity: 0.2,
+      opacity: 0.3,
       child: Image(
         image: AssetImage(viewModel.model.assetName),
         fit: BoxFit.cover,

@@ -95,8 +95,8 @@ class FormFields extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 10),
-                textStyle: TextStyle(fontSize: 17),
+                padding: EdgeInsets.symmetric(vertical: 12),
+                textStyle: TextStyle(fontSize: 18),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -154,10 +154,10 @@ class ContainerClass extends StatelessWidget {
             bottomRight: Radius.circular(20)),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
+            color: Colors.grey.withOpacity(0.1),
             spreadRadius: 2,
-            blurRadius: 7,
-            offset: Offset(0, 1), // changes position of shadow
+            blurRadius: 5,
+            offset: Offset(0, 5), // changes position of shadow
           ),
         ],
       ),
