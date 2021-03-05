@@ -1,5 +1,16 @@
+import 'package:diet_app/ui/model/authentication/on_board/base/on_board_base.dart';
+import 'package:diet_app/ui/view/authentication/on_board/base/base.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class DietPageViewModel extends GetxController {
+  var model = OnBoardBaseModel(
+    assetName: 'assets/images/onboard/onboarding3.png',
+    title: 'diet_lists'.tr,
+    subtitle: 'onboard3_subtitle'.tr
+  );
 
+  Widget onBoardBase() {
+    return OnBoardBase(model.assetName, model.title, model.subtitle);
+  }
 }

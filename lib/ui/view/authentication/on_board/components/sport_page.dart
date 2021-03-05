@@ -1,10 +1,11 @@
-import 'package:diet_app/ui/view/authentication/on_board/base/base.dart';
+import 'package:diet_app/ui/viewmodel/authentication/on_board/components/sport_page.dart';
 import 'package:flutter/material.dart';
-import 'package:get/utils.dart';
 
 class SportPage extends StatelessWidget {
+  final viewModel = SportPageViewModel();
+
   @override
   Widget build(BuildContext context) {
-    return OnBoardBase('assets/images/onboard/onboarding2.png','activities'.tr, 'onboard2_subtitle'.tr);
+    return viewModel.onBoardBase();
   }
 }

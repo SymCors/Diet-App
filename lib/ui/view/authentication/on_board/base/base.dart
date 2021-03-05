@@ -13,26 +13,23 @@ class OnBoardBase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 50),
-              child: Image(
-                image: AssetImage(asset_image),
-                height: Sizes.height_30percent(context),
-              ),
+    return Column(
+      children: [
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 50),
+            child: Image(
+              image: AssetImage(asset_image),
+              height: Sizes.height_30percent(context),
             ),
           ),
-          Text(title, style: kTitleStyle, textAlign: TextAlign.center,),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Text(subtitle, style: kSubtitleStyle, textAlign: TextAlign.center,),
-          ),
-        ],
-      ),
+        ),
+        Text(title, style: kTitleStyle, textAlign: TextAlign.center,),
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Text(subtitle, style: kSubtitleStyle, textAlign: TextAlign.center,),
+        ),
+      ],
     );
   }
 }

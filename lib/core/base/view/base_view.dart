@@ -34,6 +34,7 @@ class _BaseViewState extends State<BaseView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: widget.onPageBuilder(context, widget.viewModel),
     );
   }
