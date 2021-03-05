@@ -17,4 +17,8 @@ class LoginFormFieldsViewModel extends GetxController{
   void signUp(){
     Get.toNamed('/sign_up');
   }
+
+  void login(){
+    Get.offAndToNamed('/home_main');
+  }
 }

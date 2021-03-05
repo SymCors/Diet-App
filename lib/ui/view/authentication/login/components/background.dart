@@ -1,8 +1,9 @@
 import 'package:diet_app/ui/viewmodel/authentication/login/components/background.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Background extends StatelessWidget {
-  final viewModel = LoginBackgroundViewModel();
+  final viewModel = Get.put(LoginBackgroundViewModel());
 
   @override
   Widget build(BuildContext context) {

@@ -15,4 +15,10 @@ const Map<String, String> trTR = {
   'sign_up_now': 'Kayıt olun',
   'sign_up': 'Kayıt Ol',
 
+  'home': 'Ana Sayfa',
+  'search': 'Arama',
+  'message': 'Mesajlar',
+  'exercise': 'Egzersizler',
+  'profile': 'Profil',
+
 };

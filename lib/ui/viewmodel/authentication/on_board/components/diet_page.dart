@@ -11,6 +11,6 @@ class DietPageViewModel extends GetxController {
   );
 
   Widget onBoardBase() {
-    return OnBoardBase(model.assetName, model.title, model.subtitle);
+    return OnBoardBase(model: model);
   }
 }

@@ -2,6 +2,7 @@ import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/constant/sizes.dart';
 import 'package:diet_app/ui/viewmodel/authentication/sign_up/sign_up.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'components/background.dart';
 import 'components/form_fields.dart';
@@ -13,7 +14,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  final viewModel = SignUpViewModel();
+  final viewModel = Get.put(SignUpViewModel());
 
   @override
   Widget build(BuildContext context) {

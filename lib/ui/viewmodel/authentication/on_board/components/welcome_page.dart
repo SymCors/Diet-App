@@ -11,6 +11,6 @@ class WelcomePageViewModel {
   );
 
   Widget onBoardBase() {
-    return OnBoardBase(model.assetName, model.title, model.subtitle);
+    return OnBoardBase(model: model);
   }
 }

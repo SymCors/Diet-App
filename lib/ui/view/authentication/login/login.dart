@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/ui/viewmodel/authentication/login/login.dart';
+import 'package:get/get.dart';
 
 import 'components/background.dart';
 import 'components/form_fields.dart';
@@ -12,7 +13,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final viewModel = LoginViewModel();
+  final viewModel = Get.put(LoginViewModel());
 
   @override
   Widget build(BuildContext context) {

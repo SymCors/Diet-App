@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FormFields extends StatelessWidget {
-  final viewModel = SignUpFormFieldsViewModel();
+  final viewModel = Get.put(SignUpFormFieldsViewModel());
 
   @override
   Widget build(BuildContext context) {
