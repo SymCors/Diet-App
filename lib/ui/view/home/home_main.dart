@@ -1,4 +1,5 @@
 import 'package:diet_app/core/base/view/base_view.dart';
+import 'package:diet_app/core/widget/navigation_drawer.dart';
 import 'package:diet_app/ui/viewmodel/home/home_main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -45,6 +46,11 @@ class _HomeMainState extends State<HomeMain> {
           ],
           reverse: true,
         ),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text(viewModel.pageName),
+        ),
+        drawer: NavigationDrawer(),
       ),
     );
   }

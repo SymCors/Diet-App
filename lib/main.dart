@@ -1,3 +1,4 @@
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/theme/dark_theme.dart';
 import 'package:diet_app/ui/view/authentication/login/login.dart';
 import 'package:diet_app/ui/view/authentication/sign_up/sign_up.dart';
@@ -16,13 +17,13 @@ void main() {
       locale: LanguageManager.locale,
       fallbackLocale: LanguageManager.fallbackLocale,
       translations: LanguageManager(),
-      initialRoute: '/homepage',
+      initialRoute: Routes.home_main,
       routes: {
-        '/':(context) => Main(),
-        '/on_board':(context) => OnBoard(),
-        '/login':(context) => Login(),
-        '/sign_up':(context) => SignUp(),
-        '/home_main':(context) => HomeMain(),
+        Routes.main:(context) => Main(),
+        Routes.on_board:(context) => OnBoard(),
+        Routes.login:(context) => Login(),
+        Routes.sign_up:(context) => SignUp(),
+        Routes.home_main:(context) => HomeMain(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme,

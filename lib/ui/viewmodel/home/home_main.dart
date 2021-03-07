@@ -17,10 +17,19 @@ class HomeMainViewModel extends GetxController {
     Exercises(),
     Profile()
   ];
+  static var pageNames = [
+    'home'.tr,
+    'search'.tr,
+    'message'.tr,
+    'exercise'.tr,
+    'profile'.tr,
+  ];
   Widget body = pages[0];
+  var pageName = pageNames[0];
 
   void changePage(int index){
     body = pages[index];
+    pageName = pageNames[index];
     page.value = index;
     print(index.toString());
     update();
