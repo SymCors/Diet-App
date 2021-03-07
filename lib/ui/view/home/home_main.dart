@@ -49,6 +49,9 @@ class _HomeMainState extends State<HomeMain> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(viewModel.pageName),
+          actions: [
+            IconButton(icon: Icon(Icons.notifications_none), onPressed: (){})
+          ],
         ),
         drawer: NavigationDrawer(),
       ),

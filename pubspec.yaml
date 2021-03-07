@@ -14,7 +14,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   get: ^3.26.0
-  flutter_native_splash: ^1.0.2
+  flutter_native_splash: ^1.0.3
   pedantic: ^1.11.0
   page_view_indicators: ^2.0.0
   titled_navigation_bar: ^4.1.0
@@ -37,6 +37,9 @@ flutter:
     - family: CM Sans Serif
       fonts:
         - asset: assets/fonts/cm_sans_serif_2012.ttf
+    - family: AppIcons
+      fonts:
+        - asset: assets/fonts/AppIcons.ttf
 
 flutter_native_splash:
   image: assets/images/logo.png

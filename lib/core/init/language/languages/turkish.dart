@@ -20,5 +20,4 @@ const Map<String, String> trTR = {
   'message': 'Mesajlar',
   'exercise': 'Egzersizler',
   'profile': 'Profil',
-
 };

@@ -14,3 +14,18 @@ final kSubtitleStyle = TextStyle(
   fontSize: 18.0,
   height: 1.2,
 );
+
+final kStoryStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 14,
+);
+
+final kPostNameStyle = TextStyle(
+  color: Colors.black,
+  fontSize: 17,
+);
+
+final kPostTextStyle = TextStyle(
+  color: Colors.grey[900],
+  fontSize: 16,
+);
