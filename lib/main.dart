@@ -1,5 +1,4 @@
 import 'package:diet_app/core/constant/routes.dart';
-import 'package:diet_app/core/theme/dark_theme.dart';
 import 'package:diet_app/ui/view/authentication/login/login.dart';
 import 'package:diet_app/ui/view/authentication/sign_up/sign_up.dart';
 import 'package:diet_app/ui/view/home/home_main.dart';
@@ -8,7 +7,8 @@ import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:get/get.dart';
 import 'package:diet_app/core/init/language/language_manager.dart';
 
-import 'core/theme/light_theme.dart';
+import 'core/init/theme/dark_theme.dart';
+import 'core/init/theme/light_theme.dart';
 import 'ui/view/authentication/on_board/on_board.dart';
 
 void main() {

@@ -22,10 +22,14 @@ final kStoryStyle = TextStyle(
 
 final kPostNameStyle = TextStyle(
   color: Colors.black,
-  fontSize: 17,
+  fontSize: 16,
 );
 
 final kPostTextStyle = TextStyle(
   color: Colors.grey[900],
   fontSize: 16,
+);
+
+final kPostButtonStyle = ButtonStyle(
+  foregroundColor: MaterialStateColor.resolveWith((states) => Colors.black54)
 );

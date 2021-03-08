@@ -1,7 +1,9 @@
 import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
+import 'package:diet_app/core/widget/bottom_sheet.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/utils.dart';
 
 class Posts extends StatelessWidget {
   final names = List<String>.generate(10, (i) => 'Name Surname $i');
@@ -15,23 +17,25 @@ class Posts extends StatelessWidget {
       itemBuilder: (context, index) {
         return Column(
           children: [
-            header(index),
+            header(context, index),
             text(),
             image(),
-            footer(),
+            likeAndDislikes(),
+            customDivider(),
+            buttons(),
           ],
         );
       },
     );
   }
 
-  Widget header(index) {
+  Widget header(context, index) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 5, left: 10),
       child: Row(
         children: [
           AppCircularImage(
-            radius: 20,
+            radius: 17,
           ),
           Expanded(
             child: Padding(
@@ -41,23 +45,18 @@ class Posts extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.centerRight,
-            child: PopupMenuButton(
-              itemBuilder: (BuildContext bc) => [
-                PopupMenuItem(
-                  value: '/newchat',
-                  child: Text('New Chat'),
-                ),
-                PopupMenuItem(
-                  value: '/new-group-chat',
-                  child: Text('New Group Chat'),
-                ),
-                PopupMenuItem(
-                  value: '/settings',
-                  child: Text('Settings'),
-                ),
-              ],
-              onSelected: (route) {
-                print(route);
+            child: IconButton(
+              icon: Icon(AppIcons.kebab_vertical),
+              onPressed: (){
+                showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return AppBottomSheet(
+                      size: 150,
+                      child: bottomSheetBody(context),
+                    );
+                  },
+                );
               },
             ),
           ),
@@ -85,30 +84,117 @@ class Posts extends StatelessWidget {
     );
   }
 
-  Widget footer() {
+  Widget likeAndDislikes() {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.only(left: 10, top: 5),
       child: Row(
         children: [
-          IconButton(
-              icon: Icon(
-                AppIcons.heart_empty,
-                size: 24,
-              ),
-              onPressed: () {}),
-          Text('13 Likes'),
-          SizedBox(
-            width: 30,
+          Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: Icon(
+              AppIcons.heart,
+              size: 20,
+              color: Colors.red,
+            ),
           ),
-          IconButton(
-              icon: Icon(
-                AppIcons.comment_empty,
-                size: 24,
+          Text('4'),
+          Padding(
+            padding: const EdgeInsets.only(left: 30, right: 8),
+            child: Icon(
+              AppIcons.heart_broken,
+              size: 20,
+              color: Colors.red,
+            ),
+          ),
+          Text('1'),
+          Padding(
+            padding: const EdgeInsets.only(left: 30, right: 8),
+            child: Icon(
+              AppIcons.comment,
+              size: 20,
+              color: Colors.blueGrey,
+            ),
+          ),
+          Text('12'),
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: Text(
+                  '23 min',
+                  style: TextStyle(color: Colors.grey),
+                ),
               ),
-              onPressed: () {}),
-          Text('20 Comments'),
+            ),
+          )
         ],
       ),
+    );
+  }
+
+  Widget customDivider() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
+      child: Container(
+        height: 1,
+        color: Colors.grey[100],
+      ),
+    );
+  }
+
+  Widget buttons() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10, right: 10),
+      child: Row(
+        children: [
+          Expanded(
+            child: TextButton.icon(
+              style: kPostButtonStyle,
+              onPressed: () {},
+              icon: Icon(AppIcons.thumbs_up),
+              label: Text('like'.tr),
+            ),
+          ),
+          Expanded(
+            child: TextButton.icon(
+              style: kPostButtonStyle,
+              onPressed: () {},
+              icon: Icon(AppIcons.thumbs_down),
+              label: Text('dislike'.tr),
+            ),
+          ),
+          Expanded(
+            child: TextButton.icon(
+              style: kPostButtonStyle,
+              onPressed: () {},
+              icon: Icon(AppIcons.comment_empty),
+              label: Text('comment'.tr),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget bottomSheetBody(context) {
+    return Column(
+      children: [
+        ListTile(
+          leading: Icon(Icons.directions, color: Colors.blue[300],),
+          title: Text('direct'.tr),
+          onTap: (){
+            Navigator.pop(context);
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.report_problem_outlined, color: Colors.red[300],),
+          title: Text('report'.tr),
+          onTap: (){
+            Navigator.pop(context);
+          },
+        ),
+      ],
     );
   }
 }

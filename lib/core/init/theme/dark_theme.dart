@@ -10,6 +10,5 @@ final ThemeData appDarkTheme = ThemeData(
   ),
 
   primaryColor: AppColors.app_color,
-  primarySwatch: AppColors.primarySwatch,
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );

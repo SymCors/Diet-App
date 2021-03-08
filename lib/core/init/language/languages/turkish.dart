@@ -20,4 +20,10 @@ const Map<String, String> trTR = {
   'message': 'Mesajlar',
   'exercise': 'Egzersizler',
   'profile': 'Profil',
+
+  'report': 'Şikayet Et',
+  'direct': 'İlet',
+  'like': 'Beğen',
+  'dislike': 'Beğenme',
+  'comment': 'Yorum Yap',
 };
