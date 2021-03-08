@@ -33,3 +33,18 @@ final kPostTextStyle = TextStyle(
 final kPostButtonStyle = ButtonStyle(
   foregroundColor: MaterialStateColor.resolveWith((states) => Colors.black54)
 );
+
+final kSearchTitleStyle = TextStyle(
+  color: Colors.black54,
+  fontSize: 18,
+);
+
+final kExerciseDetailsTitleStyle = TextStyle(
+  color: AppColors.titleColors,
+  fontSize: 17,
+  fontWeight: FontWeight.w600,
+);
+
+final kExerciseDetailsSubtitleStyle = TextStyle(
+  color: Colors.grey[600],
+);

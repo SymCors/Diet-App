@@ -18,7 +18,7 @@ class AppBottomSheet extends StatelessWidget {
             borderRadius: BorderRadius.only(
               topLeft: const Radius.circular(20),
               topRight: const Radius.circular(20),
-            )
+            ),
         ),
         child: Column(
           children: [

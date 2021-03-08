@@ -2,18 +2,19 @@ import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:diet_app/core/widget/bottom_sheet.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
+import 'package:diet_app/ui/viewmodel/home/homepage/components/posts.dart';
 import 'package:flutter/material.dart';
-import 'package:get/utils.dart';
+import 'package:get/get.dart';
 
 class Posts extends StatelessWidget {
-  final names = List<String>.generate(10, (i) => 'Name Surname $i');
+  final viewModel = Get.put(PostsViewModel());
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: names.length,
+      itemCount: viewModel.names.length,
       itemBuilder: (context, index) {
         return Column(
           children: [
@@ -40,7 +41,7 @@ class Posts extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text('${names[index]}', style: kPostNameStyle),
+              child: Text('${viewModel.names[index]}', style: kPostNameStyle),
             ),
           ),
           Align(
@@ -110,7 +111,7 @@ class Posts extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 30, right: 8),
             child: Icon(
-              AppIcons.comment,
+              AppIcons.comment_dots,
               size: 20,
               color: Colors.blueGrey,
             ),

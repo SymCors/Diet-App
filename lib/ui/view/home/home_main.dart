@@ -40,7 +40,7 @@ class _HomeMainState extends State<HomeMain> {
             TitledNavigationBarItem(
                 title: Text('message'.tr), icon: Icons.message_outlined),
             TitledNavigationBarItem(
-                title: Text('exercise'.tr), icon: Icons.sports),
+                title: Text('exercise'.tr), icon: Icons.directions_run_outlined),
             TitledNavigationBarItem(
                 title: Text('profile'.tr), icon: Icons.person_outline),
           ],

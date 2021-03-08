@@ -42,8 +42,11 @@ class AppIcons {
   static const IconData comment = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData thumbs_down = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData thumbs_up = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData home_outline = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData minus = IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData search_outline = IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData comment_empty = IconData(0xf0e5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData chat_empty = IconData(0xf0e6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData thumbs_up_alt = IconData(0xf164, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData thumbs_down_alt = IconData(0xf165, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData kebab_vertical = IconData(0xf349, fontFamily: _kFontFam, fontPackage: _kFontPkg);

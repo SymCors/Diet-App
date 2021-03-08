@@ -26,4 +26,12 @@ const Map<String, String> trTR = {
   'like': 'Beğen',
   'dislike': 'Beğenme',
   'comment': 'Yorum Yap',
+
+  'see_all': 'Hepsini Gör',
+
+  'discover': 'Keşfet',
+  'do_sport': 'Spor yaparak sağlığınızı koruyun',
+  'programs': 'Programlar',
+
+
 };
