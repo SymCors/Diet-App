@@ -19,7 +19,7 @@ void main() {
       locale: LanguageManager.locale,
       fallbackLocale: LanguageManager.fallbackLocale,
       translations: LanguageManager(),
-      initialRoute: Routes.main,
+      initialRoute: Routes.home_main,
       routes: {
         Routes.main:(context) => Main(),
         Routes.on_board:(context) => OnBoard(),

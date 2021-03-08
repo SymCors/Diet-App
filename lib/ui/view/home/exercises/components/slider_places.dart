@@ -14,8 +14,8 @@ class CardHeader extends StatelessWidget {
 
   Widget background() {
     return Container(
-      height: 115,
-      margin: EdgeInsets.all(10),
+      height: 100,
+      margin: EdgeInsets.only(left: 10, top: 15, right: 10, bottom: 5),
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),

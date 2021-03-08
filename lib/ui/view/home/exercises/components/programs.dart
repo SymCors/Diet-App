@@ -1,7 +1,5 @@
 import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/constant/routes.dart';
-import 'package:diet_app/core/init/icon/app_icons.dart';
-import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:diet_app/ui/viewmodel/home/exercises/components/programs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +19,7 @@ class Programs extends StatelessWidget {
 
   Widget programs_title() {
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 10),
+      padding: const EdgeInsets.only(left: 20, right: 10, top: 10),
       child: Row(
         children: [
           Expanded(
@@ -43,30 +41,56 @@ class Programs extends StatelessWidget {
   }
 
   Widget program_lists() {
-    return ListView.builder(
-      physics: NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: viewModel.names.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          onTap: (){
-            Get.toNamed(Routes.exercise_details);
-          },
-          leading: ClipRRect(
-            borderRadius: BorderRadius.circular(10.0),
-            child: Image.asset('assets/images/login/background.webp'),
-          ),
-          title: Text(
-            'Yoga Programı',
-            style: TextStyle(color: AppColors.titleColors),
-          ),
-          subtitle: Text('6 gün  •  380 cal'),
-          trailing: Padding(
-            padding: const EdgeInsets.only(right: 5),
-            child: Icon(AppIcons.heart_empty, size: 20,),
-          ),
-        );
-      },
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+      child: GridView.count(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        crossAxisCount: 3,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        clipBehavior: Clip.none,
+        children: List.generate(13, (index) {
+          return InkWell(
+            onTap: (){
+              Get.toNamed(Routes.exercise_details);
+            },
+            child: Card(
+              child: Stack(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image:
+                          AssetImage('assets/images/sign_up/background.webp'),
+                        )),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Opacity(
+                      opacity: 0.7,
+                      child: Container(
+                        width: double.infinity,
+                        color: Colors.white,
+                        height: 25,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      margin: EdgeInsets.only(bottom: 5),
+                      child: Text('Yoga', style: TextStyle(color: AppColors.primarySwatch),),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        }),
+      ),
     );
   }
 }
