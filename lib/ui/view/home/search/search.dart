@@ -3,6 +3,8 @@ import 'package:diet_app/ui/viewmodel/home/search/search.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'components/meals.dart';
+
 class Search extends StatefulWidget {
   @override
   _SearchState createState() => _SearchState();
@@ -19,9 +21,12 @@ class _SearchState extends State<Search> {
   }
 
   Widget body(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text('Mesajlar'),
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        children: [
+          Meals(),
+        ],
       ),
     );
   }

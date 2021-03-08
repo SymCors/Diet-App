@@ -18,6 +18,7 @@ dependencies:
   pedantic: ^1.11.0
   page_view_indicators: ^2.0.0
   titled_navigation_bar: ^4.1.0
+  vexana: ^1.4.1
 
 dev_dependencies:
   flutter_test:
@@ -32,6 +33,7 @@ flutter:
     - assets/images/onboard/
     - assets/images/login/
     - assets/images/sign_up/
+    - assets/images/exercises/
 
   fonts:
     - family: CM Sans Serif

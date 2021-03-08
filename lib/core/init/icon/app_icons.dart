@@ -16,6 +16,18 @@
 ///         Author:    Dave Gandy
 ///         License:   SIL ()
 ///         Homepage:  http://fortawesome.github.com/Font-Awesome/
+/// * Typicons, (c) Stephen Hutchings 2012
+///         Author:    Stephen Hutchings
+///         License:   SIL (http://scripts.sil.org/OFL)
+///         Homepage:  http://typicons.com/
+/// * Octicons, Copyright (C) 2020 by GitHub Inc.
+///         Author:    GitHub
+///         License:   MIT (http://opensource.org/licenses/mit-license.php)
+///         Homepage:  https://primer.style/octicons/
+/// * Font Awesome 5, Copyright (C) 2016 by Dave Gandy
+///         Author:    Dave Gandy
+///         License:   SIL (https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt)
+///         Homepage:  http://fortawesome.github.com/Font-Awesome/
 ///
 import 'package:flutter/widgets.dart';
 
@@ -28,5 +40,16 @@ class AppIcons {
   static const IconData heart = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData heart_empty = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData comment = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData thumbs_down = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData thumbs_up = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData home_outline = IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData minus = IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData search_outline = IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData comment_empty = IconData(0xf0e5, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData chat_empty = IconData(0xf0e6, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData thumbs_up_alt = IconData(0xf164, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData thumbs_down_alt = IconData(0xf165, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData kebab_vertical = IconData(0xf349, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData comment_dots = IconData(0xf4ad, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData heart_broken = IconData(0xf7a9, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
