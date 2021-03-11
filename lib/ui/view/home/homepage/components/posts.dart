@@ -18,12 +18,20 @@ class Posts extends StatelessWidget {
       itemBuilder: (context, index) {
         return Column(
           children: [
-            header(context, index),
-            text(),
-            image(),
-            likeAndDislikes(),
-            customDivider(),
-            buttons(),
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: [
+                  header(context, index),
+                  text(),
+                  image(),
+                  likeAndDislikes(),
+                  customDivider(),
+                  buttons(),
+                ],
+              ),
+            ),
+            SizedBox(height: 10),
           ],
         );
       },
@@ -32,7 +40,7 @@ class Posts extends StatelessWidget {
 
   Widget header(context, index) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 5, left: 10),
+      padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
       child: Row(
         children: [
           AppCircularImage(
@@ -146,7 +154,7 @@ class Posts extends StatelessWidget {
 
   Widget buttons() {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10, right: 10),
+      padding: const EdgeInsets.only(right: 10),
       child: Row(
         children: [
           Expanded(

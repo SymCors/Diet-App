@@ -1,4 +1,5 @@
 import 'package:diet_app/core/base/view/base_view.dart';
+import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/ui/viewmodel/home/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: viewModel,
+      backgroundColor: AppColors.backgroundColor,
       onPageBuilder: (context, value) => body(context),
     );
   }
@@ -26,7 +28,7 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         children: [
           Stories(),
-          Divider(),
+          Divider(height: 1,),
           Posts(),
         ],
       ),

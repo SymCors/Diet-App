@@ -35,8 +35,13 @@ final kPostButtonStyle = ButtonStyle(
 );
 
 final kSearchTitleStyle = TextStyle(
-  color: Colors.black54,
+  color: Colors.black,
   fontSize: 18,
+  fontWeight: FontWeight.w600
+);
+
+final kViewAllStyle = TextStyle(
+  color: Colors.grey[600],
 );
 
 final kExerciseDetailsTitleStyle = TextStyle(

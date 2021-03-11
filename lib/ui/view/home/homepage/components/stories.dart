@@ -8,14 +8,15 @@ class Stories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: 110,
+      color: Colors.white,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: names.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.only(top: 10, right: 7, left: 7),
+            padding: const EdgeInsets.only(top: 15, right: 7, left: 7),
             child: Column(
               children: [
                 AppCircularImage(
