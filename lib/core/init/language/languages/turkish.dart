@@ -21,6 +21,7 @@ const Map<String, String> trTR = {
   'exercise': 'Egzersizler',
   'profile': 'Profil',
 
+  'delete': 'Sil',
   'report': 'Şikayet Et',
   'direct': 'İlet',
   'like': 'Beğen',

@@ -6,6 +6,8 @@ import 'package:diet_app/ui/viewmodel/home/homepage/components/posts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'comments.dart';
+
 class Posts extends StatelessWidget {
   final viewModel = Get.put(PostsViewModel());
 
@@ -27,7 +29,7 @@ class Posts extends StatelessWidget {
                   image(),
                   likeAndDislikes(),
                   customDivider(),
-                  buttons(),
+                  buttons(context),
                 ],
               ),
             ),
@@ -61,7 +63,7 @@ class Posts extends StatelessWidget {
                   context: context,
                   builder: (context) {
                     return AppBottomSheet(
-                      size: 150,
+                      size: 200,
                       child: bottomSheetBody(context),
                     );
                   },
@@ -152,7 +154,7 @@ class Posts extends StatelessWidget {
     );
   }
 
-  Widget buttons() {
+  Widget buttons(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 10),
       child: Row(
@@ -176,7 +178,9 @@ class Posts extends StatelessWidget {
           Expanded(
             child: TextButton.icon(
               style: kPostButtonStyle,
-              onPressed: () {},
+              onPressed: () {
+                Comments();
+              },
               icon: Icon(AppIcons.comment_empty),
               label: Text('comment'.tr),
             ),
@@ -197,8 +201,15 @@ class Posts extends StatelessWidget {
           },
         ),
         ListTile(
-          leading: Icon(Icons.report_problem_outlined, color: Colors.red[300],),
+          leading: Icon(Icons.report_problem_outlined, color: Colors.orange[300],),
           title: Text('report'.tr),
+          onTap: (){
+            Navigator.pop(context);
+          },
+        ),
+        ListTile(
+          leading: Icon(Icons.delete_sweep, color: Colors.red[300],),
+          title: Text('delete'.tr),
           onTap: (){
             Navigator.pop(context);
           },

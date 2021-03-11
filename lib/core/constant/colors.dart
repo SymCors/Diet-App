@@ -5,4 +5,5 @@ class AppColors {
   static final primarySwatch = Colors.green;
   static final titleColors = Color(0xff222A66);
   static final backgroundColor = Color(0xfff2f3f7);
+  static final bottomSheetBackground = Color(0xFF737373);
 }

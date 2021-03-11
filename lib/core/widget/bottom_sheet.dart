@@ -1,3 +1,4 @@
+import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class AppBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF737373),
+      color: AppColors.bottomSheetBackground,
       height: size,
       child: Container(
         decoration: BoxDecoration(
