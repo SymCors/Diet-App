@@ -12,6 +12,7 @@ import 'core/init/theme/light_theme.dart';
 import 'ui/view/authentication/on_board/on_board.dart';
 import 'ui/view/home/exercises/pages/exercise_details.dart';
 import 'ui/view/home/exercises/pages/exercise_details_view.dart';
+import 'ui/view/home/messages/message_ui.dart';
 
 void main() {
   runApp(
@@ -19,7 +20,7 @@ void main() {
       locale: LanguageManager.locale,
       fallbackLocale: LanguageManager.fallbackLocale,
       translations: LanguageManager(),
-      initialRoute: Routes.main,
+      initialRoute: Routes.home_main,
       routes: {
         Routes.main:(context) => Main(),
         Routes.on_board:(context) => OnBoard(),
@@ -28,6 +29,7 @@ void main() {
         Routes.home_main:(context) => HomeMain(),
         Routes.exercise_details:(context) => ExerciseDetails(),
         Routes.exercise_details_view:(context) => ExerciseDetailsView(),
+        Routes.message_ui:(context) => MessageUI(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme,

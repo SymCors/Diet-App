@@ -2,7 +2,6 @@ import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/constant/styles.dart';
-import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:diet_app/core/widget/info_button.dart';
 import 'package:diet_app/ui/viewmodel/home/exercises/pages/exercise_details.dart';
 import 'package:flutter/material.dart';

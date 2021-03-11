@@ -9,11 +9,7 @@ class AppCircularImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       radius: radius,
-      backgroundColor: Colors.white,
-      child: CircleAvatar(
-        radius: radius,
-        backgroundImage: AssetImage('assets/images/sign_up/profile_photo.png'),
-      ),
+      backgroundImage: AssetImage('assets/images/sign_up/profile_photo.png'),
     );
   }
 }
