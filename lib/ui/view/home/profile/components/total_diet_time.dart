@@ -1,7 +1,8 @@
 import 'package:diet_app/core/constant/colors.dart';
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/constant/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:get/utils.dart';
+import 'package:get/get.dart';
 
 class TotalDietTime extends StatelessWidget {
   @override
@@ -35,7 +36,7 @@ class TotalDietTime extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             padding: EdgeInsets.all(10),
-            child: Text('7' + ' ' + 'day'.tr, style: kExerciseDetailsTitleStyle,),
+            child: Text('7 ' + 'day'.tr, style: kExerciseDetailsTitleStyle,),
           ),
         ],
       ),
@@ -49,7 +50,9 @@ class TotalDietTime extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Get.toNamed(Routes.current_diet);
+        },
         child: Column(
           children: [
             ListTile(

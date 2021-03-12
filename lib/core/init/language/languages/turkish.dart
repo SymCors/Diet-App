@@ -42,5 +42,17 @@ const Map<String, String> trTR = {
   'settings': 'Ayarlar',
   'aim': 'Hedef',
 
+  'my_diet': 'Diyetim',
+  'calorie': 'Kalori',
+  'calorie_consumed': 'Alınan Kalori',
+  'daily_calorie_aim': 'Günlük Kalori Hedefi',
+  'protein': 'Protein',
+  'carbohydrate': 'Karbonhidrat',
+  'fat': 'Yağ',
+  'breakfast': 'Kahvaltı',
+  'add_something': 'Bir şeyler ekle',
+  'snack': 'Ara Öğün',
+  'lunch': 'Öğle Yemeği',
+  'dinner': 'Akşam Yemeği',
 
 };

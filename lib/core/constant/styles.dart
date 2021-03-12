@@ -85,3 +85,9 @@ final kSuccessStyle = TextStyle(
   fontSize: 20,
   fontWeight: FontWeight.w600,
 );
+
+final kMainLabelStyle = TextStyle(
+  color: AppColors.primarySwatch,
+  fontSize: 40,
+  fontWeight: FontWeight.w600,
+);

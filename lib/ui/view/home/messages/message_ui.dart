@@ -1,7 +1,6 @@
 import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/constant/colors.dart';
-import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:diet_app/core/widget/message_action_button.dart';
 import 'package:diet_app/core/widget/message_app_bar.dart';
 import 'package:diet_app/core/widget/message_input_box.dart';

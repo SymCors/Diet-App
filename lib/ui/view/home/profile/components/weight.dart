@@ -39,7 +39,7 @@ class Weight extends StatelessWidget {
             ),
             padding: EdgeInsets.all(10),
             child: Text(
-              '65.5' + ' kg.',
+              '65.5 kg',
               style: kExerciseDetailsTitleStyle,
             ),
           ),
