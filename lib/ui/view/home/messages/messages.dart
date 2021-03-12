@@ -3,6 +3,7 @@ import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:diet_app/ui/viewmodel/home/messages/messages.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 
 class Messages extends StatefulWidget {
@@ -34,35 +35,56 @@ class _MessagesState extends State<Messages> {
           shrinkWrap: true,
           itemCount: viewModel.names.length,
           itemBuilder: (context, index) {
-            return ListTile(
-              onTap: () {
-                Get.toNamed(Routes.message_ui);
-              },
-              leading: AppCircularImage(
-                radius: 20,
-              ),
-              title: Text('deneme'),
-              subtitle: Text('deneme'),
-              trailing: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('2 min'),
-                  Visibility(
-                    visible: false,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 3),
-                      child: CircleAvatar(
-                        radius: 12,
-                        backgroundColor: Colors.red,
-                        child: Text('5'),
+            return Slidable(
+              actionPane: SlidableDrawerActionPane(),
+              actionExtentRatio: 0.25,
+              closeOnScroll: true,
+              actions: [
+                IconSlideAction(
+                  caption: 'archive'.tr,
+                  color: Colors.blueAccent,
+                  icon: Icons.archive,
+                  closeOnTap: true,
+                ),
+              ],
+              secondaryActions: [
+                IconSlideAction(
+                  caption: 'delete'.tr,
+                  color: Colors.redAccent,
+                  icon: Icons.remove_circle_outline,
+                  closeOnTap: true,
+                ),
+              ],
+              child: ListTile(
+                onTap: () {
+                  Get.toNamed(Routes.message_ui);
+                },
+                leading: AppCircularImage(
+                  radius: 20,
+                ),
+                title: Text('Name Surname ${index+1}'),
+                subtitle: Text('Lorem ipsum dolor sit amet, consectetur...'),
+                trailing: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('2 min'),
+                    Visibility(
+                      visible: false,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 3),
+                        child: CircleAvatar(
+                          radius: 12,
+                          backgroundColor: Colors.red,
+                          child: Text('5'),
+                        ),
                       ),
                     ),
-                  ),
-                  Visibility(
-                    visible: false,
-                    child: Icon(Icons.done),
-                  )
-                ],
+                    Visibility(
+                      visible: false,
+                      child: Icon(Icons.done),
+                    )
+                  ],
+                ),
               ),
             );
           },

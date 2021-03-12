@@ -19,6 +19,7 @@ dependencies:
   page_view_indicators: ^2.0.0
   titled_navigation_bar: ^4.1.0
   vexana: ^1.4.1
+  flutter_slidable: ^0.5.7
 
 dev_dependencies:
   flutter_test:
@@ -29,6 +30,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/icons/
     - assets/images/
     - assets/images/onboard/
     - assets/images/login/

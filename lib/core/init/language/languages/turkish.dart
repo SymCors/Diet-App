@@ -32,7 +32,15 @@ const Map<String, String> trTR = {
 
   'discover': 'Keşfet',
   'do_sport': 'Spor yaparak sağlığınızı koruyun',
-  'programs': 'Programlar',
+
+  'archive': 'Arşivle',
+
+  'day': 'Gün',
+  'starting': 'Başlangıç',
+  'ending': 'Bitiş',
+  'kilo': 'Kilo',
+  'settings': 'Ayarlar',
+  'aim': 'Hedef',
 
 
 };

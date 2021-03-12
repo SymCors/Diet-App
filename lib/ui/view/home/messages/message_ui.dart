@@ -2,13 +2,16 @@ import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
+import 'package:diet_app/core/widget/message_action_button.dart';
 import 'package:diet_app/core/widget/message_app_bar.dart';
+import 'package:diet_app/core/widget/message_input_box.dart';
 import 'package:diet_app/ui/viewmodel/home/messages/message_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'components/his_message_ui.dart';
+import 'components/message_date_ui.dart';
 import 'components/my_message_ui.dart';
 
 class MessageUI extends StatefulWidget {
@@ -43,13 +46,26 @@ class _MessageUIState extends BaseState<MessageUI> {
               physics: NeverScrollableScrollPhysics(),
               itemCount: viewModel.numbers.length,
               itemBuilder: (context, index) {
+                if (index % 5 == 0) {
+                  return MessageDateUI();
+                }
                 return index % 2 == 0 ? MyMessageUI() : HisMessageUI();
               },
             ),
           ),
         ),
         SizedBox(height: 1),
-        MessageSender(),
+        MessageInputBox(
+          prefix: MessageActionButton(
+            iconData: Icons.add,
+            iconSize: 24.0,
+          ),
+          roundedCorners: true,
+          suffix: MessageActionButton(
+            iconData: Icons.image,
+            iconSize: 24.0,
+          ),
+        )
       ],
     );
   }

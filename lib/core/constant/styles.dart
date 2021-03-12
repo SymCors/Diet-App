@@ -31,13 +31,16 @@ final kPostTextStyle = TextStyle(
 );
 
 final kPostButtonStyle = ButtonStyle(
-  foregroundColor: MaterialStateColor.resolveWith((states) => Colors.black54)
-);
+    foregroundColor:
+        MaterialStateColor.resolveWith((states) => Colors.black54));
 
-final kSearchTitleStyle = TextStyle(
+final kSearchTitleStyle =
+    TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.w600);
+
+final kNumberStyle = TextStyle(
   color: Colors.black,
-  fontSize: 18,
-  fontWeight: FontWeight.w600
+  fontSize: 35,
+  fontWeight: FontWeight.w600,
 );
 
 final kViewAllStyle = TextStyle(
@@ -52,4 +55,33 @@ final kExerciseDetailsTitleStyle = TextStyle(
 
 final kExerciseDetailsSubtitleStyle = TextStyle(
   color: Colors.grey[600],
+);
+
+final kMessageDateStyle = TextStyle(
+  color: Colors.white,
+  fontWeight: FontWeight.w600,
+);
+
+final cardTitleStyleForDietTime = TextStyle(
+  color: Colors.white,
+  fontSize: 19,
+  fontWeight: FontWeight.w600,
+);
+
+final cardTextStyleForDietTime = TextStyle(
+  color: Colors.white,
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
+);
+
+final bigTextStyle = TextStyle(
+  color: AppColors.titleColors,
+  fontSize: 24,
+  fontWeight: FontWeight.w600,
+);
+
+final kSuccessStyle = TextStyle(
+  color: AppColors.primarySwatch,
+  fontSize: 20,
+  fontWeight: FontWeight.w600,
 );
