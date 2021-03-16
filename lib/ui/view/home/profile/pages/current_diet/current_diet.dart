@@ -97,11 +97,13 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                 Container(
                   height: double.infinity,
                   child: InkWell(
-                      onTap: () {},
-                      child: Icon(
-                        Icons.chevron_left,
-                        size: 50,
-                      )),
+                    onTap: () {},
+                    child: Icon(
+                      Icons.chevron_left,
+                      size: 50,
+                      color: Colors.black.withOpacity(0.7),
+                    ),
+                  ),
                 ),
                 Expanded(
                   child: Center(
@@ -113,7 +115,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                             progressBarColor:
                                 AppColors.app_color.withOpacity(0.7),
                           ),
-                          size: dynamicWidht(0.4),
+                          size: dynamicWidth(0.4),
                           angleRange: 360,
                           startAngle: 270,
                           infoProperties: InfoProperties(
@@ -133,6 +135,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                     child: Icon(
                       Icons.chevron_right,
                       size: 50,
+                      color: Colors.black.withOpacity(0.7),
                     ),
                   ),
                 ),

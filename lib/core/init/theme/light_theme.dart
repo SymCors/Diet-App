@@ -11,5 +11,4 @@ final ThemeData appLightTheme = ThemeData(
 
   primaryColor: AppColors.app_color,
   primarySwatch: AppColors.primarySwatch,
-  visualDensity: VisualDensity.adaptivePlatformDensity,
 );
