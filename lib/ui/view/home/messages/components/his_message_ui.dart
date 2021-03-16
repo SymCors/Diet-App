@@ -6,7 +6,7 @@ class HisMessageUI extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: Container(
-        constraints: BoxConstraints(minWidth: 70, maxWidth: 250),
+        constraints: BoxConstraints(minWidth: 70, maxWidth: 275),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10), bottomLeft: Radius.circular(10)),
           color: Color(0xffc7defa),
@@ -19,7 +19,7 @@ class HisMessageUI extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 20),
               child: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
-                style: TextStyle(fontSize: 15),
+                style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 15, color: Colors.black),
               ),
             ),
             Positioned(

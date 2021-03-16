@@ -9,7 +9,7 @@ class Stories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 110,
-      color: Colors.white,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: names.length,
@@ -22,7 +22,7 @@ class Stories extends StatelessWidget {
                 AppCircularImage(
                   radius: 33,
                 ),
-                Text('${names[index]}', style: kStoryStyle,),
+                Text('${names[index]}', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 13),),
               ],
             ),
           );

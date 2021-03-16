@@ -1,7 +1,11 @@
+import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
+import 'package:diet_app/core/init/theme/dark_theme.dart';
+import 'package:diet_app/core/init/theme/light_theme.dart';
 import 'package:diet_app/core/widget/bottom_sheet.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
+import 'package:diet_app/core/widget/custom_divider.dart';
 import 'package:diet_app/ui/viewmodel/home/homepage/components/posts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,30 +17,32 @@ class Posts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      physics: NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: viewModel.names.length,
-      itemBuilder: (context, index) {
-        return Column(
-          children: [
-            Container(
-              color: Colors.white,
-              child: Column(
-                children: [
-                  header(context, index),
-                  text(),
-                  image(),
-                  likeAndDislikes(),
-                  customDivider(),
-                  buttons(context),
-                ],
+    return Container(
+      color: !Get.isDarkMode ? Colors.white : null,
+      child: ListView.builder(
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        itemCount: viewModel.names.length,
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              Container(
+                child: Column(
+                  children: [
+                    header(context, index),
+                    text(context),
+                    image(),
+                    likeAndDislikes(context),
+                    customDivider(context),
+                    buttons(context),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 10),
-          ],
-        );
-      },
+              CustomDivider(),
+            ],
+          );
+        },
+      ),
     );
   }
 
@@ -51,14 +57,18 @@ class Posts extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text('${viewModel.names[index]}', style: kPostNameStyle),
+              child: Text('${viewModel.names[index]}',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .copyWith(fontSize: 16)),
             ),
           ),
           Align(
             alignment: Alignment.centerRight,
             child: IconButton(
               icon: Icon(AppIcons.kebab_vertical),
-              onPressed: (){
+              onPressed: () {
                 showModalBottomSheet(
                   context: context,
                   builder: (context) {
@@ -76,12 +86,18 @@ class Posts extends StatelessWidget {
     );
   }
 
-  Widget text() {
-    return Padding(
-      padding: const EdgeInsets.only(right: 10, left: 10),
-      child: Text(
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        style: kPostTextStyle,
+  Widget text(context) {
+    return InkWell(
+      onTap: () {
+        Get.changeTheme(
+            Get.isDarkMode ? appLightTheme(context) : appDarkTheme(context));
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(right: 10, left: 10),
+        child: Text(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 15),
+        ),
       ),
     );
   }
@@ -95,7 +111,7 @@ class Posts extends StatelessWidget {
     );
   }
 
-  Widget likeAndDislikes() {
+  Widget likeAndDislikes(context) {
     return Padding(
       padding: const EdgeInsets.only(left: 10, top: 5),
       child: Row(
@@ -134,7 +150,12 @@ class Posts extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 10),
                 child: Text(
                   '23 min',
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(
+                      color: Theme.of(context)
+                          .textTheme
+                          .bodyText2
+                          .color
+                          .withOpacity(0.6)),
                 ),
               ),
             ),
@@ -144,12 +165,12 @@ class Posts extends StatelessWidget {
     );
   }
 
-  Widget customDivider() {
+  Widget customDivider(context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
-      child: Container(
+      child: Divider(
         height: 1,
-        color: Colors.grey[100],
+        color: Theme.of(context).dividerColor,
       ),
     );
   }
@@ -161,23 +182,55 @@ class Posts extends StatelessWidget {
         children: [
           Expanded(
             child: TextButton.icon(
-              style: kPostButtonStyle,
+              style: ButtonStyle(
+                foregroundColor: MaterialStateColor.resolveWith(
+                  (states) => Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .color
+                      .withOpacity(0.7),
+                ),
+              ),
               onPressed: () {},
-              icon: Icon(AppIcons.thumbs_up),
-              label: Text('like'.tr),
+              icon: Icon(
+                AppIcons.thumbs_up,
+              ),
+              label: Text(
+                'like'.tr,
+              ),
             ),
           ),
           Expanded(
             child: TextButton.icon(
-              style: kPostButtonStyle,
+              style: ButtonStyle(
+                foregroundColor: MaterialStateColor.resolveWith(
+                  (states) => Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .color
+                      .withOpacity(0.7),
+                ),
+              ),
               onPressed: () {},
-              icon: Icon(AppIcons.thumbs_down),
-              label: Text('dislike'.tr),
+              icon: Icon(
+                AppIcons.thumbs_down,
+              ),
+              label: Text(
+                'dislike'.tr,
+              ),
             ),
           ),
           Expanded(
             child: TextButton.icon(
-              style: kPostButtonStyle,
+              style: ButtonStyle(
+                foregroundColor: MaterialStateColor.resolveWith(
+                  (states) => Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .color
+                      .withOpacity(0.7),
+                ),
+              ),
               onPressed: () {
                 Comments();
               },
@@ -194,23 +247,32 @@ class Posts extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          leading: Icon(Icons.directions, color: Colors.blue[300],),
+          leading: Icon(
+            Icons.directions,
+            color: Colors.blue[300],
+          ),
           title: Text('direct'.tr),
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
         ),
         ListTile(
-          leading: Icon(Icons.report_problem_outlined, color: Colors.orange[300],),
+          leading: Icon(
+            Icons.report_problem_outlined,
+            color: Colors.orange[300],
+          ),
           title: Text('report'.tr),
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
         ),
         ListTile(
-          leading: Icon(Icons.delete_sweep, color: Colors.red[300],),
+          leading: Icon(
+            Icons.delete_sweep,
+            color: Colors.red[300],
+          ),
           title: Text('delete'.tr),
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
         ),

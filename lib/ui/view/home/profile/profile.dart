@@ -21,7 +21,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: viewModel,
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
       onPageBuilder: (context, value) => body(context),
     );
   }

@@ -1,39 +1,15 @@
 import 'package:diet_app/core/constant/styles.dart';
+import 'package:diet_app/core/widget/view_all_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class Meals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10),
-      child: Column(
-        children: [
-          diets_header(),
-          diets(),
-        ],
-      ),
-    );
-  }
-
-  Widget diets_header() {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: Text('Diyetler', style: kSearchTitleStyle),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'see_all'.tr,
-                style: kViewAllStyle,
-              ),
-            )
-          ],
-        ),
-      ],
+    return ViewAllWidget(
+      title: 'diets'.tr,
+      onClick: null,
+      child: diets(),
     );
   }
 
@@ -49,7 +25,7 @@ class Meals extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.only(right: 10),
             child: InkWell(
-              onTap: (){},
+              onTap: () {},
               child: Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -60,7 +36,8 @@ class Meals extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
                     child: Image(
-                      image: AssetImage('assets/images/sign_up/background.webp'),
+                      image:
+                          AssetImage('assets/images/sign_up/background.webp'),
                       fit: BoxFit.cover,
                     ),
                   ),

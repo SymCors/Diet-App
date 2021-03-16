@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: viewModel,
-      backgroundColor: AppColors.backgroundColor,
       onPageBuilder: (context, value) => body(context),
     );
   }

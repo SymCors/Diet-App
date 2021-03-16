@@ -28,12 +28,19 @@ const Map<String, String> trTR = {
   'dislike': 'Beğenme',
   'comment': 'Yorum Yap',
 
+  'dietitians': 'Diyetisyenler',
+  'dietitian': 'Diyetisyen',
+  'diets': 'Diyetler',
+  'exercises': 'Egzersizler',
   'see_all': 'Hepsini Gör',
 
   'discover': 'Keşfet',
   'do_sport': 'Spor yaparak sağlığınızı koruyun',
 
   'archive': 'Arşivle',
+  'programs': 'Programlar',
+  'yoga': 'Yoga',
+  'total_diet': 'Toplam Diyet',
 
   'day': 'Gün',
   'starting': 'Başlangıç',

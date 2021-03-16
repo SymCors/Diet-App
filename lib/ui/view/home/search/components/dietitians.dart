@@ -1,44 +1,19 @@
 import 'package:diet_app/core/constant/colors.dart';
-import 'package:diet_app/core/constant/styles.dart';
+import 'package:diet_app/core/widget/view_all_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class Dietitians extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
-      child: Column(
-        children: [
-          diets_header(),
-          docs(),
-        ],
-      ),
+    return ViewAllWidget(
+      title: 'dietitians'.tr,
+      onClick: null,
+      child: docs(context),
     );
   }
 
-  Widget diets_header() {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: Text('Diyetisyenler', style: kSearchTitleStyle),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'see_all'.tr,
-                style: kViewAllStyle,
-              ),
-            )
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget docs() {
+  Widget docs(context) {
     return GridView.count(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
@@ -78,7 +53,7 @@ class Dietitians extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     margin: EdgeInsets.only(bottom: 5),
-                    child: Text('Diyetisyen', style: TextStyle(color: AppColors.primarySwatch),),
+                    child: Text('dietitian'.tr, style: Theme.of(context).textTheme.bodyText2.copyWith(color: AppColors.primarySwatch),),
                   ),
                 ),
                 Positioned(

@@ -9,12 +9,12 @@ class TotalDietTime extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Colors.white),
+          borderRadius: BorderRadius.circular(10), color: Theme.of(context).cardColor),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            header(),
+            header(context),
             card(),
           ],
         ),
@@ -22,21 +22,21 @@ class TotalDietTime extends StatelessWidget {
     );
   }
 
-  Widget header() {
+  Widget header(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
+      padding: const EdgeInsets.only(left: 7, right: 7, bottom: 5),
       child: Row(
         children: [
           Expanded(
-            child: Text('Toplam Diyet', style: kSearchTitleStyle),
+            child: Text('total_diet'.tr, style: Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),),
           ),
           Container(
             decoration: BoxDecoration(
-              color: AppColors.backgroundColor,
+              color: !Get.isDarkMode ? AppColors.backgroundColor : Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.circular(10),
             ),
             padding: EdgeInsets.all(10),
-            child: Text('7 ' + 'day'.tr, style: kExerciseDetailsTitleStyle,),
+            child: Text('7 ' + 'day'.tr),
           ),
         ],
       ),

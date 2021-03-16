@@ -1,13 +1,15 @@
 import 'package:date_picker_timeline/date_picker_widget.dart';
+import 'package:date_picker_timeline/extra/style.dart';
 import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
+import 'package:diet_app/core/widget/custom_divider.dart';
 import 'package:diet_app/core/widget/meal_container.dart';
 import 'package:diet_app/core/widget/rounded_linear_progress_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:get/utils.dart';
+import 'package:get/get.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class CurrentDiet extends StatefulWidget {
@@ -20,18 +22,11 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: null,
-      onPageBuilder: (context, value) => home(),
-    );
-  }
-
-  Widget home() {
-    return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         title: Text('my_diet'.tr),
       ),
-      body: body(),
+      backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
+      onPageBuilder: (context, value) => body(),
     );
   }
 
@@ -41,21 +36,21 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           date_picker(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
           header(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
           on_which_diet(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
           breakfast(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
           early_snack(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
           lunch(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
           late_snack(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
           dinner(),
-          SizedBox(height: 15),
+          CustomDivider(height: 15),
         ],
       ),
     );
@@ -63,21 +58,26 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
 
   Widget date_picker() {
     return Container(
-      color: Colors.white,
       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: DatePicker(
         DateTime.now().subtract(Duration(days: 2)),
         initialSelectedDate: DateTime.now(),
         selectionColor: AppColors.primarySwatch,
         selectedTextColor: Colors.white,
+        dateTextStyle: defaultDateTextStyle.copyWith(color: Theme.of(context).textTheme.bodyText1.color),
+        dayTextStyle: defaultDayTextStyle.copyWith(color: Theme.of(context).textTheme.bodyText1.color),
+        monthTextStyle: defaultMonthTextStyle.copyWith(color: Theme.of(context).textTheme.bodyText1.color),
         onDateChange: (date) {
           print(date);
         },
         locale: 'tr_TR',
         activeDates: [
-          DateTime(2021, 03, 10),
-          DateTime(2021, 03, 11),
-          DateTime(2021, 03, 12),
+          DateTime.now().subtract(Duration(days: 1)),
+          DateTime.now().subtract(Duration(days: 2)),
+          DateTime.now(),
+          DateTime.now().add(Duration(days: 1)),
+          DateTime.now().add(Duration(days: 2)),
         ],
         deactivatedColor: Colors.grey,
         daysCount: 62,
@@ -87,7 +87,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
 
   Widget header() {
     return Container(
-      color: Colors.white,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Column(
         children: [
           Container(
@@ -101,7 +101,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                     child: Icon(
                       Icons.chevron_left,
                       size: 50,
-                      color: Colors.black.withOpacity(0.7),
+                      color: Theme.of(context).textTheme.bodyText1.color.withOpacity(0.7),
                     ),
                   ),
                 ),
@@ -135,7 +135,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                     child: Icon(
                       Icons.chevron_right,
                       size: 50,
-                      color: Colors.black.withOpacity(0.7),
+                      color: Theme.of(context).textTheme.bodyText1.color.withOpacity(0.7),
                     ),
                   ),
                 ),
@@ -197,7 +197,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
 
   Widget on_which_diet() {
     return Container(
-      color: Colors.white,
+      color: Theme.of(context).scaffoldBackgroundColor,
       padding: EdgeInsets.only(top: 15, bottom: 20),
       child: Column(
         children: [
@@ -216,7 +216,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
               Expanded(
                 child: Text(
                   'Diyet Ismi 123',
-                  style: kSearchTitleStyle,
+                  style: null,
                 ),
               ),
               InkWell(

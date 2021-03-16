@@ -1,46 +1,51 @@
 import 'package:diet_app/core/constant/colors.dart';
-import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:get/utils.dart';
+import 'package:get/get.dart';
 
 class Weight extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Colors.white),
+          borderRadius: BorderRadius.circular(10),
+          color: Theme.of(context).cardColor),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            header(),
-            kilo(),
+            header(context),
+            kilo(context),
             progressBar(),
-            texts(),
+            texts(context),
           ],
         ),
       ),
     );
   }
 
-  Widget header() {
+  Widget header(context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
+      padding: const EdgeInsets.only(left: 7, right: 7, bottom: 5),
       child: Row(
         children: [
           Expanded(
-            child: Text('kilo'.tr, style: kSearchTitleStyle),
+            child: Text('kilo'.tr,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6
+                    .copyWith(fontSize: 17)),
           ),
           Container(
             decoration: BoxDecoration(
-              color: AppColors.backgroundColor,
+              color: !Get.isDarkMode
+                  ? AppColors.backgroundColor
+                  : Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.circular(10),
             ),
             padding: EdgeInsets.all(10),
             child: Text(
               '65.5 kg',
-              style: kExerciseDetailsTitleStyle,
             ),
           ),
           SizedBox(
@@ -55,16 +60,21 @@ class Weight extends StatelessWidget {
       ),
     );
   }
-  Widget kilo() {
+
+  Widget kilo(context) {
     return Container(
       alignment: Alignment.topLeft,
       margin: EdgeInsets.only(left: 10),
       child: Text(
         '71.0 kg',
-        style: bigTextStyle,
+        style: Theme.of(context)
+            .textTheme
+            .headline6
+            .copyWith(color: AppColors.titleColors, fontSize: 25),
       ),
     );
   }
+
   Widget progressBar() {
     return Container(
       margin: EdgeInsets.only(left: 10, right: 10, top: 20, bottom: 5),
@@ -75,7 +85,8 @@ class Weight extends StatelessWidget {
       ),
     );
   }
-  Widget texts(){
+
+  Widget texts(context) {
     return Container(
       margin: EdgeInsets.only(left: 10, top: 0, right: 10, bottom: 10),
       child: Row(
@@ -83,12 +94,24 @@ class Weight extends StatelessWidget {
           Expanded(
             child: Text(
               'starting'.tr + ': ' + '75.3' + ' kg',
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(
+                  color: Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .color
+                      .withOpacity(0.6),
+                  fontSize: 13),
             ),
           ),
           Text(
             'aim'.tr + ': ' + '65.5' + ' kg',
-            style: TextStyle(color: Colors.grey),
+            style: TextStyle(
+                color: Theme.of(context)
+                    .textTheme
+                    .bodyText2
+                    .color
+                    .withOpacity(0.6),
+                fontSize: 13),
           ),
         ],
       ),

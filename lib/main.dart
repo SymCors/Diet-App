@@ -17,7 +17,14 @@ import 'ui/view/home/messages/message_ui.dart';
 
 void main() {
   runApp(
-    GetMaterialApp(
+    MyApp(),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
       locale: LanguageManager.locale,
       fallbackLocale: LanguageManager.fallbackLocale,
       translations: LanguageManager(),
@@ -34,11 +41,12 @@ void main() {
         Routes.current_diet:(context) => CurrentDiet(),
       },
       themeMode: ThemeMode.light,
-      darkTheme: appDarkTheme,
-      theme: appLightTheme,
-    ),
-  );
+      darkTheme: appDarkTheme(context),
+      theme: appLightTheme(context),
+    );
+  }
 }
+
 
 class Main extends StatefulWidget {
   @override

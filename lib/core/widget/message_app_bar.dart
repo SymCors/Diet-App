@@ -1,3 +1,4 @@
+import 'package:diet_app/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
 import 'circular_image.dart';
@@ -13,10 +14,10 @@ class AppMessageAppBar extends StatelessWidget {
     return Material(
       elevation: 4,
       child: Container(
-        color: Colors.white,
+        color: Theme.of(context).scaffoldBackgroundColor,
         height: 56,
         child: Padding(
-          padding: const EdgeInsets.only(left: 15, right: 15),
+          padding: const EdgeInsets.only(left: 15),
           child: Row(
             children: [
               InkWell(
@@ -25,10 +26,13 @@ class AppMessageAppBar extends StatelessWidget {
                 },
                 child: Icon(Icons.arrow_back),
               ),
-              InkWell(
-                onTap: () {},
-                child: ProfileSection(nameSurname, status),
+              Expanded(
+                child: InkWell(
+                  onTap: () {},
+                  child: ProfileSection(context, nameSurname, status),
+                ),
               ),
+              IconButton(icon: Icon(Icons.settings), onPressed: (){})
             ],
           ),
         ),
@@ -36,7 +40,7 @@ class AppMessageAppBar extends StatelessWidget {
     );
   }
 
-  Widget ProfileSection(nameSurname, status) {
+  Widget ProfileSection(context, nameSurname, status) {
     return Row(
       children: [
         SizedBox(width: 15),
@@ -48,12 +52,12 @@ class AppMessageAppBar extends StatelessWidget {
           children: [
             Text(
               '$nameSurname',
-              style: TextStyle(color: Colors.black, fontSize: 16),
+              style: Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 15),
             ),
             SizedBox(height: 2),
             Text(
               '$status',
-              style: TextStyle(color: Colors.green, fontSize: 13),
+              style: Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 13, color: AppColors.primarySwatch),
             ),
           ],
         ),
