@@ -20,7 +20,9 @@ class BottomSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: InkWell(
-        onTap: (){},
+        onTap: (){
+          Get.toNamed(Routes.settings);
+        },
         child: ListTile(
           leading: Icon(Icons.settings, color: AppColors.primarySwatch,),
           title: Text('settings'.tr),
