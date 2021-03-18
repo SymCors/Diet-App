@@ -62,8 +62,16 @@ class _MessagesState extends State<Messages> {
                 leading: AppCircularImage(
                   radius: 20,
                 ),
-                title: Text('Name Surname ${index+1}'),
-                subtitle: Text('Lorem ipsum dolor sit amet, consectetur...'),
+                title: Text('Name Surname ${index + 1}'),
+                subtitle: Text(
+                  'Lorem ipsum dolor sit amet, consectetur...',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .copyWith(fontSize: 13, color: Theme.of(context)
+                      .textTheme
+                      .bodyText2.color.withOpacity(0.7),),
+                ),
                 trailing: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

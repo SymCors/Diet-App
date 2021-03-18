@@ -7,12 +7,12 @@ class Index extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Colors.white),
+          borderRadius: BorderRadius.circular(10), color: Theme.of(context).cardColor),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            header(),
+            header(context),
             SizedBox(
               height: 10,
             ),
@@ -34,13 +34,13 @@ class Index extends StatelessWidget {
     );
   }
 
-  Widget header() {
+  Widget header(context) {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
       child: Row(
         children: [
-          Expanded(child: Text('Vücut Kitle İndeksi', style: kSearchTitleStyle),),
+          Expanded(child: Text('Vücut Kitle İndeksi', style: Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),),),
           Icon(AppIcons.question, color: Colors.orange, size: 20,),
         ],
       ),

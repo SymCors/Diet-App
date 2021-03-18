@@ -7,7 +7,7 @@ class CardHeader extends StatelessWidget {
     return Stack(
       children: [
         background(),
-        texts(),
+        texts(context),
       ],
     );
   }
@@ -22,11 +22,11 @@ class CardHeader extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
-            blurRadius: 20,
+            blurRadius: 5,
             spreadRadius: 1,
             offset: Offset(
-              5,
-              5.0,
+              1,
+              1,
             ),
           ),
         ],
@@ -40,7 +40,7 @@ class CardHeader extends StatelessWidget {
       ),
     );
   }
-  Widget texts() {
+  Widget texts(context) {
     return Container(
       margin: EdgeInsets.only(left: 30, top: 35),
       child: Column(
@@ -48,12 +48,11 @@ class CardHeader extends StatelessWidget {
         children: [
           Text(
             'discover'.tr,
-            style: TextStyle(
-                color: Colors.white, fontSize: 28, fontWeight: FontWeight.w600),
+            style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 25, color: Colors.white, fontWeight: FontWeight.w600),
           ),
           Text(
             'do_sport'.tr,
-            style: TextStyle(color: Colors.white),
+            style: Theme.of(context).textTheme.bodyText2.copyWith(color: Colors.white),
           ),
         ],
       ),

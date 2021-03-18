@@ -25,8 +25,8 @@ class _MessageUIState extends BaseState<MessageUI> {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: viewModel,
+      backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
       onPageBuilder: (context, value) => body(),
-      backgroundColor: Color(0xfff7f6fb),
     );
   }
 

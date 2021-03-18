@@ -14,10 +14,19 @@ import 'ui/view/authentication/on_board/on_board.dart';
 import 'ui/view/home/exercises/pages/exercise_details.dart';
 import 'ui/view/home/exercises/pages/exercise_details_view.dart';
 import 'ui/view/home/messages/message_ui.dart';
+import 'ui/view/home/profile/pages/my_analysis/my_analysis.dart';
+import 'ui/view/home/profile/pages/settings/settings.dart';
 
 void main() {
   runApp(
-    GetMaterialApp(
+    MyApp(),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
       locale: LanguageManager.locale,
       fallbackLocale: LanguageManager.fallbackLocale,
       translations: LanguageManager(),
@@ -32,13 +41,16 @@ void main() {
         Routes.exercise_details_view:(context) => ExerciseDetailsView(),
         Routes.message_ui:(context) => MessageUI(),
         Routes.current_diet:(context) => CurrentDiet(),
+        Routes.my_analysis:(context) => MyAnalysis(),
+        Routes.settings:(context) => Settings(),
       },
       themeMode: ThemeMode.light,
-      darkTheme: appDarkTheme,
-      theme: appLightTheme,
-    ),
-  );
+      darkTheme: appDarkTheme(context),
+      theme: appLightTheme(context),
+    );
+  }
 }
+
 
 class Main extends StatefulWidget {
   @override

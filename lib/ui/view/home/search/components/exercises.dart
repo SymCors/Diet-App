@@ -1,43 +1,14 @@
-import 'package:diet_app/core/constant/styles.dart';
+import 'package:diet_app/core/widget/view_all_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class Exercises extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 10, right: 10),
-      child: Column(
-        children: [
-          diets_header(),
-          diets(),
-        ],
-      ),
-    );
+    return ViewAllWidget(title: 'exercises'.tr, onClick: null, child: exercises());
   }
 
-  Widget diets_header() {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: Text('Egzersizler', style: kSearchTitleStyle),
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'see_all'.tr,
-                style: kViewAllStyle,
-              ),
-            )
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget diets() {
+  Widget exercises() {
     return Container(
       height: 110,
       margin: EdgeInsets.only(bottom: 10),

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'components/index.dart';
-import 'components/settings_section.dart';
+import 'components/bottom_section.dart';
 import 'components/total_diet_time.dart';
 import 'components/weight.dart';
 
@@ -21,7 +21,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: viewModel,
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
       onPageBuilder: (context, value) => body(context),
     );
   }
@@ -38,7 +38,7 @@ class _ProfileState extends State<Profile> {
             SizedBox(height: 15,),
             Index(),
             SizedBox(height: 15,),
-            SettingsSection(),
+            BottomSection(),
           ],
         ),
       ),

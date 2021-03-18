@@ -1,5 +1,4 @@
 import 'package:diet_app/core/constant/colors.dart';
-import 'package:diet_app/core/constant/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
@@ -24,7 +23,7 @@ class MealContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: backgroundColor ?? Colors.white,
+      color: backgroundColor ?? Theme.of(context).scaffoldBackgroundColor,
       padding: EdgeInsets.only(left: 15, top: 15, bottom: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +39,7 @@ class MealContainer extends StatelessWidget {
               ),
               Text(
                 title,
-                style: kSearchTitleStyle,
+                style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 17),
               ),
               SizedBox(
                 width: 10,

@@ -61,6 +61,7 @@ class _OnBoardState extends BaseState<OnBoard> {
     return BaseView(
       onModelReady: null,
       viewModel: viewModel,
+      backgroundColor: Colors.white,
       onPageBuilder: (context, value) => body(),
     );
   }
