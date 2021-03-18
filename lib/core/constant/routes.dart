@@ -8,4 +8,5 @@ class Routes {
   static const String exercise_details_view = '/exercise_details_view';
   static const String message_ui = '/message_ui';
   static const String current_diet = '/current_diet';
+  static const String my_analysis = '/my_analysis';
 }

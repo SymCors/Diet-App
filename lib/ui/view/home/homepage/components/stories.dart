@@ -1,4 +1,3 @@
-import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:flutter/material.dart';
 

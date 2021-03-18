@@ -1,5 +1,4 @@
 import 'package:diet_app/core/base/view/base_view.dart';
-import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/ui/viewmodel/home/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

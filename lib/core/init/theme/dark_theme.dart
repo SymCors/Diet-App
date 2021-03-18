@@ -12,6 +12,7 @@ ThemeData appDarkTheme(BuildContext context){
         foregroundColor: Colors.white,
         titleTextStyle: TextStyle(color: Colors.white),
         iconTheme: IconThemeData(color: Colors.white),
+        textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme).apply(bodyColor: Colors.black),
       ),
       colorScheme: ColorScheme.light(
         primary: AppColors.primarySwatch,

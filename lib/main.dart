@@ -14,6 +14,7 @@ import 'ui/view/authentication/on_board/on_board.dart';
 import 'ui/view/home/exercises/pages/exercise_details.dart';
 import 'ui/view/home/exercises/pages/exercise_details_view.dart';
 import 'ui/view/home/messages/message_ui.dart';
+import 'ui/view/home/profile/pages/my_analysis/my_analysis.dart';
 
 void main() {
   runApp(
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         Routes.exercise_details_view:(context) => ExerciseDetailsView(),
         Routes.message_ui:(context) => MessageUI(),
         Routes.current_diet:(context) => CurrentDiet(),
+        Routes.my_analysis:(context) => MyAnalysis(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme(context),

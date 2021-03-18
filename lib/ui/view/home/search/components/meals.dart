@@ -1,4 +1,3 @@
-import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/widget/view_all_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/utils.dart';

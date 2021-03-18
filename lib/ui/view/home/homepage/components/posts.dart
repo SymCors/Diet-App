@@ -1,5 +1,3 @@
-import 'package:diet_app/core/constant/colors.dart';
-import 'package:diet_app/core/constant/styles.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:diet_app/core/init/theme/dark_theme.dart';
 import 'package:diet_app/core/init/theme/light_theme.dart';

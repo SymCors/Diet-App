@@ -23,7 +23,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
     return BaseView(
       viewModel: null,
       appBar: AppBar(
-        title: Text('my_diet'.tr),
+        title: Text('my_diet'.tr, style: Theme.of(context).appBarTheme.titleTextStyle,),
       ),
       backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
       onPageBuilder: (context, value) => body(),

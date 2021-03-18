@@ -1,4 +1,3 @@
-import 'package:diet_app/core/constant/styles.dart';
 import 'package:flutter/material.dart';
 
 class MessageDateUI extends StatelessWidget {
