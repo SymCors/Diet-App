@@ -11,20 +11,24 @@ class AppBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: size,
-      child: Container(
-        decoration: BoxDecoration(
-            color: Theme.of(context).scaffoldBackgroundColor,
-            borderRadius: BorderRadius.only(
-              topLeft: const Radius.circular(20),
-              topRight: const Radius.circular(20),
+      decoration: BoxDecoration(
+        color: Theme.of(context).scaffoldBackgroundColor,
+        borderRadius: BorderRadius.only(
+          topLeft: const Radius.circular(20),
+          topRight: const Radius.circular(20),
+        ),
+      ),
+      child: Column(
+        children: [
+          Center(
+            child: Icon(
+              AppIcons.minus,
+              color: Colors.blue[200],
+              size: 25,
             ),
-        ),
-        child: Column(
-          children: [
-            Center(child: Icon(AppIcons.minus, color: Colors.blue[200], size: 25,),),
-            child,
-          ],
-        ),
+          ),
+          child,
+        ],
       ),
     );
   }

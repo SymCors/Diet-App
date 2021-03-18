@@ -23,9 +23,7 @@ class Dietitians extends StatelessWidget {
       clipBehavior: Clip.none,
       children: List.generate(8, (index) {
         return InkWell(
-          onTap: (){
-
-          },
+          onTap: () {},
           child: Card(
             child: Stack(
               children: [
@@ -34,8 +32,8 @@ class Dietitians extends StatelessWidget {
                       color: Colors.white,
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image:
-                        AssetImage('assets/images/sign_up/profile_photo.png'),
+                        image: AssetImage(
+                            'assets/images/sign_up/profile_photo.png'),
                       )),
                 ),
                 Align(
@@ -53,13 +51,23 @@ class Dietitians extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     margin: EdgeInsets.only(bottom: 5),
-                    child: Text('dietitian'.tr, style: Theme.of(context).textTheme.bodyText2.copyWith(color: AppColors.primarySwatch),),
+                    child: Text(
+                      'dietitian'.tr,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText2
+                          .copyWith(color: AppColors.primarySwatch),
+                    ),
                   ),
                 ),
                 Positioned(
                   right: 0,
                   top: 0,
-                  child: Icon(Icons.circle, color: Colors.green, size: 17,),
+                  child: Icon(
+                    Icons.circle,
+                    color: Colors.green,
+                    size: 17,
+                  ),
                 )
               ],
             ),

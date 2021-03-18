@@ -16,7 +16,7 @@ class Posts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: !Get.isDarkMode ? Colors.white : null,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,

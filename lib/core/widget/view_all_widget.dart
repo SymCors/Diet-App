@@ -5,12 +5,18 @@ class ViewAllWidget extends StatelessWidget {
   final Widget child;
   final title;
   final VoidCallback onClick;
+  final color;
 
-  ViewAllWidget({@required this.child, @required this.title, @required this.onClick});
+  ViewAllWidget(
+      {@required this.child,
+      @required this.title,
+      @required this.onClick,
+      this.color});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      color: color ?? Theme.of(context).scaffoldBackgroundColor,
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
       child: Column(
         children: [
@@ -27,7 +33,11 @@ class ViewAllWidget extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: Text(title, style: Theme.of(context).textTheme.headline6.copyWith(fontSize: 17)),
+              child: Text(title,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline6
+                      .copyWith(fontSize: 17)),
             ),
             TextButton(
               onPressed: () {
@@ -35,7 +45,12 @@ class ViewAllWidget extends StatelessWidget {
               },
               child: Text(
                 'see_all'.tr,
-                style: TextStyle(color: Theme.of(context).textTheme.bodyText2.color.withOpacity(0.7)),
+                style: TextStyle(
+                    color: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        .color
+                        .withOpacity(0.7)),
               ),
             )
           ],

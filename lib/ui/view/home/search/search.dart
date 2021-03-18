@@ -1,4 +1,3 @@
-import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/widget/custom_divider.dart';
 import 'package:diet_app/ui/view/home/search/components/exercises.dart';
 import 'package:diet_app/ui/viewmodel/home/search/search.dart';
@@ -18,20 +17,17 @@ class _SearchState extends State<Search> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseView(
-      viewModel: viewModel,
-      onPageBuilder: (context, value) => body(context),
-    );
-  }
-
-  Widget body(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         children: [
           Meals(),
-          CustomDivider(height: 15,),
+          CustomDivider(
+            height: 15,
+          ),
           Dietitians(),
-          CustomDivider(height: 15,),
+          CustomDivider(
+            height: 15,
+          ),
           Exercises(),
         ],
       ),

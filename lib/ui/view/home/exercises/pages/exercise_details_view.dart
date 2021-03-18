@@ -13,10 +13,13 @@ class _ExerciseDetailsViewState extends State<ExerciseDetailsView> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseView(viewModel: viewModel, onPageBuilder: (context, value) => body(),);
+    return BaseView(
+      viewModel: viewModel,
+      onPageBuilder: (context, value) => body(),
+    );
   }
 
-  Widget body(){
+  Widget body() {
     return Container();
   }
 }

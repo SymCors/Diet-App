@@ -6,7 +6,8 @@ class AppButtonInfo extends StatelessWidget {
   final Color foregroundColor;
   final Color backgroundColor;
 
-  AppButtonInfo({this.icon, this.text, this.foregroundColor, this.backgroundColor});
+  AppButtonInfo(
+      {this.icon, this.text, this.foregroundColor, this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +15,22 @@ class AppButtonInfo extends StatelessWidget {
       height: 30,
       child: ElevatedButton(
         onPressed: null,
-        style: ButtonStyle(backgroundColor: MaterialStateColor.resolveWith((states) => backgroundColor)),
+        style: ButtonStyle(
+            backgroundColor:
+                MaterialStateColor.resolveWith((states) => backgroundColor)),
         child: Row(
           children: [
-            Icon(icon, color: foregroundColor,),
-            SizedBox(width: 3,),
-            Text('$text', style: TextStyle(color: foregroundColor),),
+            Icon(
+              icon,
+              color: foregroundColor,
+            ),
+            SizedBox(
+              width: 3,
+            ),
+            Text(
+              '$text',
+              style: TextStyle(color: foregroundColor),
+            ),
           ],
         ),
       ),

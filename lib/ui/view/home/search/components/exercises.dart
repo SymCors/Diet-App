@@ -5,7 +5,11 @@ import 'package:get/utils.dart';
 class Exercises extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ViewAllWidget(title: 'exercises'.tr, onClick: null, child: exercises());
+    return ViewAllWidget(
+      title: 'exercises'.tr,
+      onClick: null,
+      child: exercises(),
+    );
   }
 
   Widget exercises() {
@@ -20,7 +24,7 @@ class Exercises extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.only(right: 10),
             child: InkWell(
-              onTap: (){},
+              onTap: () {},
               child: Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -31,7 +35,8 @@ class Exercises extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
                     child: Image(
-                      image: AssetImage('assets/images/sign_up/background.webp'),
+                      image:
+                          AssetImage('assets/images/sign_up/background.webp'),
                       fit: BoxFit.cover,
                     ),
                   ),

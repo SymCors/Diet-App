@@ -33,26 +33,38 @@ class _MyAnalysisState extends BaseState<MyAnalysis> {
         itemCount: 10, // change according to the viewmodel
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: (){},
+            onTap: () {},
             child: Container(
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
                   color: Colors.deepOrangeAccent,
-                  borderRadius: BorderRadius.circular(10)
-              ),
+                  borderRadius: BorderRadius.circular(10)),
               child: Container(
                 margin: EdgeInsets.only(left: 7),
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(topRight: Radius.circular(10), bottomRight: Radius.circular(10),),
+                  color: Theme.of(context).cardColor,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                  ),
                 ),
                 child: ListTile(
                   leading: CircleAvatar(
-                    backgroundImage: AssetImage('assets/icons/medical_analysis_2.png'),
+                    backgroundImage:
+                        AssetImage('assets/icons/medical_analysis_2.png'),
                   ),
                   title: Text('Kan Tahlili'),
-                  subtitle: Text('18/03/2021'),
-                  trailing: Icon(Icons.chevron_right, color: Colors.deepOrange,),
+                  subtitle: Text(
+                    '18/03/2021',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        .copyWith(fontSize: 13, color: Colors.grey),
+                  ),
+                  trailing: Icon(
+                    Icons.chevron_right,
+                    color: Colors.deepOrange,
+                  ),
                 ),
               ),
             ),

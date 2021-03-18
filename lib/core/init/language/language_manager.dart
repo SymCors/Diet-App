@@ -4,8 +4,7 @@ import 'package:get/get.dart';
 import 'package:diet_app/core/init/language/languages/english.dart';
 import 'package:diet_app/core/init/language/languages/turkish.dart';
 
-class LanguageManager extends Translations{
-
+class LanguageManager extends Translations {
   static final locale = Locale('tr', 'TR');
 
   // fallbackLocale saves the day when the locale gets in trouble
@@ -29,9 +28,9 @@ class LanguageManager extends Translations{
   // Translations are separated maps in `lang` file
   @override
   Map<String, Map<String, String>> get keys => {
-    'en_US': enUS,
-    'tr_TR': trTR,
-  };
+        'en_US': enUS,
+        'tr_TR': trTR,
+      };
 
   // Gets locale from language, and updates the locale
   static void changeLocale(String lang) {

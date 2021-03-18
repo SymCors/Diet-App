@@ -109,7 +109,7 @@ class FormFields extends StatelessWidget {
           ),
           SizedBox(height: 20),
           GestureDetector(
-            onTap: (){
+            onTap: () {
               viewModel.signUp();
             },
             child: Container(

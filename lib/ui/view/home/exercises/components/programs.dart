@@ -10,7 +10,8 @@ class Programs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewAllWidget(title: 'programs'.tr, onClick: null, child: program_lists(context));
+    return ViewAllWidget(
+        title: 'programs'.tr, onClick: null, child: program_lists(context));
   }
 
   Widget program_lists(context) {
@@ -23,7 +24,7 @@ class Programs extends StatelessWidget {
       clipBehavior: Clip.none,
       children: List.generate(13, (index) {
         return InkWell(
-          onTap: (){
+          onTap: () {
             Get.toNamed(Routes.exercise_details);
           },
           child: Card(
@@ -35,7 +36,7 @@ class Programs extends StatelessWidget {
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image:
-                        AssetImage('assets/images/sign_up/background.webp'),
+                            AssetImage('assets/images/sign_up/background.webp'),
                       )),
                 ),
                 Align(
@@ -53,7 +54,13 @@ class Programs extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     margin: EdgeInsets.only(bottom: 5),
-                    child: Text('yoga'.tr, style: Theme.of(context).textTheme.bodyText2.copyWith(color: AppColors.primarySwatch),),
+                    child: Text(
+                      'yoga'.tr,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText2
+                          .copyWith(color: AppColors.primarySwatch),
+                    ),
                   ),
                 ),
               ],

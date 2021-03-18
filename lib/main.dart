@@ -51,13 +51,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-class Main extends StatefulWidget {
-  @override
-  _MainState createState() => _MainState();
-}
-
-class _MainState extends BaseState<Main> {
+class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OnBoard();

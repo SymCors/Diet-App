@@ -14,8 +14,6 @@ final kSubtitleStyle = TextStyle(
   height: 1.2,
 );
 
-
-
 final cardTitleStyleForDietTime = TextStyle(
   color: Colors.white,
   fontSize: 19,

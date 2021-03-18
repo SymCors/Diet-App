@@ -8,7 +8,10 @@ class MyMessageUI extends StatelessWidget {
       child: Container(
         constraints: BoxConstraints(minWidth: 80, maxWidth: 275),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(10), bottomRight: Radius.circular(10), bottomLeft: Radius.circular(10)),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10),
+              bottomRight: Radius.circular(10),
+              bottomLeft: Radius.circular(10)),
           color: Colors.white,
         ),
         padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 7),
@@ -19,7 +22,10 @@ class MyMessageUI extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 20),
               child: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
-                style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 15, color: Colors.black),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText2
+                    .copyWith(fontSize: 15, color: Colors.black),
               ),
             ),
             Positioned(
@@ -27,11 +33,16 @@ class MyMessageUI extends StatelessWidget {
               bottom: 0,
               child: Row(
                 children: [
-                  Icon(Icons.done, size: 14, color: Colors.green,),
+                  Icon(
+                    Icons.done,
+                    size: 14,
+                    color: Colors.green,
+                  ),
                   SizedBox(width: 3),
                   Text(
                     '14:12',
-                    style: TextStyle(fontSize: 12, color: Colors.black.withOpacity(0.5)),
+                    style: TextStyle(
+                        fontSize: 12, color: Colors.black.withOpacity(0.5)),
                   ),
                 ],
               ),

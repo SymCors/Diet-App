@@ -32,7 +32,7 @@ class AppMessageAppBar extends StatelessWidget {
                   child: ProfileSection(context, nameSurname, status),
                 ),
               ),
-              IconButton(icon: Icon(Icons.settings), onPressed: (){})
+              IconButton(icon: Icon(Icons.settings), onPressed: () {})
             ],
           ),
         ),
@@ -52,12 +52,16 @@ class AppMessageAppBar extends StatelessWidget {
           children: [
             Text(
               '$nameSurname',
-              style: Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 15),
+              style:
+                  Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 15),
             ),
             SizedBox(height: 2),
             Text(
               '$status',
-              style: Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 13, color: AppColors.primarySwatch),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyText1
+                  .copyWith(fontSize: 13, color: AppColors.primarySwatch),
             ),
           ],
         ),

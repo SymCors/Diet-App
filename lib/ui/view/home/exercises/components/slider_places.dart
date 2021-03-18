@@ -4,15 +4,18 @@ import 'package:get/utils.dart';
 class CardHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        background(),
-        texts(context),
-      ],
+    return Container(
+      color: Theme.of(context).scaffoldBackgroundColor,
+      child: Stack(
+        children: [
+          background(context),
+          texts(context),
+        ],
+      ),
     );
   }
 
-  Widget background() {
+  Widget background(context) {
     return Container(
       height: 100,
       margin: EdgeInsets.only(left: 10, top: 15, right: 10, bottom: 5),
@@ -40,6 +43,7 @@ class CardHeader extends StatelessWidget {
       ),
     );
   }
+
   Widget texts(context) {
     return Container(
       margin: EdgeInsets.only(left: 30, top: 35),
@@ -48,11 +52,15 @@ class CardHeader extends StatelessWidget {
         children: [
           Text(
             'discover'.tr,
-            style: Theme.of(context).textTheme.headline4.copyWith(fontSize: 25, color: Colors.white, fontWeight: FontWeight.w600),
+            style: Theme.of(context).textTheme.headline4.copyWith(
+                fontSize: 25, color: Colors.white, fontWeight: FontWeight.w600),
           ),
           Text(
             'do_sport'.tr,
-            style: Theme.of(context).textTheme.bodyText2.copyWith(color: Colors.white),
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2
+                .copyWith(color: Colors.white),
           ),
         ],
       ),

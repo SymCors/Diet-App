@@ -21,7 +21,13 @@ class Stories extends StatelessWidget {
                 AppCircularImage(
                   radius: 33,
                 ),
-                Text('${names[index]}', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 13),),
+                Text(
+                  '${names[index]}',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .copyWith(fontSize: 13),
+                ),
               ],
             ),
           );

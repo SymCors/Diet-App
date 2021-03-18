@@ -20,13 +20,19 @@ class BottomSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: InkWell(
-        onTap: (){
+        onTap: () {
           Get.toNamed(Routes.settings);
         },
         child: ListTile(
-          leading: Icon(Icons.settings, color: AppColors.primarySwatch,),
+          leading: Icon(
+            Icons.settings,
+            color: AppColors.primarySwatch,
+          ),
           title: Text('settings'.tr),
-          trailing: Icon(Icons.chevron_right, color: AppColors.primarySwatch,),
+          trailing: Icon(
+            Icons.chevron_right,
+            color: AppColors.primarySwatch,
+          ),
         ),
       ),
     );
@@ -38,13 +44,19 @@ class BottomSection extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: InkWell(
-        onTap: (){
+        onTap: () {
           Get.toNamed(Routes.my_analysis);
         },
         child: ListTile(
-          leading: Image.asset('assets/icons/medical_analysis.png', width: 25,),
+          leading: Image.asset(
+            'assets/icons/medical_analysis.png',
+            width: 25,
+          ),
           title: Text('my_analysis'.tr),
-          trailing: Icon(Icons.chevron_right, color: AppColors.primarySwatch,),
+          trailing: Icon(
+            Icons.chevron_right,
+            color: AppColors.primarySwatch,
+          ),
         ),
       ),
     );

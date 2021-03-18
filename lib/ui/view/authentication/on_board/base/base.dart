@@ -21,10 +21,18 @@ class OnBoardBase extends StatelessWidget {
             ),
           ),
         ),
-        Text(model.title, style: kTitleStyle, textAlign: TextAlign.center,),
+        Text(
+          model.title,
+          style: kTitleStyle,
+          textAlign: TextAlign.center,
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Text(model.subtitle, style: kSubtitleStyle, textAlign: TextAlign.center,),
+          child: Text(
+            model.subtitle,
+            style: kSubtitleStyle,
+            textAlign: TextAlign.center,
+          ),
         ),
       ],
     );

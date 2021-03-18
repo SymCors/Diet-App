@@ -83,38 +83,41 @@ class _MessageUIState extends BaseState<MessageUI> {
               onPressed: () {}),
           Expanded(
             child: Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: TextFormField(
-                    maxLines: 4,
-                    minLines: 1,
-                    keyboardType: TextInputType.multiline,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(17),
-                          borderSide: BorderSide(
-                            color: Colors.blue[100],
-                          ),
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: TextFormField(
+                  maxLines: 4,
+                  minLines: 1,
+                  keyboardType: TextInputType.multiline,
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(17),
+                        borderSide: BorderSide(
+                          color: Colors.blue[100],
                         ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(17),
-                          borderSide: BorderSide(
-                            color: Colors.black38,
-                          ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(17),
+                        borderSide: BorderSide(
+                          color: Colors.black38,
                         ),
-                        errorBorder: InputBorder.none,
-                        disabledBorder: InputBorder.none,
-                        contentPadding: EdgeInsets.only(left: 15, right: 15),
-                        hintText: 'Write Something ...'),
-                  ),
+                      ),
+                      errorBorder: InputBorder.none,
+                      disabledBorder: InputBorder.none,
+                      contentPadding: EdgeInsets.only(left: 15, right: 15),
+                      hintText: 'Write Something ...'),
                 ),
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 15, left: 5),
-            child: Icon(Icons.send, color: AppColors.primarySwatch,),
+            child: Icon(
+              Icons.send,
+              color: AppColors.primarySwatch,
+            ),
           ),
         ],
       ),

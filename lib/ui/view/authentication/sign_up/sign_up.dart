@@ -19,8 +19,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-        viewModel: viewModel,
-        onPageBuilder: (context, value) => body());
+        viewModel: viewModel, onPageBuilder: (context, value) => body());
   }
 
   Widget body() {

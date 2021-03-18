@@ -1,4 +1,3 @@
-import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:diet_app/ui/viewmodel/home/messages/messages.dart';
@@ -16,14 +15,8 @@ class _MessagesState extends State<Messages> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseView(
-      viewModel: viewModel,
-      onPageBuilder: (context, value) => body(context),
-    );
-  }
-
-  Widget body(BuildContext context) {
     return Container(
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Center(
         child: ListView.separated(
           separatorBuilder: (context, index) => Container(
@@ -65,12 +58,14 @@ class _MessagesState extends State<Messages> {
                 title: Text('Name Surname ${index + 1}'),
                 subtitle: Text(
                   'Lorem ipsum dolor sit amet, consectetur...',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText2
-                      .copyWith(fontSize: 13, color: Theme.of(context)
-                      .textTheme
-                      .bodyText2.color.withOpacity(0.7),),
+                  style: Theme.of(context).textTheme.bodyText2.copyWith(
+                        fontSize: 13,
+                        color: Theme.of(context)
+                            .textTheme
+                            .bodyText2
+                            .color
+                            .withOpacity(0.7),
+                      ),
                 ),
                 trailing: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

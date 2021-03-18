@@ -9,7 +9,8 @@ class TotalDietTime extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Theme.of(context).cardColor),
+          borderRadius: BorderRadius.circular(10),
+          color: Theme.of(context).cardColor),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -28,11 +29,17 @@ class TotalDietTime extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Text('total_diet'.tr, style: Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),),
+            child: Text(
+              'total_diet'.tr,
+              style:
+                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
+            ),
           ),
           Container(
             decoration: BoxDecoration(
-              color: !Get.isDarkMode ? AppColors.backgroundColor : Theme.of(context).backgroundColor,
+              color: !Get.isDarkMode
+                  ? AppColors.backgroundColor
+                  : Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.circular(10),
             ),
             padding: EdgeInsets.all(10),
@@ -77,33 +84,65 @@ class TotalDietTime extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Text('3 ' + 'day'.tr, style: cardTitleStyleForDietTime,),
+              leading: Text(
+                '3 ' + 'day'.tr,
+                style: cardTitleStyleForDietTime,
+              ),
               trailing: Padding(
                 padding: const EdgeInsets.only(right: 8.0),
-                child: Image(image: AssetImage('assets/icons/meal.png'), fit: BoxFit.contain, width: 40,),
+                child: Image(
+                  image: AssetImage('assets/icons/meal.png'),
+                  fit: BoxFit.contain,
+                  width: 40,
+                ),
               ),
             ),
             Container(
               margin: EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 10),
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: AppColors.cardBackgroundDark),
+                  borderRadius: BorderRadius.circular(10),
+                  color: AppColors.cardBackgroundDark),
               child: Column(
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.circle, color: Colors.green, size: 15,),
-                      SizedBox(width: 10,),
-                      Expanded(child: Text('starting'.tr, style: cardTextStyleForDietTime,),),
+                      Icon(
+                        Icons.circle,
+                        color: Colors.green,
+                        size: 15,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Text(
+                          'starting'.tr,
+                          style: cardTextStyleForDietTime,
+                        ),
+                      ),
                       Text('12/03/2021 11:28', style: cardTextStyleForDietTime)
                     ],
                   ),
-                  SizedBox(height: 15,),
+                  SizedBox(
+                    height: 15,
+                  ),
                   Row(
                     children: [
-                      Icon(Icons.circle, color: Colors.red, size: 15,),
-                      SizedBox(width: 10,),
-                      Expanded(child: Text('ending'.tr, style: cardTextStyleForDietTime,),),
+                      Icon(
+                        Icons.circle,
+                        color: Colors.red,
+                        size: 15,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Text(
+                          'ending'.tr,
+                          style: cardTextStyleForDietTime,
+                        ),
+                      ),
                       Text('12/03/2021 11:28', style: cardTextStyleForDietTime)
                     ],
                   ),

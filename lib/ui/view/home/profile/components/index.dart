@@ -7,7 +7,8 @@ class Index extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Theme.of(context).cardColor),
+          borderRadius: BorderRadius.circular(10),
+          color: Theme.of(context).cardColor),
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -40,8 +41,18 @@ class Index extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
       child: Row(
         children: [
-          Expanded(child: Text('Vücut Kitle İndeksi', style: Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),),),
-          Icon(AppIcons.question, color: Colors.orange, size: 20,),
+          Expanded(
+            child: Text(
+              'Vücut Kitle İndeksi',
+              style:
+                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
+            ),
+          ),
+          Icon(
+            AppIcons.question,
+            color: Colors.orange,
+            size: 20,
+          ),
         ],
       ),
     );
@@ -65,7 +76,11 @@ class Index extends StatelessWidget {
     );
   }
 
-  Widget emoji(){
-    return Icon(AppIcons.heart, size: 30, color: Colors.red,);
+  Widget emoji() {
+    return Icon(
+      AppIcons.heart,
+      size: 30,
+      color: Colors.red,
+    );
   }
 }

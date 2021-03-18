@@ -23,7 +23,10 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
     return BaseView(
       viewModel: null,
       appBar: AppBar(
-        title: Text('my_diet'.tr, style: Theme.of(context).appBarTheme.titleTextStyle,),
+        title: Text(
+          'my_diet'.tr,
+          style: Theme.of(context).appBarTheme.titleTextStyle,
+        ),
       ),
       backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
       onPageBuilder: (context, value) => body(),
@@ -65,9 +68,12 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
         initialSelectedDate: DateTime.now(),
         selectionColor: AppColors.primarySwatch,
         selectedTextColor: Colors.white,
-        dateTextStyle: defaultDateTextStyle.copyWith(color: Theme.of(context).textTheme.bodyText1.color),
-        dayTextStyle: defaultDayTextStyle.copyWith(color: Theme.of(context).textTheme.bodyText1.color),
-        monthTextStyle: defaultMonthTextStyle.copyWith(color: Theme.of(context).textTheme.bodyText1.color),
+        dateTextStyle: defaultDateTextStyle.copyWith(
+            color: Theme.of(context).textTheme.bodyText1.color),
+        dayTextStyle: defaultDayTextStyle.copyWith(
+            color: Theme.of(context).textTheme.bodyText1.color),
+        monthTextStyle: defaultMonthTextStyle.copyWith(
+            color: Theme.of(context).textTheme.bodyText1.color),
         onDateChange: (date) {
           print(date);
         },
@@ -101,7 +107,11 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                     child: Icon(
                       Icons.chevron_left,
                       size: 50,
-                      color: Theme.of(context).textTheme.bodyText1.color.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .textTheme
+                          .bodyText1
+                          .color
+                          .withOpacity(0.7),
                     ),
                   ),
                 ),
@@ -135,7 +145,11 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                     child: Icon(
                       Icons.chevron_right,
                       size: 50,
-                      color: Theme.of(context).textTheme.bodyText1.color.withOpacity(0.7),
+                      color: Theme.of(context)
+                          .textTheme
+                          .bodyText1
+                          .color
+                          .withOpacity(0.7),
                     ),
                   ),
                 ),

@@ -157,7 +157,15 @@ class _ExerciseDetailsState extends State<ExerciseDetails> {
           title: Text(
             'exercises'.tr,
           ),
-          subtitle: Text('03:27 dk.', style: TextStyle(color: Theme.of(context).textTheme.bodyText2.color.withOpacity(0.6)),),
+          subtitle: Text(
+            '03:27 dk.',
+            style: TextStyle(
+                color: Theme.of(context)
+                    .textTheme
+                    .bodyText2
+                    .color
+                    .withOpacity(0.6)),
+          ),
           trailing: Padding(
             padding: const EdgeInsets.only(right: 5),
             child: ElevatedButton(

@@ -18,8 +18,9 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return BaseView(
-        viewModel: viewModel,
-        onPageBuilder: (context, value) => body());
+      viewModel: viewModel,
+      onPageBuilder: (context, value) => body(),
+    );
   }
 
   Widget body() {

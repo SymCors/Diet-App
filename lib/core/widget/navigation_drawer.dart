@@ -16,34 +16,28 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
           createDrawerBodyItem(
             icon: Icons.home,
             text: 'Home',
-            onTap: () =>
-                Navigator.pop(context),
+            onTap: () => Navigator.pop(context),
           ),
           createDrawerBodyItem(
             icon: Icons.account_circle,
             text: 'Profile',
-            onTap: () =>
-                Navigator.pop(context),
+            onTap: () => Navigator.pop(context),
           ),
-
           createDrawerBodyItem(
             icon: Icons.event_note,
             text: 'Events',
-            onTap: () =>
-                Navigator.pop(context),
+            onTap: () => Navigator.pop(context),
           ),
           Divider(),
           createDrawerBodyItem(
             icon: Icons.notifications_active,
             text: 'Notifications',
-            onTap: () =>
-                Navigator.pop(context),
+            onTap: () => Navigator.pop(context),
           ),
           createDrawerBodyItem(
             icon: Icons.contact_phone,
             text: 'Contact Info',
-            onTap: () =>
-                Navigator.pop(context),
+            onTap: () => Navigator.pop(context),
           ),
           ListTile(
             title: Text('App version 1.0.0'),
@@ -61,7 +55,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.fill,
-                image:  AssetImage('assets/images/navigation_drawer.jpg'))),
+                image: AssetImage('assets/images/navigation_drawer.jpg'))),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -69,8 +63,12 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ClipOval(
-                child: Image(image: AssetImage('assets/images/sign_up/profile_photo.png'),
-                width: 75, height: 75, fit: BoxFit.cover,),
+                child: Image(
+                  image: AssetImage('assets/images/sign_up/profile_photo.png'),
+                  width: 75,
+                  height: 75,
+                  fit: BoxFit.cover,
+                ),
               ),
               Text('Name Surname',
                   style: TextStyle(
@@ -82,7 +80,8 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
         ));
   }
 
-  Widget createDrawerBodyItem({IconData icon, String text, GestureTapCallback onTap}) {
+  Widget createDrawerBodyItem(
+      {IconData icon, String text, GestureTapCallback onTap}) {
     return ListTile(
       title: Row(
         children: <Widget>[
@@ -96,5 +95,4 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
       onTap: onTap,
     );
   }
-
 }

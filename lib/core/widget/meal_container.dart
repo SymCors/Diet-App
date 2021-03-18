@@ -39,7 +39,10 @@ class MealContainer extends StatelessWidget {
               ),
               Text(
                 title,
-                style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 17),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText2
+                    .copyWith(fontSize: 17),
               ),
               SizedBox(
                 width: 10,

@@ -13,7 +13,10 @@ class MessageDateUI extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Text(
             'Yesterday',
-            style: Theme.of(context).textTheme.bodyText2.copyWith(color: Colors.white),
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2
+                .copyWith(color: Colors.white),
           ),
         ),
       ),
