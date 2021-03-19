@@ -10,13 +10,13 @@ class ExerciseDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: Get.put(ExerciseDetailsViewViewModel()),
-      onPageBuilder: (context, value) => const body(),
+      onPageBuilder: (context, value) => const Body(),
     );
   }
 }
 
-class body extends StatelessWidget {
-  const body();
+class Body extends StatelessWidget {
+  const Body();
 
   @override
   Widget build(BuildContext context) {

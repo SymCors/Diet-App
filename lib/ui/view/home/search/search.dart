@@ -20,11 +20,11 @@ class _SearchState extends State<Search> {
       child: Column(
         children: [
           const Meals(),
-          CustomDivider(
+          const CustomDivider(
             height: 15,
           ),
           const Dietitians(),
-          CustomDivider(
+          const CustomDivider(
             height: 15,
           ),
           const Exercises(),

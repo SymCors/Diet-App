@@ -16,10 +16,10 @@ class Weight extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const header(),
-            const kilo(),
-            const progressBar(),
-            const texts(),
+            const Header(),
+            const Kilo(),
+            const ProgressBar(),
+            const Texts(),
           ],
         ),
       ),
@@ -27,8 +27,8 @@ class Weight extends StatelessWidget {
   }
 }
 
-class header extends StatelessWidget {
-  const header();
+class Header extends StatelessWidget {
+  const Header();
 
   @override
   Widget build(BuildContext context) {
@@ -69,8 +69,8 @@ class header extends StatelessWidget {
   }
 }
 
-class kilo extends StatelessWidget {
-  const kilo();
+class Kilo extends StatelessWidget {
+  const Kilo();
 
   @override
   Widget build(BuildContext context) {
@@ -88,8 +88,8 @@ class kilo extends StatelessWidget {
   }
 }
 
-class progressBar extends StatelessWidget {
-  const progressBar();
+class ProgressBar extends StatelessWidget {
+  const ProgressBar();
 
   @override
   Widget build(BuildContext context) {
@@ -104,8 +104,8 @@ class progressBar extends StatelessWidget {
   }
 }
 
-class texts extends StatelessWidget {
-  const texts();
+class Texts extends StatelessWidget {
+  const Texts();
 
   @override
   Widget build(BuildContext context) {

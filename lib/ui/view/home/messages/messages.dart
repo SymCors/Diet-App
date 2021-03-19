@@ -53,7 +53,7 @@ class _MessagesState extends State<Messages> {
                 onTap: () {
                   Get.toNamed(Routes.message_ui);
                 },
-                leading: AppCircularImage(
+                leading: const AppCircularImage(
                   radius: 20,
                 ),
                 title: Text('Name Surname ${index + 1}'),

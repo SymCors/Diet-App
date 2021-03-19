@@ -26,21 +26,21 @@ class _MessageUIState extends BaseState<MessageUI> {
     return BaseView(
       viewModel: viewModel,
       backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
-      onPageBuilder: (context, viewModel) => body(viewModel),
+      onPageBuilder: (context, viewModel) => Body(viewModel),
     );
   }
 }
 
-class body extends StatelessWidget {
+class Body extends StatelessWidget {
   final viewModel;
 
-  const body(this.viewModel);
+  const Body(this.viewModel);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AppMessageAppBar(
+        const AppMessageAppBar(
           nameSurname: 'Name Surname',
           status: 'Online',
         ),
@@ -63,13 +63,13 @@ class body extends StatelessWidget {
           ),
         ),
         SizedBox(height: 1),
-        MessageInputBox(
-          prefix: MessageActionButton(
+        const MessageInputBox(
+          prefix: const MessageActionButton(
             iconData: Icons.add,
             iconSize: 24.0,
           ),
           roundedCorners: true,
-          suffix: MessageActionButton(
+          suffix: const MessageActionButton(
             iconData: Icons.image,
             iconSize: 24.0,
           ),

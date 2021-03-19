@@ -15,19 +15,19 @@ class Index extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const header(),
+            const Header(),
             SizedBox(
               height: 10,
             ),
-            const index(),
+            const Indexes(),
             SizedBox(
               height: 10,
             ),
-            const result(),
+            const Result(),
             SizedBox(
               height: 10,
             ),
-            const emoji(),
+            const Emoji(),
             SizedBox(
               height: 10,
             ),
@@ -38,8 +38,8 @@ class Index extends StatelessWidget {
   }
 }
 
-class header extends StatelessWidget {
-  const header();
+class Header extends StatelessWidget {
+  const Header();
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class header extends StatelessWidget {
             child: Text(
               'Vücut Kitle İndeksi',
               style:
-              Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
+                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
             ),
           ),
           Icon(
@@ -66,8 +66,8 @@ class header extends StatelessWidget {
   }
 }
 
-class index extends StatelessWidget {
-  const index();
+class Indexes extends StatelessWidget {
+  const Indexes();
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +82,8 @@ class index extends StatelessWidget {
   }
 }
 
-class result extends StatelessWidget {
-  const result();
+class Result extends StatelessWidget {
+  const Result();
 
   @override
   Widget build(BuildContext context) {
@@ -94,8 +94,8 @@ class result extends StatelessWidget {
   }
 }
 
-class emoji extends StatelessWidget {
-  const emoji();
+class Emoji extends StatelessWidget {
+  const Emoji();
 
   @override
   Widget build(BuildContext context) {

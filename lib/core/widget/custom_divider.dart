@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomDivider extends StatelessWidget {
-  final double height;
+  const CustomDivider({
+    this.height = 10,
+  });
 
-  CustomDivider({this.height = 10});
+  final double height;
 
   @override
   Widget build(BuildContext context) {

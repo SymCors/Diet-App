@@ -28,16 +28,16 @@ class Posts extends StatelessWidget {
               Container(
                 child: Column(
                   children: [
-                    header(viewModel, index),
-                    const text(),
-                    const image(),
-                    const likeAndDislikes(),
-                    const customDivider(),
-                    const buttons(),
+                    Header(viewModel, index),
+                    const Texts(),
+                    const Images(),
+                    const LikesAndDislikes(),
+                    const CustomDividers(),
+                    const Buttons(),
                   ],
                 ),
               ),
-              CustomDivider(),
+              const CustomDivider(),
             ],
           );
         },
@@ -46,11 +46,11 @@ class Posts extends StatelessWidget {
   }
 }
 
-class header extends StatelessWidget {
+class Header extends StatelessWidget {
   final index;
   final viewModel;
 
-  const header(this.viewModel, this.index);
+  const Header(this.viewModel, this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class header extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
       child: Row(
         children: [
-          AppCircularImage(
+          const AppCircularImage(
             radius: 17,
           ),
           Expanded(
@@ -79,9 +79,9 @@ class header extends StatelessWidget {
                 showModalBottomSheet(
                   context: context,
                   builder: (context) {
-                    return AppBottomSheet(
+                    return const AppBottomSheet(
                       size: 200,
-                      child: bottomSheetBody(),
+                      child: BottomSheetBody(),
                     );
                   },
                 );
@@ -94,8 +94,8 @@ class header extends StatelessWidget {
   }
 }
 
-class text extends StatelessWidget {
-  const text();
+class Texts extends StatelessWidget {
+  const Texts();
 
   @override
   Widget build(BuildContext context) {
@@ -115,8 +115,8 @@ class text extends StatelessWidget {
   }
 }
 
-class image extends StatelessWidget {
-  const image();
+class Images extends StatelessWidget {
+  const Images();
 
   @override
   Widget build(BuildContext context) {
@@ -129,8 +129,8 @@ class image extends StatelessWidget {
   }
 }
 
-class likeAndDislikes extends StatelessWidget {
-  const likeAndDislikes();
+class LikesAndDislikes extends StatelessWidget {
+  const LikesAndDislikes();
 
   @override
   Widget build(BuildContext context) {
@@ -188,8 +188,8 @@ class likeAndDislikes extends StatelessWidget {
   }
 }
 
-class customDivider extends StatelessWidget {
-  const customDivider();
+class CustomDividers extends StatelessWidget {
+  const CustomDividers();
 
   @override
   Widget build(BuildContext context) {
@@ -203,8 +203,8 @@ class customDivider extends StatelessWidget {
   }
 }
 
-class buttons extends StatelessWidget {
-  const buttons();
+class Buttons extends StatelessWidget {
+  const Buttons();
 
   @override
   Widget build(BuildContext context) {
@@ -276,7 +276,9 @@ class buttons extends StatelessWidget {
   }
 }
 
-class bottomSheetBody extends StatelessWidget {
+class BottomSheetBody extends StatelessWidget {
+  const BottomSheetBody();
+
   @override
   Widget build(BuildContext context) {
     return Column(

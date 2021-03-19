@@ -19,7 +19,7 @@ class Stories extends StatelessWidget {
             padding: const EdgeInsets.only(top: 15, right: 7, left: 7),
             child: Column(
               children: [
-                AppCircularImage(
+                const AppCircularImage(
                   radius: 33,
                 ),
                 Text(

@@ -1,40 +1,37 @@
 import 'package:flutter/material.dart';
 
-class NavigationDrawer extends StatefulWidget {
-  @override
-  _NavigationDrawerState createState() => _NavigationDrawerState();
-}
+class NavigationDrawer extends StatelessWidget {
+  const NavigationDrawer();
 
-class _NavigationDrawerState extends State<NavigationDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          createDrawerHeader(),
-          createDrawerBodyItem(
+          CreateDrawerHeader(),
+          CreateDrawerBodyItem(
             icon: Icons.home,
             text: 'Home',
             onTap: () => Navigator.pop(context),
           ),
-          createDrawerBodyItem(
+          CreateDrawerBodyItem(
             icon: Icons.account_circle,
             text: 'Profile',
             onTap: () => Navigator.pop(context),
           ),
-          createDrawerBodyItem(
+          CreateDrawerBodyItem(
             icon: Icons.event_note,
             text: 'Events',
             onTap: () => Navigator.pop(context),
           ),
           Divider(),
-          createDrawerBodyItem(
+          CreateDrawerBodyItem(
             icon: Icons.notifications_active,
             text: 'Notifications',
             onTap: () => Navigator.pop(context),
           ),
-          createDrawerBodyItem(
+          CreateDrawerBodyItem(
             icon: Icons.contact_phone,
             text: 'Contact Info',
             onTap: () => Navigator.pop(context),
@@ -47,41 +44,55 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
       ),
     );
   }
+}
 
-  Widget createDrawerHeader() {
+class CreateDrawerHeader extends StatelessWidget {
+  const CreateDrawerHeader();
+
+  @override
+  Widget build(BuildContext context) {
     return DrawerHeader(
-        margin: EdgeInsets.zero,
-        padding: EdgeInsets.zero,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage('assets/images/navigation_drawer.jpg'))),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipOval(
-                child: Image(
-                  image: AssetImage('assets/images/sign_up/profile_photo.png'),
-                  width: 75,
-                  height: 75,
-                  fit: BoxFit.cover,
-                ),
+      margin: EdgeInsets.zero,
+      padding: EdgeInsets.zero,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              fit: BoxFit.fill,
+              image: AssetImage('assets/images/navigation_drawer.jpg'))),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipOval(
+              child: Image(
+                image: AssetImage('assets/images/sign_up/profile_photo.png'),
+                width: 75,
+                height: 75,
+                fit: BoxFit.cover,
               ),
-              Text('Name Surname',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.w500)),
-            ],
-          ),
-        ));
+            ),
+            Text('Name Surname',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w500)),
+          ],
+        ),
+      ),
+    );
   }
+}
 
-  Widget createDrawerBodyItem(
-      {IconData icon, String text, GestureTapCallback onTap}) {
+class CreateDrawerBodyItem extends StatelessWidget {
+  const CreateDrawerBodyItem({this.icon, this.text, this.onTap});
+
+  final icon;
+  final text;
+  final onTap;
+
+  @override
+  Widget build(BuildContext context) {
     return ListTile(
       title: Row(
         children: <Widget>[

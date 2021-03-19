@@ -40,30 +40,30 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          const date_picker(),
-          CustomDivider(height: 15),
-          const header(),
-          CustomDivider(height: 15),
-          const on_which_diet(),
-          CustomDivider(height: 15),
-          const breakfast(),
-          CustomDivider(height: 15),
-          const early_snack(),
-          CustomDivider(height: 15),
-          const lunch(),
-          CustomDivider(height: 15),
-          const late_snack(),
-          CustomDivider(height: 15),
-          const dinner(),
-          CustomDivider(height: 15),
+          const DatePickers(),
+          const CustomDivider(height: 15),
+          const Header(),
+          const CustomDivider(height: 15),
+          const OnWhichDiet(),
+          const CustomDivider(height: 15),
+          const Breakfast(),
+          const CustomDivider(height: 15),
+          const EarlySnack(),
+          const CustomDivider(height: 15),
+          const Lunch(),
+          const CustomDivider(height: 15),
+          const LateSnack(),
+          const CustomDivider(height: 15),
+          const Dinner(),
+          const CustomDivider(height: 15),
         ],
       ),
     );
   }
 }
 
-class date_picker extends StatelessWidget {
-  const date_picker();
+class DatePickers extends StatelessWidget {
+  const DatePickers();
 
   @override
   Widget build(BuildContext context) {
@@ -99,8 +99,8 @@ class date_picker extends StatelessWidget {
   }
 }
 
-class header extends StatelessWidget {
-  const header();
+class Header extends StatelessWidget {
+  const Header();
 
   @override
   Widget build(BuildContext context) {
@@ -222,8 +222,8 @@ class header extends StatelessWidget {
   }
 }
 
-class on_which_diet extends StatelessWidget {
-  const on_which_diet();
+class OnWhichDiet extends StatelessWidget {
+  const OnWhichDiet();
 
   @override
   Widget build(BuildContext context) {
@@ -366,8 +366,8 @@ class on_which_diet extends StatelessWidget {
   }
 }
 
-class breakfast extends StatelessWidget {
-  const breakfast();
+class Breakfast extends StatelessWidget {
+  const Breakfast();
 
   @override
   Widget build(BuildContext context) {
@@ -380,8 +380,8 @@ class breakfast extends StatelessWidget {
   }
 }
 
-class early_snack extends StatelessWidget {
-  const early_snack();
+class EarlySnack extends StatelessWidget {
+  const EarlySnack();
 
   @override
   Widget build(BuildContext context) {
@@ -394,8 +394,8 @@ class early_snack extends StatelessWidget {
   }
 }
 
-class lunch extends StatelessWidget {
-  const lunch();
+class Lunch extends StatelessWidget {
+  const Lunch();
 
   @override
   Widget build(BuildContext context) {
@@ -408,8 +408,8 @@ class lunch extends StatelessWidget {
   }
 }
 
-class late_snack extends StatelessWidget {
-  const late_snack();
+class LateSnack extends StatelessWidget {
+  const LateSnack();
 
   @override
   Widget build(BuildContext context) {
@@ -422,8 +422,8 @@ class late_snack extends StatelessWidget {
   }
 }
 
-class dinner extends StatelessWidget {
-  const dinner();
+class Dinner extends StatelessWidget {
+  const Dinner();
 
   @override
   Widget build(BuildContext context) {

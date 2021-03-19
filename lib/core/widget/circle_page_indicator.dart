@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
 
 class AppCirclePageIndicator extends StatelessWidget {
+  const AppCirclePageIndicator({
+    @required this.counter,
+    @required this.currentPageNotifier,
+  });
+
   final int counter;
   final ValueNotifier<int> currentPageNotifier;
-
-  AppCirclePageIndicator(
-      {@required this.counter, @required this.currentPageNotifier});
 
   @override
   Widget build(BuildContext context) {

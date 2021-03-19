@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppTextInput extends StatelessWidget {
+  const AppTextInput({
+    @required this.child,
+    this.marginTop,
+  });
+
   final Widget child;
   final double marginTop;
-
-  AppTextInput({@required this.child, this.marginTop});
 
   @override
   Widget build(BuildContext context) {

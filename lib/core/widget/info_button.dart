@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
 class AppButtonInfo extends StatelessWidget {
+  const AppButtonInfo({
+    this.icon,
+    this.text,
+    this.foregroundColor,
+    this.backgroundColor,
+  });
+
   final IconData icon;
   final text;
   final Color foregroundColor;
   final Color backgroundColor;
-
-  AppButtonInfo(
-      {this.icon, this.text, this.foregroundColor, this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {

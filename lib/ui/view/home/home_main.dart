@@ -71,7 +71,7 @@ class _HomeMainState extends State<HomeMain> {
             )
           ],
         ),
-        drawer: NavigationDrawer(),
+        drawer: const NavigationDrawer(),
         backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
         onPageBuilder: (context, value) => viewModel.body,
       ),

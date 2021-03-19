@@ -31,17 +31,17 @@ class MyApp extends StatelessWidget {
       translations: LanguageManager(),
       initialRoute: Routes.home_main,
       routes: {
-        Routes.main:(context) => Main(),
-        Routes.on_board:(context) => OnBoard(),
-        Routes.login:(context) => Login(),
-        Routes.sign_up:(context) => SignUp(),
-        Routes.home_main:(context) => HomeMain(),
-        Routes.exercise_details:(context) => ExerciseDetails(),
-        Routes.exercise_details_view:(context) => ExerciseDetailsView(),
-        Routes.message_ui:(context) => MessageUI(),
-        Routes.current_diet:(context) => CurrentDiet(),
-        Routes.my_analysis:(context) => MyAnalysis(),
-        Routes.settings:(context) => Settings(),
+        Routes.main:(context) => const Main(),
+        Routes.on_board:(context) => const OnBoard(),
+        Routes.login:(context) => const Login(),
+        Routes.sign_up:(context) => const SignUp(),
+        Routes.home_main:(context) => const HomeMain(),
+        Routes.exercise_details:(context) => const ExerciseDetails(),
+        Routes.exercise_details_view:(context) => const ExerciseDetailsView(),
+        Routes.message_ui:(context) => const MessageUI(),
+        Routes.current_diet:(context) => const CurrentDiet(),
+        Routes.my_analysis:(context) => const MyAnalysis(),
+        Routes.settings:(context) => const Settings(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme(context),
@@ -51,6 +51,8 @@ class MyApp extends StatelessWidget {
 }
 
 class Main extends StatelessWidget {
+  const Main();
+
   @override
   Widget build(BuildContext context) {
     return OnBoard();

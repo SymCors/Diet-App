@@ -13,13 +13,13 @@ class Programs extends StatelessWidget {
     return ViewAllWidget(
       title: 'programs'.tr,
       onClick: null,
-      child: const program_lists(),
+      child: const ProgramLists(),
     );
   }
 }
 
-class program_lists extends StatelessWidget {
-  const program_lists();
+class ProgramLists extends StatelessWidget {
+  const ProgramLists();
 
   @override
   Widget build(BuildContext context) {

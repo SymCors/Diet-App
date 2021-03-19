@@ -4,12 +4,13 @@ import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 import 'message_action_button.dart';
 
 class MessageInputBox extends StatelessWidget {
-  MessageInputBox(
-      {this.prefix,
-      this.suffix,
-      this.roundedCorners,
-      this.onChanged,
-      this.onSubmitted});
+  const MessageInputBox({
+    this.prefix,
+    this.suffix,
+    this.roundedCorners,
+    this.onChanged,
+    this.onSubmitted,
+  });
 
   final Widget prefix;
   final Widget suffix;

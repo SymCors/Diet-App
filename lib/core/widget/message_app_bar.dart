@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'circular_image.dart';
 
 class AppMessageAppBar extends StatelessWidget {
-  AppMessageAppBar({this.nameSurname, this.status});
+  const AppMessageAppBar({
+    this.nameSurname,
+    this.status,
+  });
 
   final nameSurname;
   final status;
@@ -26,11 +29,9 @@ class AppMessageAppBar extends StatelessWidget {
                 },
                 child: Icon(Icons.arrow_back),
               ),
-              Expanded(
-                child: InkWell(
-                  onTap: () {},
-                  child: ProfileSection(context, nameSurname, status),
-                ),
+              ProfileSection(
+                nameSurname: nameSurname,
+                status: status,
               ),
               IconButton(icon: Icon(Icons.settings), onPressed: () {})
             ],
@@ -39,34 +40,47 @@ class AppMessageAppBar extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget ProfileSection(context, nameSurname, status) {
-    return Row(
-      children: [
-        SizedBox(width: 15),
-        AppCircularImage(radius: 19),
-        SizedBox(width: 15),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+class ProfileSection extends StatelessWidget {
+  const ProfileSection({this.nameSurname, this.status});
+
+  final nameSurname;
+  final status;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: InkWell(
+        onTap: () {},
+        child: Row(
           children: [
-            Text(
-              '$nameSurname',
-              style:
-                  Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 15),
+            SizedBox(width: 15),
+            const AppCircularImage(radius: 19),
+            SizedBox(width: 15),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '$nameSurname',
+                  style:
+                      Theme.of(context).textTheme.bodyText1.copyWith(fontSize: 15),
+                ),
+                SizedBox(height: 2),
+                Text(
+                  '$status',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText1
+                      .copyWith(fontSize: 13, color: AppColors.primarySwatch),
+                ),
+              ],
             ),
-            SizedBox(height: 2),
-            Text(
-              '$status',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText1
-                  .copyWith(fontSize: 13, color: AppColors.primarySwatch),
-            ),
+            SizedBox(width: 15),
           ],
         ),
-        SizedBox(width: 15),
-      ],
+      ),
     );
   }
 }

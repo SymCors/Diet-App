@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class MessageActionButton extends StatelessWidget {
-  MessageActionButton(
-      {this.icon,
-      this.onPressed,
-      this.iconData,
-      this.iconColor,
-      this.iconSize});
+  const MessageActionButton({
+    this.icon,
+    this.onPressed,
+    this.iconData,
+    this.iconColor,
+    this.iconSize,
+  });
 
   final Icon icon;
   final IconData iconData;

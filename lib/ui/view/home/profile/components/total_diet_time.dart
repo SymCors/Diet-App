@@ -17,8 +17,8 @@ class TotalDietTime extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const header(),
-            const card(),
+            const Header(),
+            const Cards(),
           ],
         ),
       ),
@@ -26,8 +26,8 @@ class TotalDietTime extends StatelessWidget {
   }
 }
 
-class header extends StatelessWidget {
-  const header();
+class Header extends StatelessWidget {
+  const Header();
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class header extends StatelessWidget {
             child: Text(
               'total_diet'.tr,
               style:
-              Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
+                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
             ),
           ),
           Container(
@@ -58,8 +58,8 @@ class header extends StatelessWidget {
   }
 }
 
-class card extends StatelessWidget {
-  const card();
+class Cards extends StatelessWidget {
+  const Cards();
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,8 @@ class card extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 10),
+              margin: const EdgeInsets.only(
+                  left: 15, right: 15, bottom: 15, top: 10),
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),

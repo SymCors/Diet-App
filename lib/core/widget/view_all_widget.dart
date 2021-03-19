@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class ViewAllWidget extends StatelessWidget {
-  ViewAllWidget(
-      {@required this.child,
-      @required this.title,
-      @required this.onClick,
-      this.color});
+  const ViewAllWidget({
+    @required this.child,
+    @required this.title,
+    @required this.onClick,
+    this.color,
+  });
 
   final Widget child;
   final title;
@@ -20,14 +21,28 @@ class ViewAllWidget extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
       child: Column(
         children: [
-          diets_header(context),
+          DietsHeader(
+            title: title,
+            onClick: onClick,
+          ),
           child,
         ],
       ),
     );
   }
+}
 
-  Widget diets_header(context) {
+class DietsHeader extends StatelessWidget {
+  const DietsHeader({
+    @required this.title,
+    @required this.onClick,
+  });
+
+  final title;
+  final VoidCallback onClick;
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Row(

@@ -12,8 +12,8 @@ class Exercises extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          CardHeader(),
-          Programs(),
+          const CardHeader(),
+          const Programs(),
         ],
       ),
     );

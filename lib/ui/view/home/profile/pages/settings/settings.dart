@@ -23,13 +23,13 @@ class _SettingsState extends BaseState<Settings> {
         ),
       ),
       viewModel: null,
-      onPageBuilder: (context, value) => const body(),
+      onPageBuilder: (context, value) => const Body(),
     );
   }
 }
 
-class body extends StatelessWidget {
-  const body();
+class Body extends StatelessWidget {
+  const Body();
 
   @override
   Widget build(BuildContext context) {

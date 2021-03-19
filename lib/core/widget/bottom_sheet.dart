@@ -2,10 +2,13 @@ import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:flutter/material.dart';
 
 class AppBottomSheet extends StatelessWidget {
+  const AppBottomSheet({
+    @required this.size,
+    @required this.child,
+  });
+
   final double size;
   final Widget child;
-
-  AppBottomSheet({@required this.size, @required this.child});
 
   @override
   Widget build(BuildContext context) {

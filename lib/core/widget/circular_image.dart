@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AppCircularImage extends StatelessWidget {
-  final double radius;
+  const AppCircularImage({
+    @required this.radius,
+  });
 
-  AppCircularImage({@required this.radius});
+  final double radius;
 
   @override
   Widget build(BuildContext context) {
