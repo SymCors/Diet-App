@@ -42,9 +42,6 @@ flutter:
     - assets/images/exercises/
 
   fonts:
-    - family: CM Sans Serif
-      fonts:
-        - asset: assets/fonts/cm_sans_serif_2012.ttf
     - family: AppIcons
       fonts:
         - asset: assets/fonts/AppIcons.ttf
