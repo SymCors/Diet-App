@@ -8,27 +8,27 @@ import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 import 'package:get/utils.dart';
 
 class HomeMain extends StatefulWidget {
+  const HomeMain();
+
   @override
   _HomeMainState createState() => _HomeMainState();
 }
 
 class _HomeMainState extends State<HomeMain> {
-  final viewModel = Get.put(HomeMainViewModel());
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeMainViewModel>(
       init: HomeMainViewModel(),
-      builder: (controller) => BaseView(
-        viewModel: viewModel,
+      builder: (viewModel) => BaseView(
+        viewModel: Get.put(HomeMainViewModel()),
         bottomNavigationBar: TitledBottomNavigationBar(
           activeColor: Theme.of(context).primaryColor,
           inactiveColor: Theme.of(context).textTheme.bodyText2.color,
 
-          currentIndex: controller.page.value,
+          currentIndex: viewModel.page.value,
           // Use this to update the Bar giving a position
           onTap: (index) {
-            controller.changePage(index);
+            viewModel.changePage(index);
           },
           items: [
             TitledNavigationBarItem(
@@ -73,7 +73,7 @@ class _HomeMainState extends State<HomeMain> {
         ),
         drawer: NavigationDrawer(),
         backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
-        onPageBuilder: (context, value) => controller.body,
+        onPageBuilder: (context, value) => viewModel.body,
       ),
     );
   }

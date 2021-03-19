@@ -13,6 +13,8 @@ import 'package:get/get.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class CurrentDiet extends StatefulWidget {
+  const CurrentDiet();
+
   @override
   _CurrentDietState createState() => _CurrentDietState();
 }
@@ -38,28 +40,33 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          date_picker(),
+          const date_picker(),
           CustomDivider(height: 15),
-          header(),
+          const header(),
           CustomDivider(height: 15),
-          on_which_diet(),
+          const on_which_diet(),
           CustomDivider(height: 15),
-          breakfast(),
+          const breakfast(),
           CustomDivider(height: 15),
-          early_snack(),
+          const early_snack(),
           CustomDivider(height: 15),
-          lunch(),
+          const lunch(),
           CustomDivider(height: 15),
-          late_snack(),
+          const late_snack(),
           CustomDivider(height: 15),
-          dinner(),
+          const dinner(),
           CustomDivider(height: 15),
         ],
       ),
     );
   }
+}
 
-  Widget date_picker() {
+class date_picker extends StatelessWidget {
+  const date_picker();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
       color: Theme.of(context).scaffoldBackgroundColor,
@@ -90,8 +97,13 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       ),
     );
   }
+}
 
-  Widget header() {
+class header extends StatelessWidget {
+  const header();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
       child: Column(
@@ -125,7 +137,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                             progressBarColor:
                                 AppColors.app_color.withOpacity(0.7),
                           ),
-                          size: dynamicWidth(0.4),
+                          size: MediaQuery.of(context).size.width * 0.4,
                           angleRange: 360,
                           startAngle: 270,
                           infoProperties: InfoProperties(
@@ -208,11 +220,16 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       ),
     );
   }
+}
 
-  Widget on_which_diet() {
+class on_which_diet extends StatelessWidget {
+  const on_which_diet();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      padding: EdgeInsets.only(top: 15, bottom: 20),
+      padding: const EdgeInsets.only(top: 15, bottom: 20),
       child: Column(
         children: [
           Row(
@@ -271,7 +288,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                       ),
                       Container(
                         height: 10,
-                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
                         child: AppRoundedLinearProgressIndicator(
                           value: 0.57,
                           color: AppColors.primarySwatch,
@@ -301,7 +318,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                       ),
                       Container(
                         height: 10,
-                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
                         child: AppRoundedLinearProgressIndicator(
                           value: 0.3,
                           color: Colors.orange,
@@ -331,7 +348,7 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
                       ),
                       Container(
                         height: 10,
-                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
                         child: AppRoundedLinearProgressIndicator(
                           value: 0.46,
                           color: Colors.yellow[600],
@@ -347,8 +364,13 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       ),
     );
   }
+}
 
-  Widget breakfast() {
+class breakfast extends StatelessWidget {
+  const breakfast();
+
+  @override
+  Widget build(BuildContext context) {
     return MealContainer(
       title: 'breakfast'.tr,
       asset: 'assets/icons/breakfast.png',
@@ -356,8 +378,13 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       calorieGained: 115,
     );
   }
+}
 
-  Widget early_snack() {
+class early_snack extends StatelessWidget {
+  const early_snack();
+
+  @override
+  Widget build(BuildContext context) {
     return MealContainer(
       title: 'snack'.tr,
       asset: 'assets/icons/early_snack.png',
@@ -365,8 +392,13 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       calorieGained: 78,
     );
   }
+}
 
-  Widget lunch() {
+class lunch extends StatelessWidget {
+  const lunch();
+
+  @override
+  Widget build(BuildContext context) {
     return MealContainer(
       title: 'lunch'.tr,
       asset: 'assets/icons/lunch.png',
@@ -374,8 +406,13 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       calorieGained: 259,
     );
   }
+}
 
-  Widget late_snack() {
+class late_snack extends StatelessWidget {
+  const late_snack();
+
+  @override
+  Widget build(BuildContext context) {
     return MealContainer(
       title: 'snack'.tr,
       asset: 'assets/icons/late_Snack.png',
@@ -383,8 +420,13 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
       calorieGained: 64,
     );
   }
+}
 
-  Widget dinner() {
+class dinner extends StatelessWidget {
+  const dinner();
+
+  @override
+  Widget build(BuildContext context) {
     return MealContainer(
       title: 'dinner'.tr,
       asset: 'assets/icons/dinner.png',

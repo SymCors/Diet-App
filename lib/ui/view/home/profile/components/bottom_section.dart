@@ -4,17 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BottomSection extends StatelessWidget {
+  const BottomSection();
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        settings(),
-        my_analysis(),
+        const settings(),
+        const my_analysis(),
       ],
     );
   }
+}
 
-  Widget settings() {
+class settings extends StatelessWidget {
+  const settings();
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
@@ -37,8 +44,13 @@ class BottomSection extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget my_analysis() {
+class my_analysis extends StatelessWidget {
+  const my_analysis();
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),

@@ -3,23 +3,23 @@ import 'package:diet_app/ui/viewmodel/home/exercises/pages/exercise_details_view
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExerciseDetailsView extends StatefulWidget {
-  @override
-  _ExerciseDetailsViewState createState() => _ExerciseDetailsViewState();
-}
-
-class _ExerciseDetailsViewState extends State<ExerciseDetailsView> {
-  final viewModel = Get.put(ExerciseDetailsViewViewModel());
+class ExerciseDetailsView extends StatelessWidget {
+  const ExerciseDetailsView();
 
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      viewModel: viewModel,
-      onPageBuilder: (context, value) => body(),
+      viewModel: Get.put(ExerciseDetailsViewViewModel()),
+      onPageBuilder: (context, value) => const body(),
     );
   }
+}
 
-  Widget body() {
+class body extends StatelessWidget {
+  const body();
+
+  @override
+  Widget build(BuildContext context) {
     return Container();
   }
 }

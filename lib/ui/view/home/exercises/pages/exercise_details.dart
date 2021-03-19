@@ -5,23 +5,25 @@ import 'package:diet_app/ui/viewmodel/home/exercises/pages/exercise_details.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ExerciseDetails extends StatefulWidget {
-  @override
-  _ExerciseDetailsState createState() => _ExerciseDetailsState();
-}
-
-class _ExerciseDetailsState extends State<ExerciseDetails> {
-  final viewModel = Get.put(ExerciseDetailsViewModel());
+class ExerciseDetails extends StatelessWidget {
+  const ExerciseDetails();
 
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      viewModel: viewModel,
-      onPageBuilder: (context, value) => body(),
+      viewModel: Get.put(ExerciseDetailsViewModel()),
+      onPageBuilder: (context, viewModel) => body(viewModel),
     );
   }
+}
 
-  Widget body() {
+class body extends StatelessWidget {
+  final viewModel;
+
+  const body(this.viewModel);
+
+  @override
+  Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
@@ -60,18 +62,23 @@ class _ExerciseDetailsState extends State<ExerciseDetails> {
         ),
         SliverList(
             delegate: SliverChildListDelegate([
-          titleTexts(),
-          Buttons(),
-          exercises_title(),
-          exercises(context),
+          const titleTexts(),
+          const Buttons(),
+          const exercises_title(),
+          exercises(viewModel),
         ])),
       ],
     );
   }
+}
 
-  Widget titleTexts() {
+class titleTexts extends StatelessWidget {
+  const titleTexts();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20, left: 20),
+      margin: const EdgeInsets.only(top: 20, left: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -89,8 +96,13 @@ class _ExerciseDetailsState extends State<ExerciseDetails> {
       ),
     );
   }
+}
 
-  Widget Buttons() {
+class Buttons extends StatelessWidget {
+  const Buttons();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 20, top: 10),
       child: Row(
@@ -123,8 +135,13 @@ class _ExerciseDetailsState extends State<ExerciseDetails> {
       ),
     );
   }
+}
 
-  Widget exercises_title() {
+class exercises_title extends StatelessWidget {
+  const exercises_title();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 20, top: 20, bottom: 10),
       child: Row(
@@ -139,8 +156,15 @@ class _ExerciseDetailsState extends State<ExerciseDetails> {
       ),
     );
   }
+}
 
-  Widget exercises(context) {
+class exercises extends StatelessWidget {
+  final viewModel;
+
+  const exercises(this.viewModel);
+
+  @override
+  Widget build(BuildContext context) {
     return ListView.builder(
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,

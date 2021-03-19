@@ -8,21 +8,23 @@ import 'components/background.dart';
 import 'components/form_fields.dart';
 import 'components/logo_text.dart';
 
-class SignUp extends StatefulWidget {
-  @override
-  _SignUpState createState() => _SignUpState();
-}
-
-class _SignUpState extends State<SignUp> {
-  final viewModel = Get.put(SignUpViewModel());
+class SignUp extends StatelessWidget {
+  const SignUp();
 
   @override
   Widget build(BuildContext context) {
     return BaseView(
-        viewModel: viewModel, onPageBuilder: (context, value) => body());
+      viewModel: Get.put(SignUpViewModel()),
+      onPageBuilder: (context, viewModel) => const body(),
+    );
   }
+}
 
-  Widget body() {
+class body extends StatelessWidget {
+  const body();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: Sizes.height_100percent(context),
       child: Stack(

@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'circular_image.dart';
 
 class AppMessageAppBar extends StatelessWidget {
+  AppMessageAppBar({this.nameSurname, this.status});
+
   final nameSurname;
   final status;
-
-  AppMessageAppBar({this.nameSurname, this.status});
 
   @override
   Widget build(BuildContext context) {

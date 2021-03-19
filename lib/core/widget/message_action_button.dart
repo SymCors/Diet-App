@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MessageActionButton extends StatelessWidget {
-  final Icon icon;
-  final IconData iconData;
-  final Color iconColor;
-  final double iconSize;
-  final Function onPressed;
-
   MessageActionButton(
       {this.icon,
       this.onPressed,
@@ -14,12 +8,18 @@ class MessageActionButton extends StatelessWidget {
       this.iconColor,
       this.iconSize});
 
+  final Icon icon;
+  final IconData iconData;
+  final Color iconColor;
+  final double iconSize;
+  final Function onPressed;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: icon ??
             Icon(
               iconData ?? Icons.arrow_back,

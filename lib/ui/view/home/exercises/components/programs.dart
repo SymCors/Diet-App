@@ -1,20 +1,28 @@
 import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/widget/view_all_widget.dart';
-import 'package:diet_app/ui/viewmodel/home/exercises/components/programs.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Programs extends StatelessWidget {
-  final viewModel = Get.put(ProgramsViewModel());
+  const Programs();
 
   @override
   Widget build(BuildContext context) {
+    //final viewModel = Get.put(ProgramsViewModel());
     return ViewAllWidget(
-        title: 'programs'.tr, onClick: null, child: program_lists(context));
+      title: 'programs'.tr,
+      onClick: null,
+      child: const program_lists(),
+    );
   }
+}
 
-  Widget program_lists(context) {
+class program_lists extends StatelessWidget {
+  const program_lists();
+
+  @override
+  Widget build(BuildContext context) {
     return GridView.count(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
@@ -53,7 +61,7 @@ class Programs extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    margin: EdgeInsets.only(bottom: 5),
+                    margin: const EdgeInsets.only(bottom: 5),
                     child: Text(
                       'yoga'.tr,
                       style: Theme.of(context)

@@ -4,7 +4,6 @@ import 'package:diet_app/ui/view/authentication/sign_up/sign_up.dart';
 import 'package:diet_app/ui/view/home/home_main.dart';
 import 'package:diet_app/ui/view/home/profile/pages/current_diet/current_diet.dart';
 import 'package:flutter/material.dart';
-import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:get/get.dart';
 import 'package:diet_app/core/init/language/language_manager.dart';
 

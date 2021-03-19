@@ -6,7 +6,6 @@ import 'package:diet_app/core/widget/message_app_bar.dart';
 import 'package:diet_app/core/widget/message_input_box.dart';
 import 'package:diet_app/ui/viewmodel/home/messages/message_ui.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'components/his_message_ui.dart';
@@ -14,23 +13,31 @@ import 'components/message_date_ui.dart';
 import 'components/my_message_ui.dart';
 
 class MessageUI extends StatefulWidget {
+  const MessageUI();
+
   @override
   _MessageUIState createState() => _MessageUIState();
 }
 
 class _MessageUIState extends BaseState<MessageUI> {
-  final viewModel = Get.put(MessageUIViewModel());
-
   @override
   Widget build(BuildContext context) {
+    final viewModel = Get.put(MessageUIViewModel());
     return BaseView(
       viewModel: viewModel,
       backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
-      onPageBuilder: (context, value) => body(),
+      onPageBuilder: (context, viewModel) => body(viewModel),
     );
   }
+}
 
-  Widget body() {
+class body extends StatelessWidget {
+  final viewModel;
+
+  const body(this.viewModel);
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         AppMessageAppBar(
@@ -46,9 +53,11 @@ class _MessageUIState extends BaseState<MessageUI> {
               itemCount: viewModel.numbers.length,
               itemBuilder: (context, index) {
                 if (index % 5 == 0) {
-                  return MessageDateUI();
+                  return const MessageDateUI();
                 }
-                return index % 2 == 0 ? MyMessageUI() : HisMessageUI();
+                return index % 2 == 0
+                    ? const MyMessageUI()
+                    : const HisMessageUI();
               },
             ),
           ),
@@ -66,61 +75,6 @@ class _MessageUIState extends BaseState<MessageUI> {
           ),
         )
       ],
-    );
-  }
-
-  Widget MessageSender() {
-    return Material(
-      elevation: 4,
-      color: Colors.white,
-      child: Row(
-        children: [
-          IconButton(
-              icon: Icon(
-                Icons.add_circle_outline,
-                size: 35,
-              ),
-              onPressed: () {}),
-          Expanded(
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: TextFormField(
-                  maxLines: 4,
-                  minLines: 1,
-                  keyboardType: TextInputType.multiline,
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(17),
-                        borderSide: BorderSide(
-                          color: Colors.blue[100],
-                        ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(17),
-                        borderSide: BorderSide(
-                          color: Colors.black38,
-                        ),
-                      ),
-                      errorBorder: InputBorder.none,
-                      disabledBorder: InputBorder.none,
-                      contentPadding: EdgeInsets.only(left: 15, right: 15),
-                      hintText: 'Write Something ...'),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 15, left: 5),
-            child: Icon(
-              Icons.send,
-              color: AppColors.primarySwatch,
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

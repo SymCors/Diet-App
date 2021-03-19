@@ -11,10 +11,11 @@ import 'package:get/get.dart';
 import 'comments.dart';
 
 class Posts extends StatelessWidget {
-  final viewModel = Get.put(PostsViewModel());
+  const Posts();
 
   @override
   Widget build(BuildContext context) {
+    final viewModel = Get.put(PostsViewModel());
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
       child: ListView.builder(
@@ -27,12 +28,12 @@ class Posts extends StatelessWidget {
               Container(
                 child: Column(
                   children: [
-                    header(context, index),
-                    text(context),
-                    image(),
-                    likeAndDislikes(context),
-                    customDivider(context),
-                    buttons(context),
+                    header(viewModel, index),
+                    const text(),
+                    const image(),
+                    const likeAndDislikes(),
+                    const customDivider(),
+                    const buttons(),
                   ],
                 ),
               ),
@@ -43,8 +44,16 @@ class Posts extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget header(context, index) {
+class header extends StatelessWidget {
+  final index;
+  final viewModel;
+
+  const header(this.viewModel, this.index);
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
       child: Row(
@@ -72,7 +81,7 @@ class Posts extends StatelessWidget {
                   builder: (context) {
                     return AppBottomSheet(
                       size: 200,
-                      child: bottomSheetBody(context),
+                      child: bottomSheetBody(),
                     );
                   },
                 );
@@ -83,8 +92,13 @@ class Posts extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget text(context) {
+class text extends StatelessWidget {
+  const text();
+
+  @override
+  Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         Get.changeTheme(
@@ -99,8 +113,13 @@ class Posts extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget image() {
+class image extends StatelessWidget {
+  const image();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10, right: 10, left: 10, bottom: 5),
       child: Image(
@@ -108,8 +127,13 @@ class Posts extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget likeAndDislikes(context) {
+class likeAndDislikes extends StatelessWidget {
+  const likeAndDislikes();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 10, top: 5),
       child: Row(
@@ -162,8 +186,13 @@ class Posts extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget customDivider(context) {
+class customDivider extends StatelessWidget {
+  const customDivider();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
       child: Divider(
@@ -172,8 +201,13 @@ class Posts extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget buttons(BuildContext context) {
+class buttons extends StatelessWidget {
+  const buttons();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 10),
       child: Row(
@@ -240,8 +274,11 @@ class Posts extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget bottomSheetBody(context) {
+class bottomSheetBody extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         ListTile(

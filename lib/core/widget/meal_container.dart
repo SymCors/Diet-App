@@ -5,12 +5,6 @@ import 'package:get/utils.dart';
 import 'rounded_linear_progress_indicator.dart';
 
 class MealContainer extends StatelessWidget {
-  final backgroundColor;
-  final asset;
-  final title;
-  final double calorie;
-  final double calorieGained;
-
   const MealContainer(
       {Key key,
       this.backgroundColor,
@@ -20,11 +14,17 @@ class MealContainer extends StatelessWidget {
       @required this.calorieGained})
       : super(key: key);
 
+  final backgroundColor;
+  final asset;
+  final title;
+  final double calorie;
+  final double calorieGained;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: backgroundColor ?? Theme.of(context).scaffoldBackgroundColor,
-      padding: EdgeInsets.only(left: 15, top: 15, bottom: 20),
+      padding: const EdgeInsets.only(left: 15, top: 15, bottom: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -82,7 +82,7 @@ class MealContainer extends StatelessWidget {
               Container(
                 height: 10,
                 width: 180,
-                margin: EdgeInsets.only(top: 10, bottom: 20),
+                margin: const EdgeInsets.only(top: 10, bottom: 20),
                 child: AppRoundedLinearProgressIndicator(
                   value: calorieGained / calorie,
                   color: Colors.blue[300],

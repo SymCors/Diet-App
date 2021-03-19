@@ -2,10 +2,11 @@ import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:flutter/material.dart';
 
 class Stories extends StatelessWidget {
-  final names = List<String>.generate(10, (i) => 'name_ $i');
+  const Stories();
 
   @override
   Widget build(BuildContext context) {
+    final names = List<String>.generate(10, (i) => 'name_ $i');
     return Container(
       height: 110,
       color: Theme.of(context).scaffoldBackgroundColor,

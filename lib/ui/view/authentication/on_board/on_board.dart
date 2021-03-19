@@ -1,4 +1,3 @@
-import 'package:diet_app/core/base/state/base_state.dart';
 import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/constant/colors.dart';
 import 'package:diet_app/core/widget/circle_page_indicator.dart';
@@ -6,15 +5,27 @@ import 'package:diet_app/ui/viewmodel/authentication/on_board/on_board.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class OnBoard extends StatefulWidget {
+class OnBoard extends StatelessWidget {
+  const OnBoard();
+
   @override
-  _OnBoardState createState() => _OnBoardState();
+  Widget build(BuildContext context) {
+    return BaseView(
+      onModelReady: null,
+      viewModel: Get.put(OnBoardViewModel()),
+      backgroundColor: Colors.white,
+      onPageBuilder: (context, viewModel) => body(viewModel),
+    );
+  }
 }
 
-class _OnBoardState extends BaseState<OnBoard> {
-  final OnBoardViewModel viewModel = Get.put(OnBoardViewModel());
+class body extends StatelessWidget {
+  final viewModel;
 
-  Widget body() {
+  const body(this.viewModel);
+
+  @override
+  Widget build(BuildContext context) {
     return Stack(
       children: [
         PageView(
@@ -38,7 +49,7 @@ class _OnBoardState extends BaseState<OnBoard> {
                 style: ElevatedButton.styleFrom(
                   // background color
                   primary: AppColors.app_color,
-                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   textStyle: TextStyle(fontSize: 20),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -53,16 +64,6 @@ class _OnBoardState extends BaseState<OnBoard> {
           ),
         ),
       ],
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return BaseView(
-      onModelReady: null,
-      viewModel: viewModel,
-      backgroundColor: Colors.white,
-      onPageBuilder: (context, value) => body(),
     );
   }
 }

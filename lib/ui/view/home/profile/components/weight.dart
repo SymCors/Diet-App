@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Weight extends StatelessWidget {
+  const Weight();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,17 +16,22 @@ class Weight extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            header(context),
-            kilo(context),
-            progressBar(),
-            texts(context),
+            const header(),
+            const kilo(),
+            const progressBar(),
+            const texts(),
           ],
         ),
       ),
     );
   }
+}
 
-  Widget header(context) {
+class header extends StatelessWidget {
+  const header();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 7, right: 7, bottom: 5),
       child: Row(
@@ -43,7 +50,7 @@ class Weight extends StatelessWidget {
                   : Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.circular(10),
             ),
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Text(
               '65.5 kg',
             ),
@@ -60,11 +67,16 @@ class Weight extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget kilo(context) {
+class kilo extends StatelessWidget {
+  const kilo();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.topLeft,
-      margin: EdgeInsets.only(left: 10),
+      margin: const EdgeInsets.only(left: 10),
       child: Text(
         '71.0 kg',
         style: Theme.of(context)
@@ -74,10 +86,15 @@ class Weight extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget progressBar() {
+class progressBar extends StatelessWidget {
+  const progressBar();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10, right: 10, top: 20, bottom: 5),
+      margin: const EdgeInsets.only(left: 10, right: 10, top: 20, bottom: 5),
       child: LinearProgressIndicator(
         backgroundColor: Colors.red,
         value: 0.4,
@@ -85,10 +102,15 @@ class Weight extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget texts(context) {
+class texts extends StatelessWidget {
+  const texts();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 10, top: 0, right: 10, bottom: 10),
+      margin: const EdgeInsets.only(left: 10, top: 0, right: 10, bottom: 10),
       child: Row(
         children: [
           Expanded(

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SportPage extends StatelessWidget {
-  final viewModel = Get.put(SportPageViewModel());
+  const SportPage();
 
   @override
   Widget build(BuildContext context) {
-    return viewModel.onBoardBase();
+    return Get.put(SportPageViewModel()).onBoardBase();
   }
 }

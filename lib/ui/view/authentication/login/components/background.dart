@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Background extends StatelessWidget {
-  final viewModel = Get.put(LoginBackgroundViewModel());
+  const Background();
 
   @override
   Widget build(BuildContext context) {
     return Opacity(
       opacity: 0.3,
       child: Image(
-        image: AssetImage(viewModel.model.assetName),
+        image: AssetImage(Get.put(LoginBackgroundViewModel()).model.assetName),
         fit: BoxFit.cover,
         height: double.infinity,
         width: double.infinity,

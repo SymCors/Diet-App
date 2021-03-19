@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Settings extends StatefulWidget {
+  const Settings();
+
   @override
   _SettingsState createState() => _SettingsState();
 }
@@ -21,11 +23,16 @@ class _SettingsState extends BaseState<Settings> {
         ),
       ),
       viewModel: null,
-      onPageBuilder: (context, value) => body(),
+      onPageBuilder: (context, value) => const body(),
     );
   }
+}
 
-  Widget body() {
+class body extends StatelessWidget {
+  const body();
+
+  @override
+  Widget build(BuildContext context) {
     return Container();
   }
 }

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DietPage extends StatelessWidget {
-  final viewModel = Get.put(DietPageViewModel());
+  const DietPage();
 
   @override
   Widget build(BuildContext context) {
-    return viewModel.onBoardBase();
+    return Get.put(DietPageViewModel()).onBoardBase();
   }
 }

@@ -2,23 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class CardHeader extends StatelessWidget {
+  const CardHeader();
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
       child: Stack(
         children: [
-          background(context),
-          texts(context),
+          const background(),
+          const texts(),
         ],
       ),
     );
   }
+}
 
-  Widget background(context) {
+class background extends StatelessWidget {
+  const background();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: 100,
-      margin: EdgeInsets.only(left: 10, top: 15, right: 10, bottom: 5),
+      margin: const EdgeInsets.only(left: 10, top: 15, right: 10, bottom: 5),
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
@@ -43,10 +50,15 @@ class CardHeader extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget texts(context) {
+class texts extends StatelessWidget {
+  const texts();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 30, top: 35),
+      margin: const EdgeInsets.only(left: 30, top: 35),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

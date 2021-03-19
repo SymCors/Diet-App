@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FormFields extends StatelessWidget {
-  final viewModel = Get.put(LoginFormFieldsViewModel());
+  const FormFields();
 
   @override
   Widget build(BuildContext context) {
+    final viewModel = Get.put(LoginFormFieldsViewModel());
     return Container(
       alignment: Alignment.center,
-      margin: EdgeInsets.symmetric(horizontal: 40),
+      margin: const EdgeInsets.symmetric(horizontal: 40),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -98,7 +99,7 @@ class FormFields extends StatelessWidget {
                 viewModel.login();
               },
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(vertical: 12),
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 textStyle: TextStyle(fontSize: 18),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class ViewAllWidget extends StatelessWidget {
-  final Widget child;
-  final title;
-  final VoidCallback onClick;
-  final color;
-
   ViewAllWidget(
       {@required this.child,
       @required this.title,
       @required this.onClick,
       this.color});
+
+  final Widget child;
+  final title;
+  final VoidCallback onClick;
+  final color;
 
   @override
   Widget build(BuildContext context) {

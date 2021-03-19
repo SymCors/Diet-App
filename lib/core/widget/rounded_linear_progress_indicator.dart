@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppRoundedLinearProgressIndicator extends StatelessWidget {
+  AppRoundedLinearProgressIndicator({this.value, this.color});
+
   final value;
   final color;
-
-  AppRoundedLinearProgressIndicator({this.value, this.color});
 
   @override
   Widget build(BuildContext context) {

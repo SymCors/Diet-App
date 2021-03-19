@@ -6,21 +6,22 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 
 class Messages extends StatefulWidget {
+  const Messages();
+
   @override
   _MessagesState createState() => _MessagesState();
 }
 
 class _MessagesState extends State<Messages> {
-  final viewModel = Get.put(MessagesViewModel());
-
   @override
   Widget build(BuildContext context) {
+    final viewModel = Get.put(MessagesViewModel());
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
       child: Center(
         child: ListView.separated(
           separatorBuilder: (context, index) => Container(
-            margin: EdgeInsets.only(left: 72.8),
+            margin: const EdgeInsets.only(left: 72.8),
             child: Divider(
               height: 1,
             ),

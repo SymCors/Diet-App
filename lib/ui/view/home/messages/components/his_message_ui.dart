@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HisMessageUI extends StatelessWidget {
+  const HisMessageUI();
+
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -9,13 +11,13 @@ class HisMessageUI extends StatelessWidget {
         constraints: BoxConstraints(minWidth: 70, maxWidth: 275),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10),
-              bottomRight: Radius.circular(10),
-              bottomLeft: Radius.circular(10)),
+              topRight: const Radius.circular(10),
+              bottomRight: const Radius.circular(10),
+              bottomLeft: const Radius.circular(10)),
           color: Color(0xffc7defa),
         ),
-        padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 7),
-        margin: EdgeInsets.only(left: 10, top: 5, bottom: 5),
+        padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 7),
+        margin: const EdgeInsets.only(left: 10, top: 5, bottom: 5),
         child: Stack(
           children: [
             Padding(

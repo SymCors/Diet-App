@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LogoText extends StatelessWidget {
-  final viewModel = Get.put(LoginLogoTextViewModel());
+  const LogoText();
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class LogoText extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(80),
         child: Image(
-          image: AssetImage(viewModel.model.assetName),
+          image: AssetImage(Get.put(LoginLogoTextViewModel()).model.assetName),
         ),
       ),
     );

@@ -3,19 +3,26 @@ import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class Exercises extends StatelessWidget {
+  const Exercises();
+
   @override
   Widget build(BuildContext context) {
     return ViewAllWidget(
       title: 'exercises'.tr,
       onClick: null,
-      child: exercises(),
+      child: const exercises(),
     );
   }
+}
 
-  Widget exercises() {
+class exercises extends StatelessWidget {
+  const exercises();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: 110,
-      margin: EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 10),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,

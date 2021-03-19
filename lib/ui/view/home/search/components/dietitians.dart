@@ -4,16 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:get/utils.dart';
 
 class Dietitians extends StatelessWidget {
+  const Dietitians();
+
   @override
   Widget build(BuildContext context) {
     return ViewAllWidget(
       title: 'dietitians'.tr,
       onClick: null,
-      child: docs(context),
+      child: const docs(),
     );
   }
+}
 
-  Widget docs(context) {
+class docs extends StatelessWidget {
+  const docs();
+
+  @override
+  Widget build(BuildContext context) {
     return GridView.count(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
@@ -50,7 +57,7 @@ class Dietitians extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
-                    margin: EdgeInsets.only(bottom: 5),
+                    margin: const EdgeInsets.only(bottom: 5),
                     child: Text(
                       'dietitian'.tr,
                       style: Theme.of(context)

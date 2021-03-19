@@ -7,30 +7,30 @@ import 'components/background.dart';
 import 'components/form_fields.dart';
 import 'components/logo_text.dart';
 
-class Login extends StatefulWidget {
-  @override
-  _LoginState createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
-  final viewModel = Get.put(LoginViewModel());
+class Login extends StatelessWidget {
+  const Login();
 
   @override
   Widget build(BuildContext context) {
     return BaseView(
-      viewModel: viewModel,
-      onPageBuilder: (context, value) => body(),
+      viewModel: Get.put(LoginViewModel()),
+      onPageBuilder: (context, value) => const body(),
     );
   }
+}
 
-  Widget body() {
+class body extends StatelessWidget {
+  const body();
+
+  @override
+  Widget build(BuildContext context) {
     return Stack(
       children: [
-        Background(),
+        const Background(),
         Column(
           children: [
-            LogoText(),
-            FormFields(),
+            const LogoText(),
+            const FormFields(),
           ],
         ),
       ],

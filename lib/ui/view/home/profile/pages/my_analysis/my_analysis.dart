@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MyAnalysis extends StatefulWidget {
+  const MyAnalysis();
+
   @override
   _MyAnalysisState createState() => _MyAnalysisState();
 }
@@ -22,11 +24,16 @@ class _MyAnalysisState extends BaseState<MyAnalysis> {
         ),
       ),
       viewModel: null,
-      onPageBuilder: (context, value) => body(),
+      onPageBuilder: (context, value) => const body(),
     );
   }
+}
 
-  Widget body() {
+class body extends StatelessWidget {
+  const body();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
         shrinkWrap: true,
@@ -35,17 +42,17 @@ class _MyAnalysisState extends BaseState<MyAnalysis> {
           return InkWell(
             onTap: () {},
             child: Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   color: Colors.deepOrangeAccent,
                   borderRadius: BorderRadius.circular(10)),
               child: Container(
-                margin: EdgeInsets.only(left: 7),
+                margin: const EdgeInsets.only(left: 7),
                 decoration: BoxDecoration(
                   color: Theme.of(context).cardColor,
                   borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
+                    topRight: const Radius.circular(10),
+                    bottomRight: const Radius.circular(10),
                   ),
                 ),
                 child: ListTile(

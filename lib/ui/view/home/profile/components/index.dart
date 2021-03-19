@@ -3,6 +3,8 @@ import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:flutter/material.dart';
 
 class Index extends StatelessWidget {
+  const Index();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,19 +15,19 @@ class Index extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            header(context),
+            const header(),
             SizedBox(
               height: 10,
             ),
-            index(),
+            const index(),
             SizedBox(
               height: 10,
             ),
-            result(),
+            const result(),
             SizedBox(
               height: 10,
             ),
-            emoji(),
+            const emoji(),
             SizedBox(
               height: 10,
             ),
@@ -34,18 +36,23 @@ class Index extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget header(context) {
+class header extends StatelessWidget {
+  const header();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 7, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
       child: Row(
         children: [
           Expanded(
             child: Text(
               'Vücut Kitle İndeksi',
               style:
-                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
+              Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
             ),
           ),
           Icon(
@@ -57,26 +64,41 @@ class Index extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget index() {
+class index extends StatelessWidget {
+  const index();
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      margin: EdgeInsets.only(left: 10),
+      margin: const EdgeInsets.only(left: 10),
       child: Text(
         '24.3',
         style: bigTextStyle,
       ),
     );
   }
+}
 
-  Widget result() {
+class result extends StatelessWidget {
+  const result();
+
+  @override
+  Widget build(BuildContext context) {
     return Text(
       'İdeal Kilo Aralığındasınız',
       style: kSuccessStyle,
     );
   }
+}
 
-  Widget emoji() {
+class emoji extends StatelessWidget {
+  const emoji();
+
+  @override
+  Widget build(BuildContext context) {
     return Icon(
       AppIcons.heart,
       size: 30,

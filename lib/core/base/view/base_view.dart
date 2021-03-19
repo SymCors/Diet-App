@@ -1,16 +1,6 @@
 import 'package:flutter/material.dart';
 
 class BaseView<T> extends StatefulWidget {
-  final Widget Function(BuildContext context, T value) onPageBuilder;
-  final T viewModel;
-  final Function(T model) onModelReady;
-  final VoidCallback onDispose;
-  final backgroundColor;
-  final AppBar appBar;
-  final bottomNavigationBar;
-  final drawer;
-  final floatingActionButton;
-
   const BaseView(
       {Key key,
       @required this.viewModel,
@@ -23,6 +13,16 @@ class BaseView<T> extends StatefulWidget {
       this.drawer,
       this.floatingActionButton})
       : super(key: key);
+
+  final Widget Function(BuildContext context, T value) onPageBuilder;
+  final T viewModel;
+  final Function(T model) onModelReady;
+  final VoidCallback onDispose;
+  final Color backgroundColor;
+  final AppBar appBar;
+  final bottomNavigationBar;
+  final drawer;
+  final FloatingActionButton floatingActionButton;
 
   @override
   _BaseViewState createState() => _BaseViewState();

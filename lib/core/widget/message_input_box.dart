@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 
 import 'message_action_button.dart';
 
 class MessageInputBox extends StatelessWidget {
+  MessageInputBox(
+      {this.prefix,
+      this.suffix,
+      this.roundedCorners,
+      this.onChanged,
+      this.onSubmitted});
+
   final Widget prefix;
   final Widget suffix;
   final bool roundedCorners;
-  final Function onChanged;
-  final Function onSubmitted;
-  MessageInputBox({this.prefix, this.suffix, this.roundedCorners, this.onChanged, this.onSubmitted});
+  final Callback onChanged;
+  final Callback onSubmitted;
 
   @override
   Widget build(BuildContext context) {
-
     double cornerRadius() {
-      if(roundedCorners != null && roundedCorners == true) {
+      if (roundedCorners != null && roundedCorners == true) {
         return 25.0;
       } else {
         return 0.0;
@@ -22,7 +28,7 @@ class MessageInputBox extends StatelessWidget {
     }
 
     double padding() {
-      if(roundedCorners != null && roundedCorners == true) {
+      if (roundedCorners != null && roundedCorners == true) {
         return 12.0;
       } else {
         return 8.0;
@@ -42,7 +48,7 @@ class MessageInputBox extends StatelessWidget {
           )
         ],
       ),
-      margin: EdgeInsets.only(left: 10, right: 10, bottom: 7, top: 5),
+      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 7, top: 5),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.1),
@@ -55,11 +61,19 @@ class MessageInputBox extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: [
-            prefix ?? SizedBox(width: 0, height: 0,),
+            prefix ??
+                SizedBox(
+                  width: 0,
+                  height: 0,
+                ),
             Expanded(
               child: TextField(
-                onChanged: onChanged,
-                onSubmitted: onSubmitted,
+                onChanged: (text) {
+                  onChanged;
+                },
+                onSubmitted: (text) {
+                  onSubmitted;
+                },
                 maxLines: 4,
                 minLines: 1,
                 decoration: InputDecoration(
@@ -68,14 +82,18 @@ class MessageInputBox extends StatelessWidget {
                     color: Colors.black.withOpacity(0.6),
                   ),
                   border: InputBorder.none,
-                  contentPadding: EdgeInsets.all(16.0,),
+                  contentPadding: const EdgeInsets.all(
+                    16.0,
+                  ),
                 ),
-                style: TextStyle(
-                    color: Colors.black
-                ),
+                style: TextStyle(color: Colors.black),
               ),
             ),
-            suffix ?? SizedBox(width: 0, height: 0,),
+            suffix ??
+                SizedBox(
+                  width: 0,
+                  height: 0,
+                ),
             MessageActionButton(
               icon: Icon(
                 Icons.send,
@@ -89,4 +107,3 @@ class MessageInputBox extends StatelessWidget {
     );
   }
 }
-

@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TotalDietTime extends StatelessWidget {
+  const TotalDietTime();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,15 +17,20 @@ class TotalDietTime extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            header(context),
-            card(),
+            const header(),
+            const card(),
           ],
         ),
       ),
     );
   }
+}
 
-  Widget header(context) {
+class header extends StatelessWidget {
+  const header();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 7, right: 7, bottom: 5),
       child: Row(
@@ -32,7 +39,7 @@ class TotalDietTime extends StatelessWidget {
             child: Text(
               'total_diet'.tr,
               style:
-                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
+              Theme.of(context).textTheme.headline6.copyWith(fontSize: 17),
             ),
           ),
           Container(
@@ -42,15 +49,20 @@ class TotalDietTime extends StatelessWidget {
                   : Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.circular(10),
             ),
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Text('7 ' + 'day'.tr),
           ),
         ],
       ),
     );
   }
+}
 
-  Widget card() {
+class card extends StatelessWidget {
+  const card();
+
+  @override
+  Widget build(BuildContext context) {
     return Card(
       color: AppColors.cardBackground,
       shape: RoundedRectangleBorder(
@@ -98,8 +110,8 @@ class TotalDietTime extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 10),
-              padding: EdgeInsets.all(10),
+              margin: const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: AppColors.cardBackgroundDark),

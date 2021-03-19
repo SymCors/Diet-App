@@ -1,6 +1,4 @@
-import 'package:diet_app/ui/viewmodel/home/profile/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import 'components/index.dart';
 import 'components/bottom_section.dart';
@@ -8,33 +6,34 @@ import 'components/total_diet_time.dart';
 import 'components/weight.dart';
 
 class Profile extends StatefulWidget {
+  const Profile();
+
   @override
   _ProfileState createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
-  final viewModel = Get.put(ProfileViewModel());
-
   @override
   Widget build(BuildContext context) {
+    //final viewModel = Get.put(ProfileViewModel());
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            TotalDietTime(),
+            const TotalDietTime(),
             SizedBox(
               height: 15,
             ),
-            Weight(),
+            const Weight(),
             SizedBox(
               height: 15,
             ),
-            Index(),
+            const Index(),
             SizedBox(
               height: 15,
             ),
-            BottomSection(),
+            const BottomSection(),
           ],
         ),
       ),
