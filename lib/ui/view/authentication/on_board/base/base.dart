@@ -4,9 +4,9 @@ import 'package:diet_app/ui/model/authentication/on_board/base/on_board_base.dar
 import 'package:flutter/material.dart';
 
 class OnBoardBase extends StatelessWidget {
-  final OnBoardBaseModel model;
-
   const OnBoardBase({@required this.model});
+
+  final OnBoardBaseModel model;
 
   @override
   Widget build(BuildContext context) {

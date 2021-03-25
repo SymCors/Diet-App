@@ -14,15 +14,15 @@ class OnBoard extends StatelessWidget {
       onModelReady: null,
       viewModel: Get.put(OnBoardViewModel()),
       backgroundColor: Colors.white,
-      onPageBuilder: (context, viewModel) => body(viewModel),
+      onPageBuilder: (context, viewModel) => Body(viewModel),
     );
   }
 }
 
-class body extends StatelessWidget {
-  final viewModel;
+class Body extends StatelessWidget {
+  const Body(this.viewModel);
 
-  const body(this.viewModel);
+  final viewModel;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,8 @@ class body extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   // background color
                   primary: AppColors.app_color,
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                   textStyle: TextStyle(fontSize: 20),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
