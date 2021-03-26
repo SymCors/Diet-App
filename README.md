@@ -1,4 +1,4 @@
-# dieat_app
+# diet_app
 
 A new Flutter application.
 
