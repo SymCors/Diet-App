@@ -1,4 +1,6 @@
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer();
@@ -12,12 +14,15 @@ class NavigationDrawer extends StatelessWidget {
           CreateDrawerHeader(),
           CreateDrawerBodyItem(
             icon: Icons.home,
-            text: 'Home',
-            onTap: () => Navigator.pop(context),
+            text: 'my_diet_lists'.tr,
+            onTap: () {
+              Navigator.pop(context);
+              Get.toNamed(Routes.my_diet_lists);
+            },
           ),
           CreateDrawerBodyItem(
             icon: Icons.account_circle,
-            text: 'Profile',
+            text: 'my_payment_history'.tr,
             onTap: () => Navigator.pop(context),
           ),
           CreateDrawerBodyItem(

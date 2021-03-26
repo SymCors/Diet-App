@@ -15,6 +15,7 @@ import 'ui/view/home/exercises/pages/exercise_details_view.dart';
 import 'ui/view/home/messages/message_ui.dart';
 import 'ui/view/home/profile/pages/my_analysis/my_analysis.dart';
 import 'ui/view/home/profile/pages/settings/settings.dart';
+import 'ui/view/home_drawer/my_diet_lists.dart';
 
 void main() {
   runApp(
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         Routes.current_diet: (context) => const CurrentDiet(),
         Routes.my_analysis: (context) => const MyAnalysis(),
         Routes.settings: (context) => const Settings(),
+        Routes.my_diet_lists: (context) => const MyDietLists(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme(context),

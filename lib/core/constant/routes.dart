@@ -10,4 +10,5 @@ class Routes {
   static const String current_diet = '/current_diet';
   static const String my_analysis = '/my_analysis';
   static const String settings = '/settings';
+  static const String my_diet_lists = '/my_diet_lists';
 }

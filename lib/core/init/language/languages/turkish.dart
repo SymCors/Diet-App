@@ -43,6 +43,8 @@ const Map<String, String> trTR = {
   'message': 'Mesajlar',
   'my_analysis': 'Tahlillerim',
   'my_diet': 'Diyetim',
+  'my_diet_lists': 'Diyet Listelerim',
+  'my_payment_history': 'Ödeme Geçmişim',
 
   'not_have_account': 'Hesabınız yok mu?',
 
