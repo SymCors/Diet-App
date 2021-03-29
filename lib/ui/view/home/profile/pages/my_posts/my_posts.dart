@@ -1,6 +1,7 @@
+import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/widget/custom_divider.dart';
 import 'package:diet_app/ui/view/home/homepage/components/posts.dart';
-import 'package:diet_app/ui/viewmodel/home/profile/pages/my_profile/components/my_posts/my_posts.dart';
+import 'package:diet_app/ui/viewmodel/home/profile/pages/my_posts/my_posts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,12 +10,29 @@ class MyPosts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return BaseView(
+      appBar: AppBar(
+        title: Text(
+          'my_posts'.tr,
+          style: Theme.of(context).appBarTheme.titleTextStyle,
+        ),
+      ),
+      viewModel: null,
+      onPageBuilder: (context, value) => const Body(),
+    );
+  }
+}
+
+class Body extends StatelessWidget {
+  const Body();
+
+  @override
+  Widget build(BuildContext context) {
     final viewModel = Get.put(MyPostsViewModel());
 
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
       child: ListView.builder(
-        physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         itemCount: viewModel.names.length,
         itemBuilder: (context, index) {

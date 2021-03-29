@@ -52,6 +52,7 @@ const Map<String, String> trTR = {
   'my_diet': 'Diyetim',
   'my_diet_lists': 'Diyet Listelerim',
   'my_payment_history': 'Ödeme Geçmişim',
+  'my_posts': 'Gönderilerim',
   'my_profile': 'Profilim',
 
   'not_have_account': 'Hesabınız yok mu?',
@@ -71,7 +72,6 @@ const Map<String, String> trTR = {
   'report': 'Şikayet Et',
 
   'saved': 'Biriken',
-  'saved_posts': 'Kayıtlı Gönderiler',
   'search': 'Arama',
   'see_all': 'Hepsini Gör',
   'settings': 'Ayarlar',

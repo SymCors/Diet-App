@@ -1,3 +1,4 @@
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,11 +18,16 @@ class ProfileListTile extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: Column(
-                    children: [
-                      Text('24', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 19, fontWeight: FontWeight.w600),),
-                      Text('posts'.tr),
-                    ],
+                  child: InkWell(
+                    onTap: (){
+                      Get.toNamed(Routes.my_posts);
+                    },
+                    child: Column(
+                      children: [
+                        Text('24', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 19, fontWeight: FontWeight.w600),),
+                        Text('posts'.tr),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(

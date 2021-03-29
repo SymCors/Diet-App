@@ -1,3 +1,4 @@
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,8 +20,10 @@ class Buttons extends StatelessWidget {
           SizedBox(width: 20),
           Expanded(
             child: OutlinedButton(
-              onPressed: () {},
-              child: Text('saved_posts'.tr),
+              onPressed: () {
+                Get.toNamed(Routes.my_posts);
+              },
+              child: Text('my_posts'.tr),
             ),
           ),
         ],
