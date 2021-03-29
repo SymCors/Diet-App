@@ -34,50 +34,48 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: 10, // change according to the viewmodel
-        itemBuilder: (context, index) {
-          return InkWell(
-            onTap: () {},
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: 10, // change according to the viewmodel
+      itemBuilder: (context, index) {
+        return InkWell(
+          onTap: () {},
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+            decoration: BoxDecoration(
+                color: Colors.deepOrangeAccent,
+                borderRadius: BorderRadius.circular(10)),
             child: Container(
-              margin: const EdgeInsets.all(10),
+              margin: const EdgeInsets.only(left: 5),
               decoration: BoxDecoration(
-                  color: Colors.deepOrangeAccent,
-                  borderRadius: BorderRadius.circular(10)),
-              child: Container(
-                margin: const EdgeInsets.only(left: 7),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).cardColor,
-                  borderRadius: BorderRadius.only(
-                    topRight: const Radius.circular(10),
-                    bottomRight: const Radius.circular(10),
-                  ),
+                color: Theme.of(context).cardColor,
+                borderRadius: BorderRadius.only(
+                  topRight: const Radius.circular(10),
+                  bottomRight: const Radius.circular(10),
                 ),
-                child: ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage:
-                        AssetImage('assets/icons/medical_analysis_2.png'),
-                  ),
-                  title: Text('Kan Tahlili'),
-                  subtitle: Text(
-                    '18/03/2021',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2
-                        .copyWith(fontSize: 13, color: Colors.grey),
-                  ),
-                  trailing: Icon(
-                    Icons.chevron_right,
-                    color: Colors.deepOrange,
-                  ),
+              ),
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundImage:
+                      AssetImage('assets/icons/medical_analysis_2.png'),
+                ),
+                title: Text('Kan Tahlili'),
+                subtitle: Text(
+                  '18/03/2021',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyText2
+                      .copyWith(fontSize: 13, color: Colors.grey),
+                ),
+                trailing: Icon(
+                  Icons.chevron_right,
+                  color: Colors.deepOrange,
                 ),
               ),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
