@@ -28,6 +28,7 @@ class Posts extends StatelessWidget {
               Container(
                 child: Column(
                   children: [
+                    // TODO: Rename the classes with _ to make in private after removing posts from profile.
                     Header(viewModel, index),
                     const Texts(),
                     const Images(),

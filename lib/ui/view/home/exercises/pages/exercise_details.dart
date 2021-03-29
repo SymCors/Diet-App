@@ -12,15 +12,15 @@ class ExerciseDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: Get.put(ExerciseDetailsViewModel()),
-      onPageBuilder: (context, viewModel) => Body(viewModel),
+      onPageBuilder: (context, viewModel) => _Body(viewModel),
     );
   }
 }
 
-class Body extends StatelessWidget {
+class _Body extends StatelessWidget {
   final viewModel;
 
-  const Body(this.viewModel);
+  const _Body(this.viewModel);
 
   @override
   Widget build(BuildContext context) {
@@ -62,18 +62,18 @@ class Body extends StatelessWidget {
         ),
         SliverList(
             delegate: SliverChildListDelegate([
-          const TitleTexts(),
-          const Buttons(),
-          const ExercisesTitle(),
-          Exercises(viewModel),
+          const _TitleTexts(),
+          const _Buttons(),
+          const _ExercisesTitle(),
+          _Exercises(viewModel),
         ])),
       ],
     );
   }
 }
 
-class TitleTexts extends StatelessWidget {
-  const TitleTexts();
+class _TitleTexts extends StatelessWidget {
+  const _TitleTexts();
 
   @override
   Widget build(BuildContext context) {
@@ -98,8 +98,8 @@ class TitleTexts extends StatelessWidget {
   }
 }
 
-class Buttons extends StatelessWidget {
-  const Buttons();
+class _Buttons extends StatelessWidget {
+  const _Buttons();
 
   @override
   Widget build(BuildContext context) {
@@ -137,8 +137,8 @@ class Buttons extends StatelessWidget {
   }
 }
 
-class ExercisesTitle extends StatelessWidget {
-  const ExercisesTitle();
+class _ExercisesTitle extends StatelessWidget {
+  const _ExercisesTitle();
 
   @override
   Widget build(BuildContext context) {
@@ -158,10 +158,10 @@ class ExercisesTitle extends StatelessWidget {
   }
 }
 
-class Exercises extends StatelessWidget {
+class _Exercises extends StatelessWidget {
   final viewModel;
 
-  const Exercises(this.viewModel);
+  const _Exercises(this.viewModel);
 
   @override
   Widget build(BuildContext context) {

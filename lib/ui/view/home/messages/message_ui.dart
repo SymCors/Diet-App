@@ -26,15 +26,15 @@ class _MessageUIState extends BaseState<MessageUI> {
     return BaseView(
       viewModel: viewModel,
       backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
-      onPageBuilder: (context, viewModel) => Body(viewModel),
+      onPageBuilder: (context, viewModel) => _Body(viewModel),
     );
   }
 }
 
-class Body extends StatelessWidget {
+class _Body extends StatelessWidget {
   final viewModel;
 
-  const Body(this.viewModel);
+  const _Body(this.viewModel);
 
   @override
   Widget build(BuildContext context) {

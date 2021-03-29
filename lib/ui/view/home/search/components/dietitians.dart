@@ -11,13 +11,13 @@ class Dietitians extends StatelessWidget {
     return ViewAllWidget(
       title: 'dietitians'.tr,
       onClick: null,
-      child: const Docs(),
+      child: const _Docs(),
     );
   }
 }
 
-class Docs extends StatelessWidget {
-  const Docs();
+class _Docs extends StatelessWidget {
+  const _Docs();
 
   @override
   Widget build(BuildContext context) {

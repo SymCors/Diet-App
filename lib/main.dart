@@ -15,6 +15,7 @@ import 'ui/view/authentication/on_board/on_board.dart';
 import 'ui/view/home/exercises/pages/exercise_details.dart';
 import 'ui/view/home/exercises/pages/exercise_details_view.dart';
 import 'ui/view/home/messages/message_ui.dart';
+import 'ui/view/home/profile/pages/edit_profile/edit_profile.dart';
 import 'ui/view/home/profile/pages/settings/settings.dart';
 import 'ui/view/home_drawer/my_analysis/my_analysis.dart';
 import 'ui/view/home_drawer/my_diet_lists/my_diet_lists.dart';
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         Routes.payment_history: (context) => const MyPaymentHistory(),
         Routes.notifications: (context) => const Notifications(),
         Routes.my_posts: (context) => const MyPosts(),
+        Routes.edit_profile: (context) => const EditProfile(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme(context),

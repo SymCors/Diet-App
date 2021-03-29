@@ -14,13 +14,13 @@ class OnBoard extends StatelessWidget {
       onModelReady: null,
       viewModel: Get.put(OnBoardViewModel()),
       backgroundColor: Colors.white,
-      onPageBuilder: (context, viewModel) => Body(viewModel),
+      onPageBuilder: (context, viewModel) => _Body(viewModel),
     );
   }
 }
 
-class Body extends StatelessWidget {
-  const Body(this.viewModel);
+class _Body extends StatelessWidget {
+  const _Body(this.viewModel);
 
   final viewModel;
 

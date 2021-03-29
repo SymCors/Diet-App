@@ -1,6 +1,5 @@
 import 'package:diet_app/core/base/view/base_view.dart';
 import 'package:diet_app/core/widget/custom_divider.dart';
-import 'package:diet_app/core/widget/view_all_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,13 +24,13 @@ class _MyPaymentHistoryState extends State<MyPaymentHistory> {
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
       ),
-      onPageBuilder: (context, value) => const Body(),
+      onPageBuilder: (context, value) => const _Body(),
     );
   }
 }
 
-class Body extends StatelessWidget {
-  const Body();
+class _Body extends StatelessWidget {
+  const _Body();
 
   @override
   Widget build(BuildContext context) {

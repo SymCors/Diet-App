@@ -31,19 +31,25 @@ class ProfileListTile extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: Column(
-                    children: [
-                      Text('13', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 19, fontWeight: FontWeight.w600),),
-                      Text('likes'.tr),
-                    ],
+                  child: InkWell(
+                    onTap: () => Get.toNamed(Routes.my_posts),
+                    child: Column(
+                      children: [
+                        Text('13', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 19, fontWeight: FontWeight.w600),),
+                        Text('likes'.tr),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
-                  child: Column(
-                    children: [
-                      Text('42', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 19, fontWeight: FontWeight.w600),),
-                      Text('comments'.tr),
-                    ],
+                  child: InkWell(
+                    onTap: () => Get.toNamed(Routes.my_posts),
+                    child: Column(
+                      children: [
+                        Text('42', style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 19, fontWeight: FontWeight.w600),),
+                        Text('comments'.tr),
+                      ],
+                    ),
                   ),
                 ),
               ],

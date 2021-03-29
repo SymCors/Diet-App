@@ -14,4 +14,5 @@ class Routes {
   static const String payment_history = '/payment_history';
   static const String notifications = '/notifications';
   static const String my_posts = '/my_posts';
+  static const String edit_profile = '/edit_profile';
 }

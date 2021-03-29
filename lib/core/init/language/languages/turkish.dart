@@ -10,6 +10,7 @@ const Map<String, String> trTR = {
   'calorie': 'Kalori',
   'calorie_consumed': 'Alınan Kalori',
   'carbohydrate': 'Karbonhidrat',
+  'change_pp': 'Profil Fotoğrafını Değiştir',
   'comment': 'Yorum Yap',
   'comments': 'Yorum',
   'continue': 'Devam Et',
@@ -51,10 +52,13 @@ const Map<String, String> trTR = {
   'my_analysis': 'Tahlillerim',
   'my_diet': 'Diyetim',
   'my_diet_lists': 'Diyet Listelerim',
+  'my_kilo': 'Kilom',
   'my_payment_history': 'Ödeme Geçmişim',
   'my_posts': 'Gönderilerim',
   'my_profile': 'Profilim',
 
+  'name_surname': 'İsim Soyisim',
+  'name_cannot_be_empty': 'İsim alanı boş bırakılamaz',
   'not_have_account': 'Hesabınız yok mu?',
   'notifications': 'Bildirimler',
 
@@ -71,6 +75,7 @@ const Map<String, String> trTR = {
   'remember_me': 'Beni Hatırla',
   'report': 'Şikayet Et',
 
+  'save': 'Kaydet',
   'saved': 'Biriken',
   'search': 'Arama',
   'see_all': 'Hepsini Gör',
@@ -79,6 +84,8 @@ const Map<String, String> trTR = {
   'sign_up_now': 'Kayıt olun',
   'snack': 'Ara Öğün',
   'starting': 'Başlangıç',
+  'status': 'Durum',
+  'status_cannot_be_empty': 'Durum alanı boş bırakılamaz',
 
   'total_diet': 'Toplam Diyet',
   'total_paid': 'Toplam Harcanan',

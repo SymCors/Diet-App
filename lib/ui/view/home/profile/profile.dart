@@ -1,7 +1,6 @@
 import 'package:diet_app/core/widget/custom_divider.dart';
 import 'package:flutter/material.dart';
 
-import 'components/profile_header/components/buttons.dart';
 import 'components/index.dart';
 import 'components/bottom_section.dart';
 import 'components/profile_header/profile_header.dart';
@@ -18,7 +17,6 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    //final viewModel = Get.put(ProfileViewModel());
     return SingleChildScrollView(
       child: Column(
         children: [

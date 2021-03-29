@@ -16,13 +16,13 @@ class Notifications extends StatelessWidget {
         ),
       ),
       viewModel: null,
-      onPageBuilder: (context, value) => const Body(),
+      onPageBuilder: (context, value) => const _Body(),
     );
   }
 }
 
-class Body extends StatelessWidget {
-  const Body();
+class _Body extends StatelessWidget {
+  const _Body();
 
   @override
   Widget build(BuildContext context) {

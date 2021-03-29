@@ -10,14 +10,14 @@ class BottomSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Settings(),
+        const _Settings(),
       ],
     );
   }
 }
 
-class Settings extends StatelessWidget {
-  const Settings();
+class _Settings extends StatelessWidget {
+  const _Settings();
 
   @override
   Widget build(BuildContext context) {

@@ -15,13 +15,13 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseView(
       viewModel: Get.put(SignUpViewModel()),
-      onPageBuilder: (context, viewModel) => const Body(),
+      onPageBuilder: (context, viewModel) => const _Body(),
     );
   }
 }
 
-class Body extends StatelessWidget {
-  const Body();
+class _Body extends StatelessWidget {
+  const _Body();
 
   @override
   Widget build(BuildContext context) {

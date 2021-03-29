@@ -13,7 +13,9 @@ class Buttons extends StatelessWidget {
         children: [
           Expanded(
             child: OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.edit_profile);
+                },
               child: Text('edit_profile'.tr),
             ),
           ),

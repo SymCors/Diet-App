@@ -10,13 +10,13 @@ class Exercises extends StatelessWidget {
     return ViewAllWidget(
       title: 'exercises'.tr,
       onClick: null,
-      child: const ExercisesWidget(),
+      child: const _ExercisesWidget(),
     );
   }
 }
 
-class ExercisesWidget extends StatelessWidget {
-  const ExercisesWidget();
+class _ExercisesWidget extends StatelessWidget {
+  const _ExercisesWidget();
 
   @override
   Widget build(BuildContext context) {

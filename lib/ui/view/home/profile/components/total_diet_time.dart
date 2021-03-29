@@ -17,8 +17,8 @@ class TotalDietTime extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const Header(),
-            const Cards(),
+            const _Header(),
+            const _Cards(),
           ],
         ),
       ),
@@ -26,8 +26,8 @@ class TotalDietTime extends StatelessWidget {
   }
 }
 
-class Header extends StatelessWidget {
-  const Header();
+class _Header extends StatelessWidget {
+  const _Header();
 
   @override
   Widget build(BuildContext context) {
@@ -58,8 +58,8 @@ class Header extends StatelessWidget {
   }
 }
 
-class Cards extends StatelessWidget {
-  const Cards();
+class _Cards extends StatelessWidget {
+  const _Cards();
 
   @override
   Widget build(BuildContext context) {

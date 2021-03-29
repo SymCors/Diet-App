@@ -15,19 +15,19 @@ class Index extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const Header(),
+            const _Header(),
             SizedBox(
               height: 10,
             ),
-            const Indexes(),
+            const _Indexes(),
             SizedBox(
               height: 10,
             ),
-            const Result(),
+            const _Result(),
             SizedBox(
               height: 10,
             ),
-            const Emoji(),
+            const _Emoji(),
             SizedBox(
               height: 10,
             ),
@@ -38,8 +38,8 @@ class Index extends StatelessWidget {
   }
 }
 
-class Header extends StatelessWidget {
-  const Header();
+class _Header extends StatelessWidget {
+  const _Header();
 
   @override
   Widget build(BuildContext context) {
@@ -66,8 +66,8 @@ class Header extends StatelessWidget {
   }
 }
 
-class Indexes extends StatelessWidget {
-  const Indexes();
+class _Indexes extends StatelessWidget {
+  const _Indexes();
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +82,8 @@ class Indexes extends StatelessWidget {
   }
 }
 
-class Result extends StatelessWidget {
-  const Result();
+class _Result extends StatelessWidget {
+  const _Result();
 
   @override
   Widget build(BuildContext context) {
@@ -94,8 +94,8 @@ class Result extends StatelessWidget {
   }
 }
 
-class Emoji extends StatelessWidget {
-  const Emoji();
+class _Emoji extends StatelessWidget {
+  const _Emoji();
 
   @override
   Widget build(BuildContext context) {

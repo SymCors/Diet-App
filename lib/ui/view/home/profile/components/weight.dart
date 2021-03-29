@@ -1,4 +1,5 @@
 import 'package:diet_app/core/constant/colors.dart';
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,10 +17,10 @@ class Weight extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            const Header(),
-            const Kilo(),
-            const ProgressBar(),
-            const Texts(),
+            const _Header(),
+            const _Kilo(),
+            const _ProgressBar(),
+            const _Texts(),
           ],
         ),
       ),
@@ -27,8 +28,8 @@ class Weight extends StatelessWidget {
   }
 }
 
-class Header extends StatelessWidget {
-  const Header();
+class _Header extends StatelessWidget {
+  const _Header();
 
   @override
   Widget build(BuildContext context) {
@@ -69,8 +70,8 @@ class Header extends StatelessWidget {
   }
 }
 
-class Kilo extends StatelessWidget {
-  const Kilo();
+class _Kilo extends StatelessWidget {
+  const _Kilo();
 
   @override
   Widget build(BuildContext context) {
@@ -88,8 +89,8 @@ class Kilo extends StatelessWidget {
   }
 }
 
-class ProgressBar extends StatelessWidget {
-  const ProgressBar();
+class _ProgressBar extends StatelessWidget {
+  const _ProgressBar();
 
   @override
   Widget build(BuildContext context) {
@@ -104,8 +105,8 @@ class ProgressBar extends StatelessWidget {
   }
 }
 
-class Texts extends StatelessWidget {
-  const Texts();
+class _Texts extends StatelessWidget {
+  const _Texts();
 
   @override
   Widget build(BuildContext context) {

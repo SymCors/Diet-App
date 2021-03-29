@@ -10,16 +10,16 @@ class CardHeader extends StatelessWidget {
       color: Theme.of(context).scaffoldBackgroundColor,
       child: Stack(
         children: [
-          const Background(),
-          const Texts(),
+          const _Background(),
+          const _Texts(),
         ],
       ),
     );
   }
 }
 
-class Background extends StatelessWidget {
-  const Background();
+class _Background extends StatelessWidget {
+  const _Background();
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +52,8 @@ class Background extends StatelessWidget {
   }
 }
 
-class Texts extends StatelessWidget {
-  const Texts();
+class _Texts extends StatelessWidget {
+  const _Texts();
 
   @override
   Widget build(BuildContext context) {

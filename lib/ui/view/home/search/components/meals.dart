@@ -10,13 +10,13 @@ class Meals extends StatelessWidget {
     return ViewAllWidget(
       title: 'diets'.tr,
       onClick: null,
-      child: const Diets(),
+      child: const _Diets(),
     );
   }
 }
 
-class Diets extends StatelessWidget {
-  const Diets();
+class _Diets extends StatelessWidget {
+  const _Diets();
 
   @override
   Widget build(BuildContext context) {

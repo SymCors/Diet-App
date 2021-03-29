@@ -31,30 +31,35 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
         ),
       ),
       backgroundColor: !Get.isDarkMode ? AppColors.backgroundColor : null,
-      onPageBuilder: (context, value) => body(),
+      onPageBuilder: (context, value) => const _Body(),
     );
   }
+}
 
-  Widget body() {
+class _Body extends StatelessWidget {
+  const _Body();
+
+  @override
+  Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          const DatePickers(),
+          const _DatePickers(),
           const CustomDivider(height: 15),
-          const Header(),
+          const _Header(),
           const CustomDivider(height: 15),
-          const OnWhichDiet(),
+          const _OnWhichDiet(),
           const CustomDivider(height: 15),
-          const Breakfast(),
+          const _Breakfast(),
           const CustomDivider(height: 15),
-          const EarlySnack(),
+          const _EarlySnack(),
           const CustomDivider(height: 15),
-          const Lunch(),
+          const _Lunch(),
           const CustomDivider(height: 15),
-          const LateSnack(),
+          const _LateSnack(),
           const CustomDivider(height: 15),
-          const Dinner(),
+          const _Dinner(),
           const CustomDivider(height: 15),
         ],
       ),
@@ -62,8 +67,9 @@ class _CurrentDietState extends BaseState<CurrentDiet> {
   }
 }
 
-class DatePickers extends StatelessWidget {
-  const DatePickers();
+
+class _DatePickers extends StatelessWidget {
+  const _DatePickers();
 
   @override
   Widget build(BuildContext context) {
@@ -99,8 +105,8 @@ class DatePickers extends StatelessWidget {
   }
 }
 
-class Header extends StatelessWidget {
-  const Header();
+class _Header extends StatelessWidget {
+  const _Header();
 
   @override
   Widget build(BuildContext context) {
@@ -222,8 +228,8 @@ class Header extends StatelessWidget {
   }
 }
 
-class OnWhichDiet extends StatelessWidget {
-  const OnWhichDiet();
+class _OnWhichDiet extends StatelessWidget {
+  const _OnWhichDiet();
 
   @override
   Widget build(BuildContext context) {
@@ -366,8 +372,8 @@ class OnWhichDiet extends StatelessWidget {
   }
 }
 
-class Breakfast extends StatelessWidget {
-  const Breakfast();
+class _Breakfast extends StatelessWidget {
+  const _Breakfast();
 
   @override
   Widget build(BuildContext context) {
@@ -380,8 +386,8 @@ class Breakfast extends StatelessWidget {
   }
 }
 
-class EarlySnack extends StatelessWidget {
-  const EarlySnack();
+class _EarlySnack extends StatelessWidget {
+  const _EarlySnack();
 
   @override
   Widget build(BuildContext context) {
@@ -394,8 +400,8 @@ class EarlySnack extends StatelessWidget {
   }
 }
 
-class Lunch extends StatelessWidget {
-  const Lunch();
+class _Lunch extends StatelessWidget {
+  const _Lunch();
 
   @override
   Widget build(BuildContext context) {
@@ -408,8 +414,8 @@ class Lunch extends StatelessWidget {
   }
 }
 
-class LateSnack extends StatelessWidget {
-  const LateSnack();
+class _LateSnack extends StatelessWidget {
+  const _LateSnack();
 
   @override
   Widget build(BuildContext context) {
@@ -422,8 +428,8 @@ class LateSnack extends StatelessWidget {
   }
 }
 
-class Dinner extends StatelessWidget {
-  const Dinner();
+class _Dinner extends StatelessWidget {
+  const _Dinner();
 
   @override
   Widget build(BuildContext context) {
