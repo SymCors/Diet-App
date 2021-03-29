@@ -12,13 +12,14 @@ const Map<String, String> trTR = {
   'carbohydrate': 'Karbonhidrat',
   'change_pp': 'Profil Fotoğrafını Değiştir',
   'comment': 'Yorum Yap',
-  'comments': 'Yorum',
+  'comments': 'Yorumlar',
   'continue': 'Devam Et',
 
   'daily_calorie_aim': 'Günlük Kalori Hedefi',
   'date': 'Tarih',
   'day': 'Gün',
   'delete': 'Sil',
+  'details': 'Detaylar',
   'diets': 'Diyetler',
   'dietitian': 'Diyetisyen',
   'dietitians': 'Diyetisyenler',
@@ -44,7 +45,7 @@ const Map<String, String> trTR = {
   'last_paid': 'Son Ödeme',
   'last_payments': 'Son Ödemeler',
   'like': 'Beğen',
-  'likes': 'Beğeni',
+  'likes': 'Beğeniler',
   'login': 'Giriş Yap',
   'lunch': 'Öğle Yemeği',
 
@@ -67,7 +68,7 @@ const Map<String, String> trTR = {
   'onboard3_subtitle': 'Diyetisyeninizden alacağınız diyet listelerinin yanı sıra uygulamamız içerisinde bulunan diğer diyet listelerinden kendinize en uygun olanını seçerek çok daha rahat diyet yapabilme olanağına erişebilirsiniz.',
 
   'password_forgotten': 'Şifremi Unuttum',
-  'posts': 'Gönderi',
+  'posts': 'Gönderiler',
   'profile': 'Profil',
   'programs': 'Programlar',
   'protein': 'Protein',

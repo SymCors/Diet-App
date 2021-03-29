@@ -2,6 +2,7 @@ import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/ui/view/authentication/login/login.dart';
 import 'package:diet_app/ui/view/authentication/sign_up/sign_up.dart';
 import 'package:diet_app/ui/view/home/home_main.dart';
+import 'package:diet_app/ui/view/home/homepage/pages/comments/comments.dart';
 import 'package:diet_app/ui/view/home/profile/pages/current_diet/current_diet.dart';
 import 'package:diet_app/ui/view/home/profile/pages/my_posts/my_posts.dart';
 import 'package:diet_app/ui/view/home_drawer/notifications/notifications.dart';
@@ -23,11 +24,13 @@ import 'ui/view/home_drawer/my_payment_history/my_payment_history.dart';
 
 void main() {
   runApp(
-    MyApp(),
+    const MyApp(),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp();
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -52,6 +55,7 @@ class MyApp extends StatelessWidget {
         Routes.notifications: (context) => const Notifications(),
         Routes.my_posts: (context) => const MyPosts(),
         Routes.edit_profile: (context) => const EditProfile(),
+        Routes.comments: (context) => const Comments(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme(context),

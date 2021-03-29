@@ -16,6 +16,7 @@ class Stories extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(
+            key: Key(index.toString()),
             padding: const EdgeInsets.only(top: 15, right: 7, left: 7),
             child: Column(
               children: [

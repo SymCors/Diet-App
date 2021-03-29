@@ -1,3 +1,4 @@
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/init/icon/app_icons.dart';
 import 'package:diet_app/core/init/theme/dark_theme.dart';
 import 'package:diet_app/core/init/theme/light_theme.dart';
@@ -7,8 +8,6 @@ import 'package:diet_app/core/widget/custom_divider.dart';
 import 'package:diet_app/ui/viewmodel/home/homepage/components/posts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'comments.dart';
 
 class Posts extends StatelessWidget {
   const Posts();
@@ -24,6 +23,7 @@ class Posts extends StatelessWidget {
         itemCount: viewModel.names.length,
         itemBuilder: (context, index) {
           return Column(
+            key: Key(index.toString()),
             children: [
               Container(
                 child: Column(
@@ -109,7 +109,7 @@ class Texts extends StatelessWidget {
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: Text(
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 15),
+          style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 15, color: Colors.grey.shade900),
         ),
       ),
     );
@@ -123,8 +123,13 @@ class Images extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10, right: 10, left: 10, bottom: 5),
-      child: Image(
-        image: AssetImage('assets/images/login/background.webp'),
+      child: Container(
+        height: 200,
+        width: double.infinity,
+        child: Image(
+          image: AssetImage('assets/images/login/background.webp'),
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
@@ -165,7 +170,7 @@ class LikesAndDislikes extends StatelessWidget {
               color: Colors.blueGrey,
             ),
           ),
-          Text('12'),
+          Text('5'),
           Expanded(
             child: Align(
               alignment: Alignment.centerRight,
@@ -265,7 +270,7 @@ class Buttons extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Comments();
+                Get.toNamed(Routes.comments);
               },
               icon: Icon(AppIcons.comment_empty),
               label: Text('comment'.tr),
