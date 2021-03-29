@@ -10,8 +10,8 @@ class BottomSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const MyProfile(),
         const Settings(),
-        const MyAnalysis(),
       ],
     );
   }
@@ -46,8 +46,8 @@ class Settings extends StatelessWidget {
   }
 }
 
-class MyAnalysis extends StatelessWidget {
-  const MyAnalysis();
+class MyProfile extends StatelessWidget {
+  const MyProfile();
 
   @override
   Widget build(BuildContext context) {
@@ -57,14 +57,11 @@ class MyAnalysis extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          Get.toNamed(Routes.my_analysis);
+          Get.toNamed(Routes.my_profile);
         },
         child: ListTile(
-          leading: Image.asset(
-            'assets/icons/medical_analysis.png',
-            width: 25,
-          ),
-          title: Text('my_analysis'.tr),
+          leading: Icon(Icons.account_circle_rounded, color: AppColors.primarySwatch,),
+          title: Text('my_profile'.tr),
           trailing: Icon(
             Icons.chevron_right,
             color: AppColors.primarySwatch,

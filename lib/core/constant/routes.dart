@@ -12,4 +12,6 @@ class Routes {
   static const String settings = '/settings';
   static const String my_diet_lists = '/my_diet_lists';
   static const String payment_history = '/payment_history';
+  static const String notifications = '/notifications';
+  static const String my_profile = '/my_profile';
 }

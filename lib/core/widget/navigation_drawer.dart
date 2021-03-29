@@ -29,9 +29,20 @@ class NavigationDrawer extends StatelessWidget {
             },
           ),
           CreateDrawerBodyItem(
+            icon: Icons.analytics_outlined,
+            text: 'my_analysis'.tr,
+            onTap: () {
+              Navigator.pop(context);
+              Get.toNamed(Routes.my_analysis);
+            },
+          ),
+          CreateDrawerBodyItem(
             icon: Icons.notifications_active,
             text: 'notifications'.tr,
-            onTap: () => Navigator.pop(context),
+            onTap: () {
+              Navigator.pop(context);
+              Get.toNamed(Routes.notifications);
+            },
           ),
           ListTile(
             title: Text('version '.tr + '1.0.0'),

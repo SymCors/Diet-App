@@ -3,6 +3,7 @@ import 'package:diet_app/ui/view/authentication/login/login.dart';
 import 'package:diet_app/ui/view/authentication/sign_up/sign_up.dart';
 import 'package:diet_app/ui/view/home/home_main.dart';
 import 'package:diet_app/ui/view/home/profile/pages/current_diet/current_diet.dart';
+import 'package:diet_app/ui/view/home_drawer/notifications/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:diet_app/core/init/language/language_manager.dart';
@@ -13,8 +14,9 @@ import 'ui/view/authentication/on_board/on_board.dart';
 import 'ui/view/home/exercises/pages/exercise_details.dart';
 import 'ui/view/home/exercises/pages/exercise_details_view.dart';
 import 'ui/view/home/messages/message_ui.dart';
-import 'ui/view/home/profile/pages/my_analysis/my_analysis.dart';
+import 'ui/view/home/profile/pages/my_profile/my_profile.dart';
 import 'ui/view/home/profile/pages/settings/settings.dart';
+import 'ui/view/home_drawer/my_analysis/my_analysis.dart';
 import 'ui/view/home_drawer/my_diet_lists/my_diet_lists.dart';
 import 'ui/view/home_drawer/my_payment_history/my_payment_history.dart';
 
@@ -46,6 +48,8 @@ class MyApp extends StatelessWidget {
         Routes.settings: (context) => const Settings(),
         Routes.my_diet_lists: (context) => const MyDietLists(),
         Routes.payment_history: (context) => const MyPaymentHistory(),
+        Routes.notifications: (context) => const Notifications(),
+        Routes.my_profile: (context) => const MyProfile(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme(context),
