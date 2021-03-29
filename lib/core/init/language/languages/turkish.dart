@@ -14,6 +14,7 @@ const Map<String, String> trTR = {
   'continue': 'Devam Et',
 
   'daily_calorie_aim': 'Günlük Kalori Hedefi',
+  'date': 'Tarih',
   'day': 'Gün',
   'delete': 'Sil',
   'diets': 'Diyetler',
@@ -26,6 +27,7 @@ const Map<String, String> trTR = {
   'dislike': 'Beğenme',
   'do_sport': 'Spor yaparak sağlığınızı koruyun',
 
+  'earnings': 'Kazanç',
   'ending': 'Bitiş',
   'exercise': 'Egzersizler',
   'exercises': 'Egzersizler',
@@ -36,6 +38,8 @@ const Map<String, String> trTR = {
 
   'kilo': 'Kilo',
 
+  'last_paid': 'Son Ödeme',
+  'last_payments': 'Son Ödemeler',
   'like': 'Beğen',
   'login': 'Giriş Yap',
   'lunch': 'Öğle Yemeği',
@@ -47,6 +51,7 @@ const Map<String, String> trTR = {
   'my_payment_history': 'Ödeme Geçmişim',
 
   'not_have_account': 'Hesabınız yok mu?',
+  'notifications': 'Bildirimler',
 
   'onboard1_subtitle': 'Uygulamamız sayesinde diyetlerinizi kolayca gerçekleştirirken aynı zamanda diyetisyeninizle irtibat halinde kalabilir, böylece her daim kontrollü diyet yaparak daha sağlıklı bir görünüme sahip olabilirsiniz.',
   'onboard2_subtitle': 'Diyetleriniz aktivitesiz kalmasın! Uygulamamızı sizlere aktiviteler önerebilecek şekilde tasarladık. Yaptığınız aktiviteleri kayıt altına alarak yakılan kalori miktarına erişebilir, bir sonraki süreçte daha sağlıklı bir hayat için kontrollü hareket edebilirsiniz.',
@@ -60,6 +65,7 @@ const Map<String, String> trTR = {
   'remember_me': 'Beni Hatırla',
   'report': 'Şikayet Et',
 
+  'saved': 'Biriken',
   'search': 'Arama',
   'see_all': 'Hepsini Gör',
   'settings': 'Ayarlar',
@@ -69,6 +75,9 @@ const Map<String, String> trTR = {
   'starting': 'Başlangıç',
 
   'total_diet': 'Toplam Diyet',
+  'total_paid': 'Toplam Harcanan',
+
+  'version' : 'Versiyon',
 
   'yoga': 'Yoga',
 

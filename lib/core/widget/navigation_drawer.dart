@@ -23,26 +23,18 @@ class NavigationDrawer extends StatelessWidget {
           CreateDrawerBodyItem(
             icon: Icons.account_circle,
             text: 'my_payment_history'.tr,
-            onTap: () => Navigator.pop(context),
+            onTap: () {
+              Navigator.pop(context);
+              Get.toNamed(Routes.payment_history);
+            },
           ),
-          CreateDrawerBodyItem(
-            icon: Icons.event_note,
-            text: 'Events',
-            onTap: () => Navigator.pop(context),
-          ),
-          Divider(),
           CreateDrawerBodyItem(
             icon: Icons.notifications_active,
-            text: 'Notifications',
-            onTap: () => Navigator.pop(context),
-          ),
-          CreateDrawerBodyItem(
-            icon: Icons.contact_phone,
-            text: 'Contact Info',
+            text: 'notifications'.tr,
             onTap: () => Navigator.pop(context),
           ),
           ListTile(
-            title: Text('App version 1.0.0'),
+            title: Text('version '.tr + '1.0.0'),
             onTap: () {},
           ),
         ],
