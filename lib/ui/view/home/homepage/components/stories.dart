@@ -1,5 +1,7 @@
+import 'package:diet_app/core/constant/routes.dart';
 import 'package:diet_app/core/widget/circular_image.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Stories extends StatelessWidget {
   const Stories();
@@ -15,22 +17,27 @@ class Stories extends StatelessWidget {
         itemCount: names.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return Padding(
-            key: Key(index.toString()),
-            padding: const EdgeInsets.only(top: 15, right: 7, left: 7),
-            child: Column(
-              children: [
-                const AppCircularImage(
-                  radius: 33,
-                ),
-                Text(
-                  '${names[index]}',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText2
-                      .copyWith(fontSize: 13),
-                ),
-              ],
+          return InkWell(
+            onTap: (){
+              Get.toNamed(Routes.stories);
+            },
+            child: Padding(
+              key: Key(index.toString()),
+              padding: const EdgeInsets.only(top: 15, right: 7, left: 7),
+              child: Column(
+                children: [
+                  const AppCircularImage(
+                    radius: 33,
+                  ),
+                  Text(
+                    '${names[index]}',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2
+                        .copyWith(fontSize: 13),
+                  ),
+                ],
+              ),
             ),
           );
         },

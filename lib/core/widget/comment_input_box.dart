@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
 
 import 'message_action_button.dart';
-import 'package:get/utils.dart';
+import 'package:get/get.dart';
 
 class CommentInputBox extends StatelessWidget {
   const CommentInputBox({
@@ -41,7 +41,7 @@ class CommentInputBox extends StatelessWidget {
       margin: const EdgeInsets.only(left: 10, right: 10, bottom: 5, top: 5),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade200,
+          color: Get.isDarkMode ? Theme.of(context).cardColor : Colors.grey.shade100,
           borderRadius: BorderRadius.circular(cornerRadius()),
         ),
         padding: EdgeInsets.symmetric(
@@ -69,14 +69,14 @@ class CommentInputBox extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: 'write_comment'.tr,
                   hintStyle: TextStyle(
-                    color: Colors.black.withOpacity(0.6),
+                    color: Theme.of(context).hintColor,
                   ),
                   border: InputBorder.none,
                   contentPadding: const EdgeInsets.all(
                     16.0,
                   ),
                 ),
-                style: TextStyle(color: Colors.black),
+                style: Theme.of(context).textTheme.bodyText2,
               ),
             ),
             suffix ??
@@ -88,7 +88,7 @@ class CommentInputBox extends StatelessWidget {
               icon: Icon(
                 Icons.send,
                 size: 24.0,
-                color: Colors.black.withOpacity(0.7),
+                color: Theme.of(context).iconTheme.color,
               ),
             ),
           ],

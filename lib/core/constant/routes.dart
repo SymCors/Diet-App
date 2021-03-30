@@ -17,4 +17,5 @@ class Routes {
   static const String edit_profile = '/edit_profile';
   static const String comments = '/comments';
   static const String likes_and_dislikes = '/likes_and_dislikes';
+  static const String stories = '/stories';
 }

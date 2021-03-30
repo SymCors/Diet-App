@@ -16,6 +16,7 @@ import 'ui/view/authentication/on_board/on_board.dart';
 import 'ui/view/home/exercises/pages/exercise_details.dart';
 import 'ui/view/home/exercises/pages/exercise_details_view.dart';
 import 'ui/view/home/homepage/pages/likes_and_dislikes/likes_and_dislikes.dart';
+import 'ui/view/home/homepage/pages/stories/stories.dart';
 import 'ui/view/home/messages/message_ui.dart';
 import 'ui/view/home/profile/pages/edit_profile/edit_profile.dart';
 import 'ui/view/home/profile/pages/settings/settings.dart';
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
         Routes.edit_profile: (context) => const EditProfile(),
         Routes.comments: (context) => const Comments(),
         Routes.likes_and_dislikes: (context) => const LikesAndDislikes(),
+        Routes.stories: (context) => const Stories(),
       },
       themeMode: ThemeMode.light,
       darkTheme: appDarkTheme(context),

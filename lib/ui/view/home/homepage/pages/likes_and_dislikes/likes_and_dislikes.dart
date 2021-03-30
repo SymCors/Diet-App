@@ -19,8 +19,16 @@ class LikesAndDislikes extends StatelessWidget {
           ),
           bottom: TabBar(
             tabs: [
-              Tab(icon: Icon(AppIcons.heart, color: Colors.red,)),
-              Tab(icon: Icon(AppIcons.heart_broken, color: Colors.red,)),
+              Tab(
+                  icon: Icon(
+                AppIcons.heart,
+                color: Colors.red,
+              )),
+              Tab(
+                  icon: Icon(
+                AppIcons.heart_broken,
+                color: Colors.red,
+              )),
             ],
           ),
         ),
@@ -49,7 +57,9 @@ class _LikedBy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      separatorBuilder: (context, index) => Divider(height: 5,),
+      separatorBuilder: (context, index) => Divider(
+        height: 2,
+      ),
       shrinkWrap: true,
       itemCount: 10,
       itemBuilder: (context, index) {
@@ -58,7 +68,13 @@ class _LikedBy extends StatelessWidget {
             radius: 20,
           ),
           title: Text('Name Surname'),
-          subtitle: Text('13:12'),
+          subtitle: Text(
+            '13:12',
+            style: Theme.of(context)
+                .textTheme
+                .subtitle2
+                .copyWith(color: Theme.of(context).hintColor),
+          ),
           trailing: Icon(Icons.chevron_right),
         );
       },
@@ -70,7 +86,9 @@ class _DislikedBy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      separatorBuilder: (context, index) => Divider(height: 5,),
+      separatorBuilder: (context, index) => Divider(
+        height: 2,
+      ),
       shrinkWrap: true,
       itemCount: 4,
       itemBuilder: (context, index) {
@@ -79,7 +97,13 @@ class _DislikedBy extends StatelessWidget {
             radius: 20,
           ),
           title: Text('Name Surname'),
-          subtitle: Text('14:25'),
+          subtitle: Text(
+            '14:25',
+            style: Theme.of(context)
+                .textTheme
+                .subtitle2
+                .copyWith(color: Theme.of(context).hintColor),
+          ),
           trailing: Icon(Icons.chevron_right),
         );
       },
