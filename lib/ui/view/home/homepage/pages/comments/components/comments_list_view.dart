@@ -28,7 +28,7 @@ class CommentsListView extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (context, index) {
             return Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               alignment: Alignment.topLeft,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,

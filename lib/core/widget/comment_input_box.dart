@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_rx/src/rx_typedefs/rx_typedefs.dart';
-import 'package:get/utils.dart';
 
 import 'message_action_button.dart';
+import 'package:get/utils.dart';
 
-class MessageInputBox extends StatelessWidget {
-  const MessageInputBox({
+class CommentInputBox extends StatelessWidget {
+  const CommentInputBox({
     this.prefix,
     this.suffix,
     this.roundedCorners,
@@ -38,22 +38,10 @@ class MessageInputBox extends StatelessWidget {
     }
 
     return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(cornerRadius()),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            spreadRadius: 20,
-            blurRadius: 20,
-            offset: Offset(0, -5), // changes position of shadow
-          )
-        ],
-      ),
-      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 7, top: 5),
+      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 5, top: 5),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.1),
+          color: Colors.grey.shade200,
           borderRadius: BorderRadius.circular(cornerRadius()),
         ),
         padding: EdgeInsets.symmetric(
@@ -79,7 +67,7 @@ class MessageInputBox extends StatelessWidget {
                 maxLines: 4,
                 minLines: 1,
                 decoration: InputDecoration(
-                  hintText: 'write_message'.tr,
+                  hintText: 'write_comment'.tr,
                   hintStyle: TextStyle(
                     color: Colors.black.withOpacity(0.6),
                   ),

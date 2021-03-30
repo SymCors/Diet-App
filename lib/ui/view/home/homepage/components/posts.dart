@@ -32,7 +32,7 @@ class Posts extends StatelessWidget {
                     Header(viewModel, index),
                     const Texts(),
                     const Images(),
-                    const LikesAndDislikes(),
+                    const LikesAndDislikesSection(),
                     const CustomDividers(),
                     const Buttons(),
                   ],
@@ -109,7 +109,7 @@ class Texts extends StatelessWidget {
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: Text(
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 15, color: Colors.grey.shade900),
+          style: Theme.of(context).textTheme.bodyText2.copyWith(fontSize: 15),
         ),
       ),
     );
@@ -135,60 +135,65 @@ class Images extends StatelessWidget {
   }
 }
 
-class LikesAndDislikes extends StatelessWidget {
-  const LikesAndDislikes();
+class LikesAndDislikesSection extends StatelessWidget {
+  const LikesAndDislikesSection();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 10, top: 5),
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 8),
-            child: Icon(
-              AppIcons.heart,
-              size: 20,
-              color: Colors.red,
-            ),
-          ),
-          Text('4'),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 8),
-            child: Icon(
-              AppIcons.heart_broken,
-              size: 20,
-              color: Colors.red,
-            ),
-          ),
-          Text('1'),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 8),
-            child: Icon(
-              AppIcons.comment_dots,
-              size: 20,
-              color: Colors.blueGrey,
-            ),
-          ),
-          Text('5'),
-          Expanded(
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: const EdgeInsets.only(right: 10),
-                child: Text(
-                  '23 min',
-                  style: TextStyle(
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText2
-                          .color
-                          .withOpacity(0.6)),
-                ),
+      child: InkWell(
+        onTap: (){
+          Get.toNamed(Routes.likes_and_dislikes);
+        },
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: Icon(
+                AppIcons.heart,
+                size: 20,
+                color: Colors.red,
               ),
             ),
-          )
-        ],
+            Text('4'),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 8),
+              child: Icon(
+                AppIcons.heart_broken,
+                size: 20,
+                color: Colors.red,
+              ),
+            ),
+            Text('1'),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 8),
+              child: Icon(
+                AppIcons.comment_dots,
+                size: 20,
+                color: Colors.blueGrey,
+              ),
+            ),
+            Text('5'),
+            Expanded(
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Text(
+                    '23 min',
+                    style: TextStyle(
+                        color: Theme.of(context)
+                            .textTheme
+                            .bodyText2
+                            .color
+                            .withOpacity(0.6)),
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -44,7 +44,7 @@ class _Body extends StatelessWidget {
                     Header(viewModel, index),
                     const Texts(),
                     const Images(),
-                    const LikesAndDislikes(),
+                    const LikesAndDislikesSection(),
                     const CustomDividers(),
                     const Buttons(),
                   ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CommentsBackground extends StatelessWidget {
   @override
@@ -9,10 +10,10 @@ class CommentsBackground extends StatelessWidget {
           constraints: BoxConstraints(minWidth: 70),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            color: Colors.grey.shade100,
+            color: Get.isDarkMode ? Theme.of(context).cardColor : Colors.grey.shade100,
           ),
           padding:
-              const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 7),
+              const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 5),
           child: Stack(
             children: [
               Padding(
@@ -33,7 +34,6 @@ class CommentsBackground extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .bodyText2
-                          .copyWith(color: Colors.grey.shade900),
                     ),
                   ],
                 ),

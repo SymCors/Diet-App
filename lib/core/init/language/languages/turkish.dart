@@ -96,6 +96,8 @@ const Map<String, String> trTR = {
   'yoga': 'Yoga',
 
   'welcome': 'Hoşgeldiniz!',
+  'write_comment': 'Yorum yapın...',
+  'write_message': 'Bir şeyler yazın...',
 
   /* ----------------- SORTED ----------------------- */
 
